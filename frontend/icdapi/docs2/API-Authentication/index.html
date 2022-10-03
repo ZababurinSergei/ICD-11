@@ -1,0 +1,250 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>ICD API Authentication - ICD-API Homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "ICD API Authentication";
+    var mkdocs_page_input_path = "API-Authentication.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <!-- <a href=".." class="icon icon-home"> ICD-API Homepage</a> -->
+        <a href="../../index.html"> ICD-API Homepage</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="https://icd.who.int/icdapi/docs2/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption custom-caption"><span class="caption-text">ICD-API Documentation</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../ReleaseNotes/index.html">Release Notes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version2.html">API Documentation (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-reference">API Reference (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="../API-Authentication.html">ICD API Authentication</a>
+    <ul class="current">
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../SupportedClassifications.html">Supported Classification Versions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-github-repository">Samples Github Repository</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Embedded Classification Tool</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5/index.html">Embedded Classification Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedCodingTool/index.html">Embedded Coding Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedBrowser/index.html">Embedded Browser</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-AdvancedSettings/index.html">Advanced settings</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Installing the ICD-API locally</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-LocalDeployment.html">General Information on Installing the API locally</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-DockerContainer.html">Installing ICD-API as a Docker container</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-WindowsService.html">Installing ICD-API as a Windows Service</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-SystemdService.html">Installing ICD-API as a systemd Service in Linux</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">OLD Version Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version1/index.html">API Documentation (version 1)</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">ICD-API Homepage</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <!-- <li><a href="..">ICD-API</a> &raquo;</li> -->
+    <li><a href="../../index.html">ICD-API Homepage</a> &raquo;</li>
+    
+      
+        
+          
+            <li>ICD-API Documentation &raquo;</li>
+                    
+        
+      
+    
+    <li>ICD API Authentication</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="icd-api-authentication">ICD API Authentication</h1>
+<p>In order to be able to use the ICD APIs you need to follow these steps:</p>
+<ul>
+<li>Register to the ICD API site (https://icd.who.int/icdapi). </li>
+<li>Click on the <strong>[Register]</strong> link and follow the instructions</li>
+<li>
+<p>Once you register and login to the portal with your account, you may now click the <strong>[View API access key]</strong> to get your clientid and clientsecret. These are necessary for using the APIs.</p>
+<p>The system allows setting up multiple clients per user as well as removing clients. However, in a standard use, just having one client Id is sufficient.</p>
+</li>
+</ul>
+<p>ICD APIs use OAUTH2 authentication with client credentials grant type which makes use of the Client Id and Client Secret for authentication. Below you will find the details on how to use them. You may also find more information on OAUTH 2.0 Authentication Framework <a href="https://tools.ietf.org/html/rfc6749">here</a></p>
+<ul>
+<li>The next step is getting an OAUTH 2.0 token from the server. 
+You will make a request to the token endpoint with the following information.</li>
+<li>Use Basic Authentication with your client Id and secret</li>
+<li>grant_type = client_credentials</li>
+<li>scope = icdapi_access</li>
+</ul>
+<p><strong>Our token endpoint:</strong> https://icdaccessmanagement.who.int/connect/token</p>
+<ul>
+<li>Then the server returns back a token which you add to your future requests to the ICD API. Please note that the tokens are valid for about 1 hour and after that one has to get a new one.</li>
+</ul>
+<p>Many programming languages have APIs that you could use to make the process easier. Below you will find and example in C# using .NET. You may find more examples in other programming languages at our <a href="https://github.com/icd-api">ICD API Samples GitHub repository</a></p>
+<pre><code class="csharp">
+using System.Net.Http;
+using System.Net.Http.Headers;
+
+//...
+
+var tokenEndpoint = &quot;https://icdaccessmanagement.who.int/connect/token&quot;;
+var clientId = &quot;...&quot;; //of course not a good idea to put id and secret in the source code
+var clientSecret = &quot;...&quot;; //you could read from an encyrpted source in the production
+var scope = &quot;icdapi_access&quot;;
+
+tokenClient = new TokenClient(tokenEndpoint,
+                clientId,
+                clientSecret);
+
+//We request the for an access token
+tokenResponse = await tokenClient.RequestClientCredentialsAsync(scope);
+
+var client = new HttpClient();
+//Place the token at the httpclient that we are going to use at the future requests
+client.SetBearerToken(tokenResponse.AccessToken);
+
+//prepare a request to the API
+request = new HttpRequestMessage(HttpMethod.Get, &quot;https://id.who.int/icd/entity&quot;);
+
+//put an accept header for application/json
+request.Headers.Accept.Add(new MediaTypeWithQualityHeaderValue(&quot;application/json&quot;));
+request.Headers.AcceptLanguage.Add(new StringWithQualityHeaderValue(&quot;en&quot;));
+request.Headers.Add(&quot;API-Version&quot;, &quot;v2&quot;);
+
+//call the API
+var response = await client.SendAsync(request);
+if (!response.IsSuccessStatusCode)
+{
+      Console.WriteLine(response.StatusCode);
+}
+
+var content = response.Content.ReadAsStringAsync().Result;
+Console.WriteLine(content);
+
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../SupportedClassifications.html" class="btn btn-neutral float-right" title="Supported Classification Versions">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../APIDoc-Version2.html" class="btn btn-neutral" title="API Documentation (version 2.x)"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../APIDoc-Version2.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../SupportedClassifications.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,98 @@
+/* Custom Stylesheet */
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+p {
+  line-height: 2rem;
+}
+
+.button-collapse {
+  color: #26a69a;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255,255,255,.9);
+}
+  .parallax-container .section {
+    width: 100%;
+  }
+
+@media only screen and (max-width : 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #index-banner .section {
+    top: 0;
+  }
+}
+
+
+.icon-block {
+  padding: 0 15px;
+}
+
+
+
+.rtl {
+    direction: rtl
+}
+
+#langarea {
+    position: absolute;
+    right: 0px;
+    z-index: 10;   
+    padding-right: 2%;
+}
+
+#langbutton img {
+    position: relative;
+    top: 2px;
+}
+
+#mlimg {
+    width: 1em;
+    height: 1em;
+}
+
+#dropdown-language {
+    direction: ltr;
+}
+
+.rtl #langarea {
+    right: auto;
+    left: 2%;
+}
+.rtl .card-panel ul {
+    padding-right: 0px;
+}
+
+.rtl .logo1 {
+    padding-left: initial;
+    margin-left: initial;
+    padding-right: 10px;
+    margin-right: 14%;
+}
+
+.dropdown-content {
+    background-color: #f0f8ff !important;
+}
+
+.dropdown-content a {
+    color: #031426 !important;
+}
+
+#langbutton {
+    background-color: #031426 !important;
+}

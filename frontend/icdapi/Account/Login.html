@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in ICD API </title>
+
+    
+    
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css" />
+<meta name="x-stylesheet-fallback-test" content="" class="sr-only" /><script>!function(a,b,c,d){var e,f=document,g=f.getElementsByTagName("SCRIPT"),h=g[g.length-1].previousElementSibling,i=f.defaultView&&f.defaultView.getComputedStyle?f.defaultView.getComputedStyle(h):h.currentStyle;if(i&&i[a]!==b)for(e=0;e<c.length;e++)f.write('<link href="https://icd.who.int/icdapi/Account/'+c[e]+'" '+d+"/>")}("position","absolute",["\/icdapi\/lib\/bootstrap\/dist\/css\/bootstrap.min.css"], "rel=\u0022stylesheet\u0022 ");</script>
+        <link rel="stylesheet" href="../css/site.min.css%3Fv=utrxcICNqCf5Yc4iTLXWQCHS7EqqQB75Q8tqrgWigxM.css" />
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../icdapi.html">Home</a></li>
+                    <li><a href="../Home/About.html">About</a></li>
+                </ul>
+
+                
+
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="Register.html">Register</a></li>
+        <li><a href="Login.html">Log in</a></li>
+    </ul>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <nav id="cookieConsent" class="navbar navbar-default navbar-fixed-bottom" role="alert">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cookieConsent .navbar-collapse">
+                    <span class="sr-only">Toggle cookie consent banner</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></span>
+            </div>
+            <div class="collapse navbar-collapse">
+                <p class="navbar-text">
+                    <a href="http://www.who.int/about/privacy/en/">Read Privacy Legal Notice for WHO web sites </a>
+                </p>
+                <div class="navbar-right">
+                    <button type="button" class="btn btn-default navbar-btn" data-cookie-string=".AspNet.Consent=yes; expires=Sat, 30 Sep 2023 10:16:07 GMT; path=/; secure; samesite=lax">Accept</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        (function () {
+            document.querySelector("#cookieConsent button[data-cookie-string]").addEventListener("click", function (el) {
+                document.cookie = el.target.dataset.cookieString;
+                document.querySelector("#cookieConsent").classList.add("hidden");
+            }, false);
+        })();
+    </script>
+
+    <div class="container body-content">
+        
+
+<h2>Log in.</h2>
+<div class="row">
+    <div class="col-md-8">
+        <section>
+            <form method="post" class="form-horizontal" action="Login.html">
+                <h4>Use a local account to log in.</h4>
+                <hr />
+                <div class="text-danger validation-summary-valid" data-valmsg-summary="true"><ul><li style="display:none"></li>
+</ul></div>
+        
+
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="Email">Email</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Email" name="Email" value="" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="Email" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="Password">Password</label>
+                    <div class="col-md-10">
+                        <input class="form-control" type="password" data-val="true" data-val-required="The Password field is required." id="Password" name="Password" />
+                        <span class="text-danger field-validation-valid" data-valmsg-for="Password" data-valmsg-replace="true"></span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                            <label for="RememberMe">
+                                <input type="checkbox" data-val="true" data-val-required="The Remember me? field is required." id="RememberMe" name="RememberMe" value="true" />
+                                Remember me?
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button type="submit" class="btn btn-default">Log in</button>
+                    </div>
+                </div>
+                <p>
+                    <a href="Register.html">Register as a new user?</a>
+                </p>
+                <p>
+                    <a href="ForgotPassword.html">Forgot your password?</a>
+                </p>
+            <input name="__RequestVerificationToken" type="hidden" value="CfDJ8DqidxGcIrhIlwJk6Ot8yHCPo5FhTlhGWTqc8rWRas8RBzPrVFW0Y71IG9DblIfGoWPavcv2hWqaYlr9NbWrMfL2Z9xve6gizOSHzJn6HFsWgh3ZVvQwKqp2BKMeZab0GimpQTiuIi5HEiiLwdIZ3C0" /><input name="RememberMe" type="hidden" value="false" /></form>
+        </section>
+    </div>
+</div>
+
+
+        <hr />
+
+    </div>
+
+    
+    
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js">
+        </script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022\/icdapi\/lib\/jquery\/dist\/jquery.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js">
+        </script>
+<script>(window.jQuery && window.jQuery.fn && window.jQuery.fn.modal||document.write("\u003Cscript src=\u0022\/icdapi\/lib\/bootstrap\/dist\/js\/bootstrap.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+        <script src="../js/site.min.js%3Fv=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU"></script>
+    
+
+    
+
+
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js">
+    </script>
+<script>(window.jQuery && window.jQuery.validator||document.write("\u003Cscript src=\u0022\/icdapi\/lib\/jquery-validation\/dist\/jquery.validate.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+    <script src="https://ajax.aspnetcdn.com/ajax/jquery.validation.unobtrusive/3.2.6/jquery.validate.unobtrusive.min.js">
+    </script>
+<script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\u003Cscript src=\u0022\/icdapi\/lib\/jquery-validation-unobtrusive\/jquery.validate.unobtrusive.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+
+
+</body>
+</html>

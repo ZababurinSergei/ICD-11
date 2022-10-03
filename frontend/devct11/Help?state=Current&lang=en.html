@@ -1,0 +1,303 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ICD-11 Coding Tool Help </title>
+    
+    
+        <link rel="stylesheet" href="css/sitemerged.min.css%3Fv131020.css" />
+    
+
+    
+        <link rel="stylesheet" href="css/main.321b1de3.css" />
+
+
+
+</head>
+<body style="overflow: hidden; padding: 0 !important;">
+    <div class="navbar navbar-default navbar-default-current navbar-fixed-top ">
+        <div class="container">
+            <div class="navbar-header">
+                <h1 class="cttitle">ICD-11 Coding Tool Help </h1>
+                <div class="sidetitle">
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+            </div>
+        </div>
+    </div>
+    <div class="body-content">
+        
+
+
+
+<a class="ctbutton  helpbutton-current" href="icd11_mms/en/index.html" title='back to Coding Tool'>Coding Tool</a>
+
+
+<div class="container-fluid " id="help-container">
+    <div class="row ">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <div id="sidenav">
+    <ul>
+        <li>
+            <a href="Help%3Fstate=Current&amp;lang=en.html#searching">Searching</a>
+            <ul>
+                <li><a href="Help%3Fstate=Current&amp;lang=en.html#word-list">Word list</a></li>
+                <li>
+                    <a href="Help%3Fstate=Current&amp;lang=en.html#destination-entities">Destination Entities</a>
+                    <ul>
+                        <li><a href="Help%3Fstate=Current&amp;lang=en.html#incomplete-results">Incomplete results</a></li>
+                        <li><a href="Help%3Fstate=Current&amp;lang=en.html#flexible-search">Flexible Search</a></li>
+                        <li><a href="Help%3Fstate=Current&amp;lang=en.html#quick-copying">Quick copying</a></li>
+                        <li><a href="Help%3Fstate=Current&amp;lang=en.html#entity-details">Entity details</a></li>
+                    </ul>
+                </li>
+                <li><a href="Help%3Fstate=Current&amp;lang=en.html#chapter-distribution-filter">Chapter distribution / filter</a></li>
+
+            </ul>
+        </li>
+        <li><a href="Help%3Fstate=Current&amp;lang=en.html#integrated-browser">Integrated browser</a></li>
+        <li>
+            <a href="Help%3Fstate=Current&amp;lang=en.html#postcoordination">Postcoordination</a>
+            <ul>
+                <li><a href="Help%3Fstate=Current&amp;lang=en.html#displaying-searching-value-sets">Displaying / Searching value sets</a></li>
+                <li><a href="Help%3Fstate=Current&amp;lang=en.html#building-a-code-string">Building a Code String</a></li>
+                <li><a href="Help%3Fstate=Current&amp;lang=en.html#postcoordination-using-multiple-values-from-the-same-axis">Postcoordination using multiple values from the same axis</a></li>
+                <li><a href="Help%3Fstate=Current&amp;lang=en.html#nested-postcoordination">Nested postcoordination</a></li>
+            </ul>
+        </li>
+        <li><a href="Help%3Fstate=Current&amp;lang=en.html#coding-note">Coding Note</a></li>
+        <li><a href="Help%3Fstate=Current&amp;lang=en.html#related-categories-in-maternal-chapter">Related categories in maternal chapter</a></li>
+        <li><a href="Help%3Fstate=Current&amp;lang=en.html#related-categories-in-perinatal-chapter">Related categories in perinatal chapter</a></li>
+    </ul>
+</div>
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-8" id="help-md">
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Searching</title>
+</head>
+<body>
+
+    <h3 id="searching">Searching</h3>
+<p>The Coding Tool works by searching as the user continues typing in the searchbox:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/search-start-v4.png" alt="screenshot of Coding Tool search start" title="Coding Tool search start" /></p>
+<p>Coding Tool generates (and dynamically updates) two different outputs as the search continues:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/search-result-columns-v4.png" alt="screenshot of Coding Tool search results" title="Coding Tool search start" /></p>
+<ol>
+<li><h4 id="word-list">Word list</h4>
+<p>On the left side the Coding Tool shows a list of words.</p>
+<p>If you are in the middle of a word the system will try to guess the word that you are typing.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/wordlist-guessing.png" alt="screenshot of Coding Tool tries to guess the word" title="Coding Tool tries to guess the word" /></p>
+<p>If you have completed a word (it means that you have <strong>typed a space</strong> at the end of a word, or you have <strong>selected a word</strong> directly from the word list) the system will show you related keywords.<br />
+The relatedness is calculated by using the number of times the words appear together in the ICD together with some other similar measures.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/wordlist-related.png" alt="screenshot of Coding Tool related words" title="Coding Tool related words" /></p>
+<p>This list can be sorted by relatedness (default) or alphabetically</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/wordlist-sort.png" alt="screenshot of Coding Tool word list sort options" title="Coding Tool word list sort options" /></p>
+<p>It is possible to click these words instead of continuing to type.</p>
+</li>
+<li><h4 id="destination-entities">Destination Entities</h4>
+<p>The middle output of the Coding Tool interface shows the matched entities of the search.</p>
+<p>This output is sorted by how well the text entered matches the phrase in the ICD. The matched words are highlighted in this list (e.g: the word &quot;tuberculosis&quot; in the screenshot below).<br />
+The mouse's focus or the keyboard's focus (you can scroll throw the entities list also with the keyboard up and down keys) is showing by the red arrow on the left side of the entity and by the light-grey background.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entities-list-v3.png" alt="screenshot of Coding Tool entities list result" title="Coding Tool entities list result" /></p>
+<p>On the right side of the entities result list, the Coding Tool also shows small icons that provide specific information about entities, as in the screenshot below:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entities-list-icons-v4.png" alt="screenshot of Coding Tool entities list icon" title="Coding Tool entities list icon" /></p>
+<p>Every icon has a different meaning:</p>
+<ul>
+<li>Postcoordination is available for this entity: <img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-pa-v4.png" alt="icon Postcoordination is available" title="icon Postcoordination is available" /></li>
+<li>Postcoordination is mandatory for this entity: <img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-pr-v4.png" alt="icon Postcoordination is mandatory" title="icon Postcoordination is mandatory" /></li>
+<li>Coding note is available for this entity: <img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-cn-v4.png" alt="icon Coding note is available" title="icon Coding note is available" /></li>
+<li>There is/are a related category/categories in maternal chapter for this entity: <img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-ml-v4.png" alt="icon related categories in maternal chapter" title="Related categories in maternal chapter" /></li>
+<li>There is/are a related category/categories in perinatal chapter for this entity: <img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-pl-v4.png" alt="icon related categories in perinatal chapter" title="Related categories in perinatal chapter" /></li>
+</ul>
+<p>If the search result contains a &quot;perfect match&quot;, the matching entity is emphasized with a blue background (as in the screenshot below)</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entities-list-blu-match-v2.png" alt="screenshot of Coding Tool entities list result perfect match" title="Coding Tool entities list perfect match" /></p>
+<p>The output is also grouped by using the ICD hierarchy so that if the search text matches a parent category and several children, they will appear in a fashion that is easy to identify visually.
+The codes for non-terminal categories (i.e. categories which have children) are rendered with a grey background in this output. E.g. in the screenshot below, the code CA23 after searching &quot;asthma&quot;:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entities-hierachy-group-v3.png" alt="screenshot of Coding Tool entities grouped by hierarchy" title="Coding Tool entities grouped by hierarchy" /></p>
+<p>You may change the sort order by using the dropdown box at the top of the list. We have two options</p>
+<ul>
+<li>Sort by matching score (default)</li>
+<li>Sort by classification order</li>
+</ul>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entities-list-sort-v4.png" alt="screenshot of Coding Tool entities list sort options" title="Coding Tool entities list sort options" /></p>
+<p>The list shows only the codes and titles, except if the title is not a search result. e.g in the screenshot below, the highlighted term is a matching term:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entity-matching-terms-v4.png" alt="screenshot of Coding Tool entity matching term" title="Coding Tool entity matching term" /></p>
+<h4 id="incomplete-results">Incomplete results</h4>
+<p>If the word(s) that have been entered in the search are not precise enough and the system finds more results than it could show, it gives the following warnings:</p>
+<p>If it finds results in more than 100 entities, it will show the best 100 matches and will place the warning: <em>The results shown are incomplete</em></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/search-result-incomplete-v3.png" alt="screenshot of Coding Tool when the results shown are incomplete" title="Coding Tool when the results showed are incomplete" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/wordlist-result-incomplete-v3.png" alt="screenshot of Coding Tool when the word list result shown is incomplete" title="Coding Tool when the word list result showed is incomplete" /></p>
+<p>In these cases, you are advised to provide more information in the search area.</p>
+<h4 id="flexible-search">Flexible Search</h4>
+<p>Flexible search feature could be used in cases when the Coding Tool's regular search do not return any results.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/flexisearch-v2.png" alt="screenshot of Coding Tool when the flexible search is available" title="Coding Tool when the flexible search is available" /></p>
+<p>The way searching is performed in the flexible search mode is different in the following aspects:</p>
+<ol>
+<li><p>In the regular search mode, the Coding Tool will only give you results that contain <em>all</em> of the words that you've used in your search. It accepts different variants or synonyms of the words but essentially it searches for a result that contains all components of your search. Whereas in flexible search mode, the results do not have to contain all of the words that are typed. It would still try to find the best matching phrase but there may be words in your search that are not matched at all.</p>
+<ul>
+<li>For example, let's say the user is searching for <em>primary steatorrhea</em> and there is no phrase in the ICD-11 index that contains these words together. The regular search of the Coding Tool will not give you any results whereas the flexible search will give you results that contain one of the words. The top result in this case will be steatorrhoea which is an index term under Other specified symptoms related to the lower gastrointestinal tract or abdomen.</li>
+</ul>
+</li>
+</ol>
+ <br/>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/flexisearch-results-v3.png" alt="screenshot of Coding Tool flexible search results" title="Coding Tool flexible search results" /></p>
+<ol start="2">
+<li>Another flexibility added is trying also some broader variants of the words. For example if the user searches <em>Lung adenosarcoma</em>, they will get <em>Malignant neoplasms of bronchus or lung, unspecified</em> . This is done by trying with &quot;malignant neoplasm&quot; instead of &quot;adenosarcoma&quot; phrase.</li>
+</ol>
+<h4 id="quick-copying">Quick copying</h4>
+<p>Clicking on the code (or on the code's title), or pressing the enter key on keyboard, copies the code selected  into the clipboard. You can check what code is copied in the clipboard at any time on the right top of the page:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entity-clipboard-v3.png" alt="screenshot of Coding Tool entity code copied in the clipboard" title="Coding Tool entity code copied in the clipboard" /></p>
+<h4 id="entity-details">Entity details</h4>
+<p>Clicking on &quot;details&quot; link (or on one of the small icons), on the right of every result opens the entity details content (see screenshots below):</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entity-details-link-v4.png" alt="screenshot of Coding Tool entity details link" title="Coding Tool entity details link" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entity-details-open-v4.png" alt="screenshot of Coding Tool entity details" title="Coding Tool entity details" /></p>
+<p>On the top of the entity details content, by means of the link &quot;show all&quot;, the Coding Tool shows all the matching terms for the current entity.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entity-details-matching-terms-v4.png" alt="screenshot of Coding Tool entity details matching terms" title="Coding Tool entity details matching terms" /></p>
+<p>Clicking on the &quot;hide&quot; link will hide all the matching terms except the first five terms.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entity-details-matching-terms-all-v4.png" alt="screenshot of Coding Tool entity details show all matching terms" title="Coding Tool entity details show all matching terms" /></p>
+</li>
+<li><h4 id="chapter-distribution-filter">Chapter distribution / filter</h4>
+<p>On the right side, by means of a switch button, the Coding Tool shows the chapter distribution and is able to set filters for the search.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entities-list-filter-off-v3.png" alt="screenshot of Coding Tool chapter filter closed" title="Coding Tool chapter filter closed" /></p>
+<p>The chapters distribution shows the number of matches found in each chapter of the classification.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/entities-list-filter-on-v3.png" alt="screenshot of Coding Tool chapter filter opened" title="Coding Tool chapter filter opened" /></p>
+<p>By default, the system searches all chapters except the <em>Extension Codes</em> and the <em>Traditional Medicine</em>.
+One can change the filter by clicking on the checkboxes near the chapter names. If unticked, the results from that chapter are not shown.</p>
+<p>Clicking on a chapter title will show you the results only from that chapter</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/chapters-filter.png" alt="screenshot of Coding Tool chapter filter" title="Coding Tool chapter filter" /></p>
+<p>Clicking on the <em>Show results from default set</em> will reset the chapter filters that you've defined and give you results from all chapters except the <em>Extension Codes</em> and the <em>Traditional Medicine</em></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/chapters-default.png" alt="screenshot of Coding Tool chapter default set" title="Coding Tool chapter default set" /></p>
+</li>
+</ol>
+<h3 id="integrated-browser">Integrated browser</h3>
+<p>When the entity details are displayed, clicking on the maximize icon (the small square indicated in the screenshot below) opens the ICD-11 browser within the coding tool</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-link-v4.png" alt="screenshot of Coding Tool browser link" title="Coding Tool browser link" /></p>
+<p>The integrated ICD-11 browser is displayed in the page as a foreground window</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-v4.png" alt="screenshot of Coding Tool integrated browser" title="Coding Tool integrated browser" /></p>
+<p>The entity's data displayed on the right side of the browser are (if present):</p>
+<ul>
+<li>Fully Specified Name</li>
+<li>Description</li>
+<li>Additional Information</li>
+<li>Inclusions</li>
+<li>Exclusions</li>
+<li>Exclusions from above levels</li>
+<li>Coded Elsewhere</li>
+<li>Related categories in maternal chapter</li>
+<li>Related categories in perinatal chapter</li>
+<li>Coding Note</li>
+<li>Coding Note from above levels</li>
+<li>Postcoordination</li>
+</ul>
+<p>When browsing ICD-11, you will see the classification hierarchy on the left side of the screen. Clicking on any entity will display the details of that entity on the right side of the screen</p>
+<p>Initially, the system only opens the hierarchy of the selected code. However, you may make the children of every entity visible by clicking on the small triangles on the left side of the entities.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-triangle.png" alt="screenshot of Coding Tool integrated browser open children" title="Coding Tool integrated browser open children" /></p>
+<h3 id="postcoordination">Postcoordination</h3>
+<p>The postcoordination system allows adding more detail to the entity that is chosen. Different types of information can be added to different elements. For example, additional &quot;Histopathology&quot; information could be added to most of the Neoplasm categories but it cannot be added to the categories elsewhere in the classification.</p>
+<p>When you have opened the detail of an entity in the results list, the postcoordination link is only displayed if postcoordination is applicable to that entity (see screenshot below)</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-available-postcoord-v4.png" alt="screenshot of Coding Tool link for available postcoordination" title="Coding Tool link for available postcoordination" /></p>
+<p>When you are on an entity in the integrated ICD-11 browser, the postcoordination area will only show the possible postcoordination axes that are applicable to that entity</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-v4.png" alt="screenshot of Coding Tool postcoordination example" title="Coding Tool postcoordination example" /></p>
+<p>Some categories contain information that is incomplete for the multiple purposes of the ICD. In such cases, the icon is &quot;Mandatory postcoordination&quot;</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-mandatory-postcoord-v4.png" alt="screenshot of Coding Tool link for mandatory postcoordination" title="Coding Tool link for mandatory postcoordination" /></p>
+<p>If the postcoordination is mandatory, the note &quot;<em>(code also)</em>&quot; in the browser's postcoordination area indicates that information needs to be added for that axis.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-mandatory-v4.png" alt="screenshot of Coding Tool mandatory postcoordination example" title="Coding Tool mandatory postcoordination example" /></p>
+<p>For opening the postcoordination corresponding to a specific matching term, you have to click onto one of the postcoordination icons on the right side of the entity details content.
+Icon can be Postcoordination is available:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-pa-v4.png" alt="icon Postcoordination is available" title="icon Postcoordination is available" /></p>
+<p>Or Postcoordination is mandatory:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-pr-v4.png" alt="icon Postcoordination is mandatory" title="icon Postcoordination is mandatory" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-selected-term-v4.png" alt="screenshot of Coding Tool postcoordination selected term" title="Coding Tool postcoordination selected term" /></p>
+<p>Into the integrated ICD-11 browser the corresponding matching term is shown as &quot;Selected term&quot;. The Coding Tool will also show the Foundation URI of the selected term if it is different from the Foundation URI of the current entity (see screenshot below).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-selected-term-in-browser-v4.png" alt="screenshot of Coding Tool postcoordination selected term in browser" title="Coding Tool postcoordination selected term in browser" /></p>
+<h4 id="displaying-searching-value-sets">Displaying / Searching value sets</h4>
+<p>Some of the postcoordination axes can get values from a smaller set of possible values such as Laterality whereas some axes can get values from a larger value set such as Histopathology.</p>
+<ul>
+<li><p>If the value set is small, the browser will show all possible values with their codes.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-small-v4.png" alt="screenshot of Coding Tool small value set postcoordination example" title="Coding Tool small value set postcoordination example" /></p>
+</li>
+<li><p>If the value set is large, you browse through the hierarchy tree of the postcoordination axis. Otherwise, you can search the value sets by typing in the search box. The browser will search only the values for that axis.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-big-v4.png" alt="screenshot of Coding Tool big value set postcoordination example" title="Coding Tool big value set postcoordination example" /></p>
+</li>
+<li><p>Sometimes, even though the actual value set for an axis is large, not all values from the value set are applicable for an entity. In such cases, the browser will show/search only the relevant part. If the number of values that can be applied is less than 12, the browser will list all of them. If the result is larger than the browser will allow searching and browsing of the axis.</p>
+<p>For example, Aneurysmal bone cyst can be postcoordinated with Specific Anatomic Detail but not all values are applicable. In such cases, the browser will display/search only the relevant ones. In the example below, when the user searches &quot;head&quot;, the system only shows the hits that are in the &quot;bones&quot; branch of the &quot;Specific anatomic detail&quot; axis.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-search-v4.png" alt="screenshot of Coding Tool search postcoordination example" title="Coding Tool search postcoordination example" /></p>
+</li>
+</ul>
+<h4 id="building-a-code-string">Building a Code String</h4>
+<p>To build a code you need to click on the values that are displayed in the search results, in the hierarchy or in the shorter lists.</p>
+<p>The example below shows how to code &quot;malignant neoplasm of breast detailed with laterality and specific anatomy&quot;.<br />
+The postcoordination selections are shown at the top of the postcoordination section and the code string generated is shown above the postcoordination section.<br />
+Clicking on the &quot;Select&quot; button copies the code string generated into the clipboard.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-build-v4.png" alt="screenshot of Coding Tool building a code string" title="Coding Tool building a code string" /></p>
+<h4 id="postcoordination-using-multiple-values-from-the-same-axis">Postcoordination using multiple values from the same axis</h4>
+<p>The system allows one value per axis for most of the postcoordination axes.<br />
+For example, when postcoordinating with &quot;severity&quot; you can't pick the value &quot;mild&quot; and &quot;moderate&quot; at the same time. However, for certain axes, the system does allow selecting multiple values. The axes that allow multiple values are listed below:</p>
+<ul>
+<li>Associated with</li>
+<li>Causing condition</li>
+<li>Has manifestation</li>
+<li>Specific anatomy</li>
+<li>Infectious agents</li>
+<li>Chemical agents</li>
+<li>Medication</li>
+</ul>
+<p>For these axes, you may select more than one value. For example, when postcoordination with specific anatomy is allowed, you may select more than one site</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-multiple-v4.png" alt="screenshot of Coding Tool postcoordination multiple values from the same axis" title="Coding Tool postcoordination multiple values from the same axis" /></p>
+<p>For some of the external causes axes, we allow multiple values only when they come from different blocks</p>
+<p>For example, when postcoordinating Unintentional land transport traffic event injuring a pedal cyclist using the Transport event descriptor axis, we can use one value from the block &quot;VEHICLE USER ROLE OF PERSON INJURED IN TRANSPORT RELATED EVENT&quot; and another from the block &quot;COUNTERPART IN LAND TRANSPORT CRASH&quot; but we can't use two values from the same block.</p>
+<p>When multiple values for an axis are not allowed and the user clicks on the second one, the system will replace the existing value. For example, when you are postcoordinating with severity and have already chosen mild as a value, clicking on moderate will replace the mild value with the moderate value.</p>
+<h4 id="nested-postcoordination">Nested postcoordination</h4>
+<p>In certain cases the system may provide further specification of the postcoordination values. If the specific detail is known then select the more precise entity. If not then select the less specific entity.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/postcoord-nested-v4.png" alt="screenshot of Coding Tool nested postcoordination" title="Coding Tool nested postcoordination" /></p>
+<h3 id="coding-note">Coding Note</h3>
+<p>When you have opened the detail of an entity in the results list, the &quot;Coding Note&quot; section is displayed if available to that entity (see screenshot below)</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-available-codingnote-v4.png" alt="screenshot of Coding Tool link for available coding note" title="Coding Tool link for available coding note" /></p>
+<p>When you are on an entity in the integrated ICD-11 browser, the &quot;Coding Note&quot; section is shown as below</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/codingnote-v4.png" alt="screenshot of Coding Tool coding note example" title="Coding Tool coding note example" /></p>
+<h3 id="related-categories-in-maternal-chapter">Related categories in maternal chapter</h3>
+<p>When coding maternal mortality, mostly the case is coded to Chapter 18. To simplify this and also to be able to keep the detail coming from the rest of the classification, ICD-11 Coding Tool provides you maternal chapter alternative codes.</p>
+<p>If the search result has a maternal code alternative, you'll see the J icon.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-ml-v4.png" alt="icon related categories in maternal chapter" title="Related categories in maternal chapter" /></p>
+<p>When you open the details of the entity in the results list, the &quot;Related categories in maternal chapter&quot; section is displayed for that entity.</p>
+<p>For example, the entity &quot;Tuberculosis of eye&quot; (1B12.1) has as related category in maternal chapter the entity &quot;Tuberculosis complicating pregnancy, childbirth or the puerperium&quot; (JB63.0)
+This code is combined with the code of Tuberculosis of eye (1B12.1) and the resulting code becomes JB63.0/1B12.1.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-available-maternal-v4.png" alt="screenshot of Coding Tool link for related categories in maternal chapter" title="Coding Tool link for related categories in maternal chapter" /></p>
+<p>When you are on an entity in the integrated ICD-11 browser, the &quot;Related categories in maternal chapter&quot; section is shown as below</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-available-maternal-integrated-v4.png" alt="screenshot of Coding Tool related categories in maternal chapter example" title="Coding Tool related categories in maternal chapter example" /></p>
+<p>Clicking on the link within the &quot;Related categories in maternal chapter&quot; section, in this example JB63.0/1B12.1 (below underlined in red in the entity details screenshot and also in the integrated browser screenshot)</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-available-maternal-link-v4.png" alt="screenshot of Coding Tool link for related categories in maternal chapter link" title="Coding Tool link for related categories in maternal chapter link" /></p>
+<p>The integrated browser directly opens the related entity in the maternal chapter (in the example below: &quot;JB63.0 Tuberculosis complicating pregnancy, childbirth or the puerperium&quot;) postcoordinated with the entity selected (in the example below: &quot;1B12.1 Tuberculosis of eye&quot;) without any user intervention</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/maternal-v4.png" alt="screenshot of Coding Tool for related categories in maternal chapter example" title="Coding Tool for related categories in maternal chapter example" /></p>
+<h3 id="related-categories-in-perinatal-chapter">Related categories in perinatal chapter</h3>
+<p>When coding perinatal mortality, mostly the case is coded to Chapter 19. To simplify this and also to be able to keep the detail coming from the rest of the classification, ICD-11 Coding Tool provides you perinatal chapter alternative codes.</p>
+<p>If the search result has a perinatal code alternative, you'll see the K icon.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/icon-pl-v4.png" alt="icon related categories in perinatal chapter" title="Related categories in perinatal chapter" /></p>
+<p>When you open the details of the entity in the results list, the &quot;Related categories in perinatal chapter&quot; section is displayed for that entity.</p>
+<p>For example, the entity &quot;Tuberculosis of eye&quot; (1B12.1) has as related category in perinatal chapter the entity &quot;Congenital tuberculosis&quot; (KA61.0)</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-available-perinatal-v4.png" alt="screenshot of Coding Tool link for related categories in perinatal chapter" title="Coding Tool link for related categories in perinatal chapter" /></p>
+<p>When you are on an entity in the integrated ICD-11 browser, the &quot;Related categories in perinatal chapter&quot; section is shown as below</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-available-perinatal-integrated-v4.png" alt="screenshot of Coding Tool related categories in perinatal chapter example" title="Coding Tool related categories in perinatal chapter example" /></p>
+<p>Clicking on the link within the &quot;Related categories in perinatal chapter&quot; section, in this example KA61.0 (below underlined in red in the entity details screenshot and also in the integrated browser screenshot)</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/browser-available-perinatal-link-v4.png" alt="screenshot of Coding Tool link for related categories in perinatal chapter link" title="Coding Tool link for related categories in perinatal chapter link" /></p>
+<p>The integrated browser directly opens the related entity in the perinatal chapter (in the example below: &quot;KA61.0 Congenital tuberculosis&quot;) without any user intervention</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/devct/help/en/img/perinatal-v4.png" alt="screenshot of Coding Tool for related categories in perinatal chapter example" title="Coding Tool for related categories in perinatal chapter example" /></p>
+
+
+</body>
+</html>
+        </div>
+      
+    </div>
+</div>
+    </div>
+</body>
+</html>

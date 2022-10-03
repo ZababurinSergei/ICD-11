@@ -1,0 +1,107 @@
+
+body, html {
+    height: 100%;
+}
+.mh{
+    color:white;
+    
+    text-shadow: 1px 1px #000000;
+    font-size: 6.2em;
+    margin-top:70px;
+}
+
+
+
+.card-panel{
+    display:block;
+    min-height:300px;
+}
+
+.logo1 {
+    height: 60px;
+    min-height: 60px;
+    display: block;
+    padding-left: 10px;
+    margin-left:14%;
+}
+
+ svg {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+}
+
+.page-footer {
+    margin-top: 20px;
+    margin-bottom: 0px;
+    height: 120px;
+    position: absolute;
+    width: 96%;
+    bottom: 0;
+    
+}
+
+#wrapper {
+
+    min-height: 100%;
+    padding: 2%;
+    position: relative;
+    padding-bottom: 155px;
+}
+
+
+@media only screen and (max-width: 900px) {
+    .title {
+        font-size: 80%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .title {
+        font-size: 65%;
+    }
+}
+
+.footer2 {
+    display: block;
+    height: 20px;
+    min-height: 10px;
+    background-color: #031a30;
+    margin-top: 8px;
+}
+
+h3.subt {
+    text-align: center !important;
+    font-size: 2.1em;
+    color: white;
+    text-shadow: 1px 1px #000000;
+}
+
+h4.subt {
+    text-align: center !important;
+    font-size: 1.6em;
+    color: #ddd;
+    text-shadow: 1px 1px #000000;
+    /*font-style:italic;*/
+}
+
+h6{
+    margin-top:25px;
+    /*color:#039be5;*/
+    color:#808080;
+    font-size:1.2em;
+    font-weight:400;
+    
+}
+
+ .maindiv{
+     display:block;
+     /*background-color:#0093d5;*/
+ }
+
+ .sub1{
+     padding-left:20px!important;
+     font-size:0.9em;
+     font-style:italic;
+
+ }

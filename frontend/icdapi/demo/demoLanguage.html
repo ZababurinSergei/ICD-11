@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Demo ECT v1.3</title>
+
+    <link rel="stylesheet" href="https://icdcdn.azureedge.net/embeddedct/icd11ect-1.3.css">
+    <style>
+        body { font-family: "Ubuntu",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif; margin: 10px 20px 20px 20px; padding: 0; font-size: 0.9rem; line-height: 1rem; color: #333; background-color: #FFF; }
+        #demo-link-docs { float: right; }
+        #demo-title { margin-top: 50px; margin-bottom: 50px; text-align: center; }       
+        #demo-selected { float: right; display: none; }
+        #demo-paste-selected { background-color: #FF9; padding: 5px; }
+        .demo-instance { border: 1px solid #CCC; margin-bottom: 40px; padding: 10px; background-color: #EEE; border-radius: .25rem; }
+        .demo {margin-top: 20px; }
+        .demo::after { clear: both; content: ""; display: block; }
+        .demo-search { float: left; margin-bottom: 20px; }
+        .demo input { width: 400px; height: 1.2rem; font-size: 0.9rem; padding-left: 4px;}
+        .demo-clear { cursor: pointer; padding: 2px; }
+        .ctw-window { background-color: #FFF; }
+    </style>
+</head>
+
+<body>
+    <a id="demo-link-docs" href="../docs2/icd11ect-1.3/index.html">🢥 Go to Documentation</a>
+    <h2 id="demo-title">DEMO of Embedded Coding Tool <small>v1.3</small> in Spanish language</h2>
+
+    <div class="demo-instance">
+        <div class="demo">
+            <div class="demo-search">
+                <!-- input element used for typing the search  -->
+                Escriba aquí para buscar en el índice: <input type="text" class="ctw-input" autocomplete="off" data-ctw-ino="1"> <button class="demo-clear" onclick="ECT.Handler.clear('1');" title="Clear search and results">❌</button>
+            </div>    
+            <div id="demo-selected">
+                <!-- example of an extra input element for testing the Embedded Coding Tool select entity function -->
+                Selección: <span id="demo-paste-selected"></span>
+            </div>
+        </div>
+
+        <!-- div element used for showing the search results -->
+        <div class="ctw-window" data-ctw-ino="1"></div>    
+    </div>
+
+    <script src="https://icdcdn.azureedge.net/embeddedct/icd11ect-1.3.js"></script>
+    <script>
+        // Embedded Coding Tool settings object
+        // please note that only the property "apiServerUrl" is required
+        // the other properties are optional
+        const mySettings = {
+        // The API located at the URL below should be used only for software
+        // development and testing. ICD content at this location might not
+        //  be up to date or complete. For production, use the API located at
+        // id.who.int with proper OAUTH authentication
+            apiServerUrl: "https://icd11restapi-developer-test.azurewebsites.net",
+            // set the Spanish language
+            language: "es"
+        };
+
+        // example of an Embedded Coding Tool using the callback selectedEntityFunction for copying the code selected in an html element
+        const myCallbacks = {
+            selectedEntityFunction: (selectedEntity) => { 
+                document.getElementById('demo-paste-selected').innerHTML = selectedEntity.code + ' - ' + selectedEntity.bestMatchText;    
+                document.getElementById('demo-selected').style.display = 'inline';
+            }
+        };
+        
+        // configure the ECT Handler with mySettings and myCallbacks
+        ECT.Handler.configure(mySettings, myCallbacks);
+    </script>    
+
+</body>
+</html>

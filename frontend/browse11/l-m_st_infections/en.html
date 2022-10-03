@@ -1,0 +1,591 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="fragment" content="!" />
+    <meta name="google-site-verification" content="INKtg_4AcvauV4s-ZBZ5SidBwCFkxK2XfoiOE3iYM-g" />
+    <meta name="msvalidate.01" content="9BB0063D535B2050751F8A6D728E83F7" />
+    <meta name="buildDate" content='2022 Jul 07 - 08:30' />
+    <meta name="icd11Date" content='2022 Feb 07' />
+
+    
+
+    <title>ICD-11 for Mortality and Morbidity Statistics-Special tabulation list of infectious agents </title>
+
+            
+<link href="../Styles/misc%3Fv=dfAVCc9GiqiW7HOGofUpKJc10Ni2nMC4BeTU_bMAoak1.css" rel="stylesheet"/>
+
+<link href="../Styles/project%3Fv=u74R43iV1Rol_6He5PFQAA125GEACTpsk6uhG9aDHbk1.css" rel="stylesheet"/>
+
+
+<script src="../Scripts/library%3Fv=e0v_ja_3_9uo8yD7NwA5JgReh3Y4IXd2XojAeT5ODXg1"></script>
+
+<script src="../Scripts/common%3Fv=z495DuYbCMDEIrp7znqqprhzZF00RizJIvZ9IAUvnno1"></script>
+
+
+
+
+     
+     
+     
+
+
+    <script src="../Scripts/jquery.layout-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    
+    
+
+    <script src="../Scripts/projectscript%3Fv=fQNbgut12T7PaxqkfCAaBYOoTdmmAozmamBbTY-Btyo1"></script>
+
+
+        <meta name="description" content="ICD-11 Browser contains the ICD-11 (International Classification of Diseases 11th Revision) " />
+
+
+
+    
+    <link rel="icon" href="../Content/ICD11.RELEASE.png" />
+
+    
+  <script type="text/javascript">
+
+       var oInfo = new OntologyBasicInfo();
+       oInfo.ontologyKey = "l-m_st_infections";
+       oInfo.ontologyId = "ICD11_MMS_st_infections";
+       oInfo.theLanguage = "en";
+       oInfo.isLinearization =  false;
+       oInfo.baseURL = location.protocol + "//" + location.hostname + ":" + location.port + '/browse11/';
+        //oInfo.ontologyLabel = "ICD-11 - ICD-11 for Mortality and Morbidity Statistics Special tabulation list of infectious agents";
+       oInfo.ontologyLabel = "ICD-11 for Mortality and Morbidity Statistics-Special tabulation list of infectious agents";
+       oInfo.usesElastic = true;
+
+       
+
+       var appState = new ApplicationStateInformation();
+       appState.userLoggedIn =  false;
+       appState.appMode = "ICD11.RELEASE";
+       appState.scrollToEntity = false;
+       appState.defaultShowGrayNodes = true;
+       $(document).ready(function(){
+           OBrowserNavigation.getInstance().navigationMode=NavigationMode.Browser;
+           OBrowserNavigation.getInstance().initialize(oInfo,appState);
+           OBrowserContributions.getInstance().initialize(oInfo.baseURL,OBrowserNavigation.getInstance());
+       });
+
+                </script>
+            
+
+
+</head>
+<body>
+
+
+
+    <div id="showinpopudiv" style="display:none"></div>
+       
+<script type="text/javascript">
+    function checkAllSearchFields() {
+        $("form input:checkbox").prop('checked', true);
+    }
+
+    function uncheckAllSearchFields() {
+        $("form input:checkbox").prop('checked', false);
+    }
+    
+</script>
+<div id="advancedSearchBox" class="advancedsearch ">
+
+
+        <form id ="advancedSearchForm" method="post" >
+
+        Search Text :
+                   <span style="float:right;margin-right:-12px;margin-bottom:2px">
+            
+
+        <span id="imagebutton_f9753e86-7253-4b6d-b104-ff6b427ac389advancedsearch" title="Help" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('f9753e86-7253-4b6d-b104-ff6b427ac389advancedsearch','Help')"  >
+                &nbsp;
+            </span>
+    <div id="content_f9753e86-7253-4b6d-b104-ff6b427ac389advancedsearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+<h2>Advanced Search Help</h2>
+
+<p>
+    <img class="dropshadow" alt="Advanced search help image"  src="../Content/helpfiles.ICD11_en/images/advancedsearch1.png" /></p>
+<p>
+
+    Advanced search lets you search selected properties of the classification. You 
+    could search all properties or a selected subset only</p>
+<p>
+
+    Please 
+    provide keywords in the <strong>Search Text</strong> field and check the 
+    properties that you&#39;d like to include in the search.</p>
+<p>
+
+    The system will search for the keywords in the properties that 
+    you&#39;ve checked </p>
+
+
+<p>
+    The results are sorted by how good the text entered matches the phrase in ICD.
+    It is also grouped by using the ICD hierarchy so that if the search text matches a parent category and several children,
+    they will appear in a fashion that is easy to identify this relation visually. The list shows only the titles or the
+    best match among the matched terms if the title is not a match. However, <span class="detailsicon">&#9636;</span>
+    button will make more matching results visible under the entity.
+</p>
+
+    <p>If the search query hits more than 200 results, then only the top 200 will be 
+    displayed.</p>
+<p>
+
+    If you provide more than one keyword, the system will 
+    search for items that have all the keywords.</p>
+
+<p>
+
+    <strong>Wildcards:</strong>
+
+    You may also use wildcard character *</p>
+<p>
+
+    For example, searching  <b>diabet*</b> finds all entities that have a word that start with 
+    &quot;diabet&quot; </p>
+
+<h4>Search Results</h4>
+<p>
+    <img  class="dropshadow" alt="Advanced search help image"  src="../Content/helpfiles.ICD11_en/images/advancedsearch2.png" /></p>
+<p>
+<p>After the search the results are displayed at the lower right area of the screen. Clicking on any result will load that entity</p>
+<p>You may close the <b>Advanced Search</b> window or the <b>Search Results</b> pane by clicking the X at the top left corner of the 
+    window.</p>
+
+        
+        </div>
+    </div>
+ 
+                </span>
+            <input autocomplete="off" class="advancedSearchTextBox" id="SearchText" name="SearchText" type="text" value="" />
+
+     
+        <br />
+        
+            <span style="font-style:italic">
+                Please check the properties that you&#39;d like to include in the search
+            </span>
+        <div style="float: right">
+            <span class="buttonLike" onclick="checkAllSearchFields(); " >
+                [ 
+                Check All  
+                ]
+            </span> 
+            &nbsp;&nbsp;&nbsp;
+            <span class="buttonLike" onclick="uncheckAllSearchFields(); " >
+                [ 
+                Uncheck All
+                ]
+            </span>   
+        </div>
+        <br />
+            <div class="advsearchpropertiesdiv">
+                <div class="advsearchpropertiesdivLeft">
+
+<input checked="checked" id="Search_Title" name="Search_Title" type="checkbox" value="true" /><input name="Search_Title" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Title')">
+                            Title
+                        </span>
+                        <br />
+<input id="Search_Synonym" name="Search_Synonym" type="checkbox" value="true" /><input name="Search_Synonym" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Synonym')">
+                            Synonym
+                        </span>
+                        <br />
+<input id="Search_Definition" name="Search_Definition" type="checkbox" value="true" /><input name="Search_Definition" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Definition')">
+                            Description
+                        </span>
+                        <br />
+<input id="Search_Inclusion" name="Search_Inclusion" type="checkbox" value="true" /><input name="Search_Inclusion" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Inclusion')">
+                            Inclusion
+                        </span>
+                        <br />
+<input id="Search_Exclusion" name="Search_Exclusion" type="checkbox" value="true" /><input name="Search_Exclusion" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Exclusion')">
+                            Exclusion
+                        </span>
+                        <br />
+
+                </div>
+                <div class="advsearchpropertiesdivRight">
+
+
+                </div>
+                </div>
+
+                
+
+
+</form>
+
+</div>
+
+
+
+    <div class='outer-north header-ltr headerICD11RELEASE'>
+
+        <div id="headerleft" style="height: 100%">
+            
+                <h1>ICD-11 for Mortality and Morbidity Statistics-Special tabulation list of infectious agents</h1>
+
+            
+            
+                <div id="searchcontainer">
+                    
+Search 
+<input class="search" id="searchbox" data-searchType="full"  type="text" />
+<img class="searchwait" src="../Content/load.gif"/>
+
+
+        <span id="imagebutton_d9ca2ae0-38ce-41a5-95f3-4eab3c7792c9quicksearch" title="Help" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('d9ca2ae0-38ce-41a5-95f3-4eab3c7792c9quicksearch','Help')"  >
+                &nbsp;
+            </span>
+    <div id="content_d9ca2ae0-38ce-41a5-95f3-4eab3c7792c9quicksearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+<h2>Quick Search Help</h2>
+
+<p>
+    <img class="dropshadow" alt="quicksearch image" src="../Content/helpfiles.ICD11_en/images/quicksearch.png" /></p>
+<p>
+    Quick search helps you quickly navigate to a particular category. 
+    It searches the titles, inclusions, synonyms and narrower terms and it works by starting to search as you type and 
+    provide you options in a dynamic dropdown list.
+</p>
+<p>
+  Clicking on one of the entities that appear in the list will load the entity.</p>
+
+<p> The results are sorted by how good the text entered matches the phrase in ICD. 
+    It is also grouped by using the ICD hierarchy so that if the search text matches a parent category and several children,
+    they will appear in a fashion that is easy to identify this relation visually. The list shows only the titles or the 
+    best match among the matched terms if the title is not a match. However, <span class="detailsicon">&#9636;</span>
+    button will make more matching results visible under the entity.</p>
+
+<p>
+    You may also use wildcards to find similar words or to simply save some 
+    typing.
+
+    For example, <strong>transp* accident </strong>will find entities with 
+    transport and accident</p>
+
+
+        
+        </div>
+    </div>
+ 
+
+
+                    <a class="buttonLike" id="advancedSearchButton">
+                        [
+                        Advanced Search
+                        ]
+                    </a>
+                </div>
+            
+            
+        </div>
+        <div class="toplogbuttons">
+            
+    
+        </div>
+        <div id="messageArea"></div>
+        <div style="display:none" id="notificationdomainsarea"></div>
+    </div>
+
+
+<div id="menu" class="menu-ltr">
+    <ul class="tabs">
+
+                    <li>
+                        <a id="mainmenu-Browse" href="../../browse11.html" title="ICD-11 - ICD-11 for Mortality and Morbidity Statistics"
+                           >
+                            Browse
+                        </a>
+
+                    </li>
+                <li class="hasmore" id="pmenu_Info">
+                    <a title=""><span>Info</span></a>
+                    <ul class="dropdown">
+                                    <li>
+                                        <a id="submenu-User_Guide"
+                                           href="../Help/en.html"
+                                           title="User Guide for the ICD11 browser"
+                                                                                      >
+                                            User Guide
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Print_Versions"
+                                           href="../Downloads/Download%3FfileName=print_en.zip"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            Print Versions
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD-11_Reference_Guide"
+                                           href="../../icd11refguide/en/index.html"
+                                           title="ICD-11 Reference Guide"
+                                                                                        target="_blank"
+>
+                                            ICD-11 Reference Guide
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Spreadsheet_File"
+                                           href="../Downloads/Download%3FfileName=simpletabulation.zip"
+                                           title="Simple Tabulation"
+                                                                                        target="_blank"
+>
+                                            Spreadsheet File
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD-10___ICD-11_mapping_Tables"
+                                           href="../Downloads/Download%3FfileName=mapping.zip"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            ICD-10 / ICD-11 mapping Tables
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD-11_Maintenance,_Contributions,_Proposals"
+                                           href="../../dev11.html"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            ICD-11 Maintenance, Contributions, Proposals
+                                        </a>
+
+
+        <span id="imagebutton_ed0fcfb5-a04a-4611-b8dc-79539e4e6e01livebrowser" title="Help" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('ed0fcfb5-a04a-4611-b8dc-79539e4e6e01livebrowser','Help')"  >
+                &nbsp;
+            </span>
+    <div id="content_ed0fcfb5-a04a-4611-b8dc-79539e4e6e01livebrowser" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+
+<h3>ICD-11 Maintenance Platform</h3>
+
+<p>
+    The ICD maintenance process allows the continuous adaptation of the ICD following the evolution in the understanding of diseases, 
+    treatments, and prevention. A proposal and review mechanism on an online platform makes the process transparent.
+
+    This platform allows users see the suggested updates, make change proposals or correction suggestions.
+    In addition we provide a mechanism to contibute to the translations of ICD-11.
+
+</p>
+
+<p>
+    The browser contained in the maintenance platform (with the orange background) is mainly for the contributors of the classification development and it has the following differences
+    <ul>
+        <li>
+            It shows the current work in progress. I.e. it may contain content that is not released and may change before releasing. Therefore it should not be used for coding cases
+        </li>
+        <li>It shows the ICD-11 foundation as well as the several linearizations including the ICD-11 for mortality morbidty statistics (MMS)</li>
+        <li>It has features for facilitating contribution such as commenting and the proposal mechanism</li>
+        <li>It contains a translation tool to aid the translations</li>
+    </ul>
+
+</p>
+        
+        </div>
+    </div>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD_Home_Page"
+                                           href="../../index.html"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            ICD Home Page
+                                        </a>
+                                    </li>
+                    </ul>
+                </li>
+    </ul>
+
+</div>
+
+
+
+    <div id="langarea" class="langarea-ltr">
+        <div id="langbutton">
+            <img id="mlimg" alt="language change icon" src="../Content/globe.svg" />
+            EN
+        </div>
+        <ul id="languagelist">
+                <li>
+                        <span class="languageselected">
+                            <span class="selstatus">&#x2713</span>
+                            English
+                        </span>
+                </li>
+                <li>
+                        <a href="../l-m/ar.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Arabic
+                        </a>
+                </li>
+                <li>
+                        <a href="../l-m/es.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Spanish
+                        </a>
+                </li>
+                <li>
+                        <a href="../l-m/fr.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            French
+                        </a>
+                </li>
+                <li>
+                        <a href="../l-m/zh.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Chinese
+                        </a>
+                </li>
+            <hr class="secondlanguageinmenu"></hr>
+                <li>
+                    <a title="Open as second language" onclick="OBrowserNavigation.getInstance().setSecondLanguage('ar')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Arabic
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Open as second language" onclick="OBrowserNavigation.getInstance().setSecondLanguage('es')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Spanish
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Open as second language" onclick="OBrowserNavigation.getInstance().setSecondLanguage('fr')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ French
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Open as second language" onclick="OBrowserNavigation.getInstance().setSecondLanguage('zh')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Chinese
+                    </a>
+
+                </li>
+
+        </ul>
+
+    </div>
+    <div class="outer-center" id="xx" style="padding: 0 !important; border: 0 !important;">
+        <div class="inner-center">
+            <div class="inner2-center details" id="firstright">
+                <img id="conceptdetailswaitimg" alt="waiting" style="display: none; float: right" src='../Content/wait.gif' />
+                <div class="initialpageRight">
+                    
+                
+
+<h3 class="page_heading1">
+    ICD-11 for Mortality and Morbidity Statistics (ICD-11 MMS) <br /> 
+</h3>
+
+
+
+            
+                </div>
+            </div>
+            <div class="inner2-east details" id="secondright">
+                
+                <div class="slclose">
+                    <span onclick="OBrowserNavigation.getInstance().removeSecondLanguage()" title="close">&times;</span>
+                </div>
+                <div id="secondlanguage"></div>
+                
+            
+            </div>
+            <div class="inner2-south" id="searchResultPane" style="overflow:hidden!important;display:none">
+                
+
+<div class="tableWrapper ui-widget ui-widget-header  ui-dialog-title" style="font-size:0.75em;">
+ 
+    <table style="width:100%; table-layout:fixed">
+        <tr><td>
+     <span class="ui-dialog-title">
+         Search Results </span>
+         <span class="ui-icon close" 
+               style ="background-position: -96px -128px; float:right;cursor:pointer" 
+               
+               title="Close search results. (It will reopen when you make another advanced search)">close</span>
+          </td></tr>
+
+        </table>
+     </div>
+    
+<img class="searchresultwaitimg" alt="waiting"  src='../Content/waitbig.gif'  />
+
+<div class="searchResultDiv data tableWrapper" style="position:relative;height:100%;">
+    <div class="innerWrapper">
+        <table style="width:100%; table-layout:fixed">
+
+        </table>
+    </div>
+</div>
+
+ 
+            </div>
+        </div>
+        <div class="inner-west details">
+            
+
+
+            
+        </div>
+    </div>
+
+    <div class="outer-west details ltr">
+        
+                
+<div id ="mainhiearchydiv" >
+<div class='topicons2'>    
+    <div class="fx">
+        
+
+        <img class="sidebutton" alt='collapse all nodes' title='collapse all nodes'
+             src="../Content/collapse.png"
+             onclick="OBrowserNavigation.getInstance().theHierarchy.collapseTree()" />
+
+    </div>
+
+</div>
+    <div  id="hierarchy"  class="ygtv-highlight " >
+    </div>
+
+</div>
+
+
+            
+    </div>
+
+    
+</body>
+</html>
+
+

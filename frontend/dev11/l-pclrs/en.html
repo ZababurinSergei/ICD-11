@@ -1,0 +1,684 @@
+
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="fragment" content="!" />
+    <meta name="google-site-verification" content="INKtg_4AcvauV4s-ZBZ5SidBwCFkxK2XfoiOE3iYM-g" />
+    <meta name="msvalidate.01" content="9BB0063D535B2050751F8A6D728E83F7" />
+    <meta name="buildDate" content='2022 Sep 29 - 14:27' />
+    <meta name="icd11Date" content='2022 Sep 29' />
+
+    <title>Primary Care Low Resource Setting Linearization </title>
+
+            
+    <link href="../bundles/misc.min.css%3Fv=x8NyQojcZkRskNBlHn-qwinI-orNIOM1UIN0p9iYm1c.css" rel="stylesheet" />
+
+    <link href="../Styles/fancydropdown/fancydropdownICD11.css" rel="stylesheet">
+
+
+    <link href="../bundles/project.min.css%3Fv=LolbQCvs3yDx6Z6UQpzCrOzQ_fuoniBZZSAwMxmSWsE.css" rel="stylesheet" />
+
+
+
+
+    <script src="../bundles/library.min.js%3Fv=hCJchYXq1Zo7fyoIEUCY-TW3Z0BBzUlBOVVGJ92usuw" type="text/javascript"></script>
+
+
+
+    <script src="../Scripts/ts/obrowser_helper.js"></script>
+
+
+
+
+
+    <script src="../Scripts/jquery.layout-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    
+    
+
+        <script src="../bundles/projectscript.min.js%3Fv=Y8dqn_k_cw9G7GEU8xz3w9m0S4ebjofKT0caUiiyKvQ" type="text/javascript"></script>
+
+
+
+
+        <meta name="description" content="ICD-11 Browser contains the ICD-11 (International Classification of Diseases 11th Revision) " />
+
+
+
+    <link rel="icon" href="../Content/ICD11.png" />
+
+    
+  <script type="text/javascript">
+
+       var oInfo = new OntologyBasicInfo();
+       oInfo.ontologyKey = "l-pclrs";
+       oInfo.ontologyId = "ICD11_Primary_Care_Low_RS";
+       oInfo.theLanguage = "en";
+       oInfo.isLinearization =  true;
+       oInfo.baseURL = location.protocol + "//" + location.hostname + ":" + location.port + '/dev11/';
+        //oInfo.ontologyLabel = "ICD-11 - Primary Care Low Resource Setting Linearization";
+       oInfo.ontologyLabel = "Primary Care Low Resource Setting Linearization";
+       oInfo.usesElastic = true;
+
+
+       var appState = new ApplicationStateInformation();
+       appState.userLoggedIn =  false;
+       appState.appMode = "ICD11";
+       appState.scrollToEntity = false;
+       appState.defaultShowGrayNodes = true;
+       $(document).ready(function(){
+           OBrowserNavigation.getInstance().navigationMode=NavigationMode.Browser;
+           OBrowserNavigation.getInstance().initialize(oInfo,appState);
+           OBrowserContributions.getInstance().initialize(oInfo.baseURL,OBrowserNavigation.getInstance());
+       });
+
+                </script>
+            
+
+
+</head>
+<body>
+
+
+
+    <div id="showinpopudiv" style="display:none"></div>
+       
+
+<script type="text/javascript">
+    function checkAllSearchFields() {
+        $("form input:checkbox").prop('checked', true);
+    }
+
+    function uncheckAllSearchFields() {
+        $("form input:checkbox").prop('checked', false);
+    }
+    
+</script>
+<div id="advancedSearchBox" class="advancedsearch ">
+
+
+        <form id="advancedSearchForm" method="post">
+
+        Search Text :
+                   <span style="float:right;margin-right:-12px;margin-bottom:2px">
+            
+
+
+        <span id="imagebutton_17d9a728-604d-41d1-a0c6-bc5a00e18ca3advancedsearch" title="Help" class="helpbutton helpbuttonICD11" 
+                onclick="Helper.popupContent('17d9a728-604d-41d1-a0c6-bc5a00e18ca3advancedsearch','Help')"  >
+                &nbsp;
+            </span>
+    <div id="content_17d9a728-604d-41d1-a0c6-bc5a00e18ca3advancedsearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+<h2>Advanced Search Help</h2>
+
+<p>
+    <img class="dropshadow" alt="Advanced search help image"  src="../Content/helpfiles.ICD11_en/images/advancedsearch1.png" /></p>
+<p>
+
+    Advanced search lets you search selected properties of the classification. You 
+    could search all properties or a selected subset only</p>
+<p>
+
+    Please 
+    provide keywords in the <strong>Search Text</strong> field and check the 
+    properties that you&#39;d like to include in the search.</p>
+<p>
+
+    The system will search for the keywords in the properties that 
+    you&#39;ve checked </p>
+
+
+<p>
+    The results are sorted by how good the text entered matches the phrase in ICD.
+    It is also grouped by using the ICD hierarchy so that if the search text matches a parent category and several children,
+    they will appear in a fashion that is easy to identify this relation visually. The list shows only the titles or the
+    best match among the matched terms if the title is not a match. However, <span class="detailsicon">&#9636;</span>
+    button will make more matching results visible under the entity.
+</p>
+
+    <p>If the search query hits more than 200 results, then only the top 200 will be 
+    displayed.</p>
+<p>
+
+    If you provide more than one keyword, the system will 
+    search for items that have all the keywords.</p>
+
+<p>
+
+    <strong>Wildcards:</strong>
+
+    You may also use wildcard character *</p>
+<p>
+
+    For example, searching  <b>diabet*</b> finds all entities that have a word that start with 
+    &quot;diabet&quot; </p>
+
+<h4>Search Results</h4>
+<p>
+    <img  class="dropshadow" alt="Advanced search help image"  src="../Content/helpfiles.ICD11_en/images/advancedsearch2.png" /></p>
+<p>
+<p>After the search the results are displayed at the lower right area of the screen. Clicking on any result will load that entity</p>
+<p>You may close the <b>Advanced Search</b> window or the <b>Search Results</b> pane by clicking the X at the top left corner of the 
+    window.</p>
+
+        
+        </div>
+    </div>
+ 
+                </span>
+            <input autocomplete="off" class="advancedSearchTextBox" id="SearchText" name="SearchText" type="text" value="" />
+
+     
+        <br />
+            <span style="font-style:italic">
+                Please check the properties that you&#x27;d like to include in the search
+            </span>
+        <div style="float: right">
+            <span class="buttonLike" onclick="checkAllSearchFields(); " >
+                [ 
+                Check All  
+                ]
+            </span> 
+            &nbsp;&nbsp;&nbsp;
+            <span class="buttonLike" onclick="uncheckAllSearchFields(); " >
+                [ 
+                Uncheck All
+                ]
+            </span>   
+        </div>
+        <br />
+            <div class="advsearchpropertiesdiv">
+                <div class="advsearchpropertiesdivLeft">
+
+<input checked="checked" id="Search_Title" name="Search_Title" type="checkbox" value="true" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Title')">
+                            Title
+                        </span>
+                        <br />
+<input id="Search_Synonym" name="Search_Synonym" type="checkbox" value="true" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Synonym')">
+                            Synonym
+                        </span>
+                        <br />
+<input id="Search_Definition" name="Search_Definition" type="checkbox" value="true" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Definition')">
+                            Description
+                        </span>
+                        <br />
+<input id="Search_Inclusion" name="Search_Inclusion" type="checkbox" value="true" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Inclusion')">
+                            Inclusion
+                        </span>
+                        <br />
+<input id="Search_Exclusion" name="Search_Exclusion" type="checkbox" value="true" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Exclusion')">
+                            Exclusion
+                        </span>
+                        <br />
+<input id="Search_LongDefinition" name="Search_LongDefinition" type="checkbox" value="true" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_LongDefinition')">
+                            Additional Information
+                        </span>
+                        <br />
+<input id="Search_FullySpecifiedName" name="Search_FullySpecifiedName" type="checkbox" value="true" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_FullySpecifiedName')">
+                            Fully Specified Name
+                        </span>
+                        <br />
+<input id="Search_NarrowerTerm" name="Search_NarrowerTerm" type="checkbox" value="true" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_NarrowerTerm')">
+                            Narrower Term
+                        </span>
+                        <br />
+
+                </div>
+                <div class="advsearchpropertiesdivRight">
+
+
+                </div>
+                </div>
+
+
+
+<input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJieFWdV9xNiQd0mPFZulFGww7hzICX1kbeID7Dz9Ljomopob2Ygg5O17kWvKUga0acFIbOmq8itoJHiTdkGwd5NozmgRUxZNs3HILoWzaZ7tsm4jNH0KxDwNOxQq31fota746SUg6avSWHEx-4YMs" /><input name="Search_Title" type="hidden" value="false" /><input name="Search_Synonym" type="hidden" value="false" /><input name="Search_Definition" type="hidden" value="false" /><input name="Search_Inclusion" type="hidden" value="false" /><input name="Search_Exclusion" type="hidden" value="false" /><input name="Search_LongDefinition" type="hidden" value="false" /><input name="Search_FullySpecifiedName" type="hidden" value="false" /><input name="Search_NarrowerTerm" type="hidden" value="false" /></form>
+
+</div>
+
+
+
+    <div class='outer-north header-ltr headerICD11'>
+
+        <div id="headerleft" style="height: 100%">
+            
+                <h1>Primary Care Low Resource Setting Linearization</h1>
+
+                    <div title="2022 Sep 29 - 22:30 UTC" class="date">
+                        Last Update: Sep 29
+                    </div>
+            
+            
+                <div id="searchcontainer">
+                    
+
+Search 
+<input class="search" id="searchbox" data-searchType="full"  type="text" />
+<img class="searchwait" src="../Content/load.gif" />
+
+
+
+        <span id="imagebutton_e8307ddb-3bc5-4846-8a1f-df49eefc24ccquicksearch" title="Help" class="helpbutton helpbuttonICD11" 
+                onclick="Helper.popupContent('e8307ddb-3bc5-4846-8a1f-df49eefc24ccquicksearch','Help')"  >
+                &nbsp;
+            </span>
+    <div id="content_e8307ddb-3bc5-4846-8a1f-df49eefc24ccquicksearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+<h2>Quick Search Help</h2>
+
+<p>
+    <img class="dropshadow" alt="quicksearch image" src="../Content/helpfiles.ICD11_en/images/quicksearch.png" /></p>
+<p>
+    Quick search helps you quickly navigate to a particular category. 
+    It searches the titles, inclusions, synonyms and narrower terms and it works by starting to search as you type and 
+    provide you options in a dynamic dropdown list.
+</p>
+<p>
+  Clicking on one of the entities that appear in the list will load the entity.</p>
+
+<p> The results are sorted by how good the text entered matches the phrase in ICD. 
+    It is also grouped by using the ICD hierarchy so that if the search text matches a parent category and several children,
+    they will appear in a fashion that is easy to identify this relation visually. The list shows only the titles or the 
+    best match among the matched terms if the title is not a match. However, <span class="detailsicon">&#9636;</span>
+    button will make more matching results visible under the entity.</p>
+
+<p>
+    You may also use wildcards to find similar words or to simply save some 
+    typing.
+
+    For example, <strong>transp* accident </strong>will find entities with 
+    transport and accident</p>
+
+
+        
+        </div>
+    </div>
+ 
+
+
+                    <a class="buttonLike" id="advancedSearchButton">
+                        [
+                        Advanced Search
+                        ]
+                    </a>
+                </div>
+            
+        </div>
+        <div class="toplogbuttons">
+            
+    <a class="nav-link text-dark btn btn-link log-btn-link " href="../Identity/Account/Register.html">Register</a>
+ | 
+    <a class="nav-link text-dark btn btn-link log-btn-link " href="../Identity/Account/Login.html">Login</a>
+
+        </div>
+        <div id="messageArea"></div>
+        <div style="display:none" id="notificationdomainsarea"></div>
+    </div>
+
+
+
+<div id="menu" class="menu-ltr">
+    <ul class="tabs">
+
+                    <li>
+                        <a id="keepAnchor-mainmenu-Home" href="../../dev11.html" title="Maintenance_Platform_Home_Page"
+                           >
+                            Home
+                        </a>
+
+                    </li>
+                    <li>
+                        <a id="keepAnchor-mainmenu-Foundation" href="../f/en.html" title="Foundation Component"
+                           >
+                            Foundation
+                        </a>
+
+
+
+
+        <span id="imagebutton_79b2fa81-057b-4b80-9808-c5eeb26555fbfoundation" title="Help" class="helpbutton helpbuttonICD11" 
+                onclick="Helper.popupContent('79b2fa81-057b-4b80-9808-c5eeb26555fbfoundation','Help')"  >
+                &nbsp;
+            </span>
+    <div id="content_79b2fa81-057b-4b80-9808-c5eeb26555fbfoundation" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+
+<h3>The ICD Foundation Component</h3>
+
+<p>
+    The Foundation Component represents the entire WHO-FIC universe. It is a multidimensional collection of interconnected entities and synonyms. 
+    These entities consist of diseases, disorders, injuries, external causes, signs and symptoms, functional descriptions, interventions, and extension codes. 
+    ICD-11 statistical core (MMS) is derived from this foundation, ICF and ICHI will follow.
+</p>
+
+
+The entities in the Foundation Component: 
+<ol  class="sublist">
+<li>are not necessarily mutually exclusive</li>
+<li>allow multiple parenting ( i. e. an entity  may be in more than one branch, for example tuberculosis meningitis is both an infection and a brain disease) </li>
+</ol>
+
+
+        
+        </div>
+    </div>
+                    </li>
+                    <li>
+                        
+
+
+        <a  id="imagebutton_3244662e-9680-46ea-ad40-9907375eed5emessage_AvailableAfterLogon" title="Help"  onclick="Helper.popupContent('3244662e-9680-46ea-ad40-9907375eed5emessage_AvailableAfterLogon','Help')"
+                             class="inactive"
+        >
+    
+        Proposals</a>
+    <div id="content_3244662e-9680-46ea-ad40-9907375eed5emessage_AvailableAfterLogon" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+<h2>This functionality is availabe after you log in to the system</h2>
+
+<p>
+    You may click the <a href="https://icd.who.int/dev11/Account/Login">[Log In]</a> link to sign in to the system. If you don't already have an account, it's 
+    very easy to setup one using the same link.
+    </p>
+
+        
+        </div>
+    </div>
+
+                    </li>
+                <li class="hasmore" id="pmenu_Info">
+                    <a title=""><span>Info</span></a>
+                    <ul class="dropdown">
+                                    <li>
+                                        <a id="submenu-User_Guide"
+                                           href="../Help/en.html"
+                                           title="User Guide for the ICD11 browser"
+                                           >
+                                            User Guide
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD-11_Reference_Guide"
+                                           href="https://icd11files.blob.core.windows.net/refguide/html/index.html"
+                                           title="ICD-11 Reference Guide"
+                                             target="_blank"
+>
+                                            ICD-11 Reference Guide
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Training_Videos"
+                                           href="https://icd11files.blob.core.windows.net/trainingvideos/index.html"
+                                           title=""
+                                           >
+                                            Training Videos
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD_Home_Page"
+                                           href="../../index.html"
+                                           title=""
+                                             target="_blank"
+>
+                                            ICD Home Page
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Earlier_releases_and_Update_history"
+                                           href="../../browse/releases/mms.html"
+                                           title=""
+                                           >
+                                            Earlier releases and Update history
+                                        </a>
+                                    </li>
+                    </ul>
+                </li>
+    </ul>
+
+</div>
+
+
+    <div class="outer-center" id="xx" style="padding: 0 !important; border: 0 !important;">
+        <div class="inner-center">
+            <div class="inner2-center details" id="firstright">
+                <img id="conceptdetailswaitimg" alt="waiting" style="display: none; float: right" src='../Content/wait.gif' />
+                <div class="initialpageRight">
+                    
+                
+
+<h3 class="page_heading">
+    WHO-FIC Maintenance Platform</h3>
+
+<p>Welcome to the Maintenance Platform for the WHO Family of International Classifications (WHO-FIC)</p>
+<p> This site contains <b>work in progress</b> versions of the Classifications</p>
+<ul>
+    <li>ICD-11</li>
+    <li>ICF</li>
+    <li>ICHI</li>
+</ul>
+
+<p>For the latest release of ICD-11 please see <a href="../../browse11.html">ICD-11 Browser</a></p>
+
+<p>
+    You need to create an account for yourself if you wish to contribute to the classification by writing proposals or comments by following the link below <br/>
+    <a href="https://icd.who.int/dev11/Account/Register"> Register</a> <br/>
+    Please note that the accounts you've created before the release of the classification are still valid.
+</p>
+
+<h3 class="page_heading">
+    Caveats
+</h3>
+<div style="float:right;margin-right :20px;">
+    <img alt="caveat icon"
+         src="../Content/helpfiles.ICD11_en/images/caution2.png" />
+</div>
+<!--<p class="section_head1">
+    ICD-11 Draft show at this site is:
+</p>-->
+<ul class="disc">
+    <li>The audience for this site is the maintainers, contributors and translators of the classification</li>
+    <li><b>The classification seen on this is not the released version of the classification. The content in this platform may change on an ongoing basis</b></li>
+
+    <li>For the latest release of the ICD-11 please see <a href="../../browse11.html">ICD-11 Browser </a></li>
+</ul>
+
+<h3 class="page_heading">Related Information</h3>
+<p><a target="_blank" href="../../index.html">ICD-11 Home Page </a></p>
+
+<p>For more information about how to use this site, please see the <a href="../Help/en.html">User Guide</a></p>
+
+<p>For more questions, please contact <a href="mailto:icd11@who.int">icd@who.int</a></p>
+            
+                </div>
+            </div>
+            <div class="inner2-east details" id="secondright">
+                
+                <div class="slclose">
+                    <span onclick="OBrowserNavigation.getInstance().removeSecondLanguage()" title="close">&times;</span>
+                </div>
+                <div id="secondlanguage"></div>
+            
+            </div>
+            <div class="inner2-south" id="searchResultPane" style="overflow:hidden!important;display:none">
+                
+
+<div class="tableWrapper ui-widget ui-widget-header  ui-dialog-title" style="font-size:0.75em;">
+    <table style="width:100%; table-layout:fixed">
+        <tr><td>
+     <span class="ui-dialog-title">
+         Search Results </span>
+         <span class="ui-icon close" 
+               style ="background-position: -96px -128px; float:right;cursor:pointer" 
+                              title="Close search results. (It will reopen when you make another advanced search)">close</span>
+          </td></tr>
+
+        </table>
+     </div>
+<img class="searchresultwaitimg" alt="waiting"  src='../Content/waitbig.gif'  />
+
+<div class="searchResultDiv data tableWrapper" style="position:relative;height:100%;">
+    <div class="innerWrapper">
+        <table style="width:100%; table-layout:fixed">
+
+        </table>
+    </div>
+</div>
+
+ 
+            </div>
+        </div>
+        <div class="inner-west details">
+            
+
+<div id ="mainvisualizationdiv" >
+
+    <div class="topicons visicons">     
+     
+        <img id="mindetailicon" class="vsidebutton" alt="show parents and children" title="show parents and children" src="../Content/mindetail.png" onclick="OBrowserNavigation.getInstance().theVisualizer.shallowHierarchy()" />
+    
+     <img id="moddetailicon" class="vsidebutton" alt="show ancestor hierarchy icon" title="show all ancestors and children" src="../Content/moderatedetail.png" onclick="OBrowserNavigation.getInstance().theVisualizer.deepHierarchy()" />
+
+     <img id="maxdetailicon" class="vsidebutton" alt="show ancestor hierarchy icon" title="deeper hierarchy analysis that shows all ancestors and children and all ancestors of children" src="../Content/maxdetail.png" onclick="OBrowserNavigation.getInstance().theVisualizer.deeperHierarchy()" />
+        <span class="imgsplit" />
+
+     
+        <img id="linlinkages" class="vsidebutton" alt="See the linearization withinin foundation" title="See the linearization withinin foundation" src="../Content/lin.png" onclick="OBrowserNavigation.getInstance().theVisualizer.toggleLinearizationLinkages()" />
+        <span class="imgsplit" />
+
+        <div style="display:inline-block; position:relative;left:26px;top:-8px;z-index:30">
+            
+
+
+        <span id="imagebutton_1494adbc-83a4-4fb0-9bff-8c6056ea3ef0visualization_legend" title="Help" class="helpbutton helpbuttonICD11" 
+                onclick="Helper.popupContent('1494adbc-83a4-4fb0-9bff-8c6056ea3ef0visualization_legend','Help')"  >
+                &nbsp;
+            </span>
+    <div id="content_1494adbc-83a4-4fb0-9bff-8c6056ea3ef0visualization_legend" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            <h2>Visualization Modes </h2>
+
+<h4>Foundation</h4>
+<p>
+    When visualizing the foundation, all nodes look the same except the selected entity which has a darker background and
+    larger circle.
+    In this example the Intervertebral disc herniation is the selected entity
+</p>
+<img class="dropshadow" src="../Content/helpfiles.ICD11_en/images/visualizationfoundation.png" />
+
+<h4> Linearizations</h4>
+<p>
+    When browsing a linearization, only entities in that linearization are visible. Regular parent-child relations are shown in 
+    blue color. The foundation children that are not linearization children are shown with a dashed line in gray.
+</p>
+<img class="dropshadow" src="../Content/helpfiles.ICD11_en/images/visualizationlinearization.png" />
+<p>The color within the circle shows whether the entity is a grouping entity or a category with a code</p>
+
+
+<h4>Linearization within foundation</h4>
+If you click on the <img class="dropshadow" src="../Content/lin.png" />  button, the system displays the
+system shows you the foundation but highlighting the linearization within the foundation. 
+<p>In this mode, the entities that are in the linearization has a blue circle whereas entities that are not in the 
+    linearization has a gray circle. As in the linearization view, the color inside circle shows whether the entity is a grouping or a codable category</p>
+<p>The blue lines show the linearization parents where as the gray lines are other parent-child relations in the foundation</p>
+<img class="dropshadow" src="../Content/helpfiles.ICD11_en/images/visualizationlininfoundation.png" />
+<p>In this example, "Polycythaemia" has 3 children in the foundation. 
+    <p>
+    One of them (the one with the gray circle) is not included
+    in the linearization.
+</p>
+<p> "Relative polycythaemia" is included in the linearization but the linearization parent is elsewhere (blue node with
+    gray connection).</p>
+<p> The third one is a proper linearization children (blue circle with blue line) </p>
+
+<p>
+    More information on the visualization feature is available in the 
+    <a href="../Help/Get/visualization_main/en.html">User Guide</a>
+</p>
+    </p>
+
+        
+        </div>
+    </div>
+
+        </div>
+
+        <button title="help" class="ui-button ui-widget ui-state-default ui-button-icon-only "
+                role="button" aria-disabled="false" type="button" style="position:relative; height:28px; width:28px; top:-8px; z-index:0 "
+              >
+
+            <span class="ui-button-text">help</span>
+        </button>
+
+        <button title="close visualizations" class="ui-button ui-widget ui-state-default ui-button-icon-only "
+                role="button" aria-disabled="false" type="button" style="position:relative;height:28px; width:28px; top:-8px; "
+                onclick="OBrowserNavigation.getInstance().toggleViewParamValueBit('V', 0); ">
+            <span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span>
+            
+            <span class="ui-button-text">close visualizations</span>
+        </button>
+
+
+</div>
+<div id="visualization">
+  <svg id="mainsvg" width="100%" height="100%">
+ <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000;stop-opacity:1" />
+      <stop offset="10%" style="stop-color:#000;stop-opacity:1" />
+      <stop offset="11%" style="stop-color:#ccc;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ccc;stop-opacity:1" />
+    </linearGradient>
+     <marker id="triangle1" viewBox="0 0 10 10" refX="25" refY="6" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="6" fill-opacity="1" fill="#888" orient="auto" class="arrowhead">
+         <path d="M 0 0 L 10 5 L 0 10 z" />
+     </marker>
+            <marker id="triangle2" viewBox="0 0 10 10" refX="20" refY="6" markerUnits="userSpaceOnUse" markerWidth="6" markerHeight="6" fill-opacity="1" fill="#888" orient="auto" class="arrowhead">
+			<path d="M 0 0 L 10 5 L 0 10 z"/>
+       </marker>
+  </defs>
+
+      </svg>
+    </div>
+</div>            
+        </div>
+    </div>
+
+    <div class="outer-west details ltr">
+        
+                
+
+<div id ="mainhiearchydiv" >
+<div class='topicons4'>    
+    <div class="fx">
+            <img class="sidebutton" alt='show/hide availability in main linearizations' title='show/hide availability in main linearizations' src="../Content/linview.png" onclick="OBrowserNavigation.getInstance().toggleViewParamValueBit('H', 1)" />
+                 <span id="fchld" class="sidebutton" alt='toggle displaying foundation children that are located elsewhere in the classification (gray children)' 
+                                    title='toggle displaying foundation children that are located elsewhere in the classification (gray children)'
+                                    onclick="OBrowserNavigation.getInstance().toggleAdoptedChildren()"></span>
+        
+
+        <img class="sidebutton" alt='collapse all nodes' title='Collapse all nodes' src="../Content/collapse.png" onclick="OBrowserNavigation.getInstance().theHierarchy.collapseTree()" />
+
+            <img class="sidebutton" alt='toggle visualizations' title='toggle visualizations' src="../Content/visualize.png" onclick="OBrowserNavigation.getInstance().toggleView('V')" />
+    </div>
+
+</div>
+    <div  id="hierarchy"  class="ygtv-highlight " >
+    </div>
+
+</div>
+
+
+            
+    </div>
+
+</body>
+</html>
+
+

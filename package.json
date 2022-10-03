@@ -1,0 +1,23 @@
+{
+  "name": "icd-11",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.mjs",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "frontend:start": "node index.mjs",
+    "frontend:dev": "nodemon index.mjs",
+    "backend:dev": "yarn --cwd backend dev"
+  },
+  "author": "Zababurin Sergei",
+  "license": "MIT",
+  "dependencies": {
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "express-enqueue": "^1.0.0",
+    "nodemon": "^2.0.20"
+  }
+}

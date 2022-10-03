@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="img/favicon.ico">
+  <title>Release Notes for ICD API version 2.0 - ICD-API Homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="css/theme.css" />
+  <link rel="stylesheet" href="css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Release Notes for ICD API version 2.0";
+    var mkdocs_page_input_path = "ReleaseNotes-Version2.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="js/jquery-2.1.1.min.js" defer></script>
+  <script src="js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <!-- <a href=".." class="icon icon-home"> ICD-API Homepage</a> -->
+        <a href="../index.html"> ICD-API Homepage</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="https://icd.who.int/icdapi/docs2/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption custom-caption"><span class="caption-text">ICD-API Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="ReleaseNotes/index.html">Release Notes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="APIDoc-Version2.html">API Documentation (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="APIDoc-Version2.html#icd-api-reference">API Reference (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="API-Authentication.html">ICD API Authentication</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="SupportedClassifications.html">Supported Classification Versions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="APIDoc-Version2.html#icd-api-github-repository">Samples Github Repository</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Embedded Classification Tool</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="icd11ect-1.5/index.html">Embedded Classification Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="icd11ect-1.5-EmbeddedCodingTool/index.html">Embedded Coding Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="icd11ect-1.5-EmbeddedBrowser/index.html">Embedded Browser</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="icd11ect-1.5-AdvancedSettings/index.html">Advanced settings</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Installing the ICD-API locally</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="ICDAPI-LocalDeployment.html">General Information on Installing the API locally</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ICDAPI-DockerContainer.html">Installing ICD-API as a Docker container</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ICDAPI-WindowsService.html">Installing ICD-API as a Windows Service</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="ICDAPI-SystemdService.html">Installing ICD-API as a systemd Service in Linux</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">OLD Version Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="APIDoc-Version1/index.html">API Documentation (version 1)</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">ICD-API Homepage</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <!-- <li><a href="..">ICD-API</a> &raquo;</li> -->
+    <li><a href="../index.html">ICD-API Homepage</a> &raquo;</li>
+    
+      
+    
+    <li>Release Notes for ICD API version 2.0</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="release-notes-for-icd-api-version-20">Release Notes for ICD API version 2.0</h1>
+<p>Most of the changes in ICD-API version 2 are additional information provided in the API responses and additional endpoints that add new functionality. These types of changes do not affect your existing software that is written for the older version. However, there are several breaking changes that you need to be aware of if you're planning to migrate existing code:</p>
+<h2 id="migrating-existing-code">Migrating Existing Code</h2>
+<p>You have two options if you already have a software that uses version 1 of the API.</p>
+<ul>
+<li><strong>Keep using version 1</strong> 
+    In this case you need to add <code>API-Version</code> header to all of you API calls with value <code>v1</code>. </li>
+<li><strong>Migrate to version 2</strong> (suggested option)
+    In this case, you need to see the breaking changes below and adapt your code accordingly. The changes that you need to make will be minimal as there are few breaking changes in the API.</li>
+</ul>
+<h2 id="breaking-changes-from-version-1">Breaking Changes from Version 1</h2>
+<h3 id="versioning-in-the-api">Versioning in the API</h3>
+<ul>
+<li>Now the API supports a request header named <code>API-Version</code> which can be used to control which version of the API you'd like to use. For example, if you request an entity with <code>Api-Version</code> header set to <code>v1</code>, our API will respond in the way version 1 of the API, where as if you set it <code>v2</code> you'll get the results in the version 2 mode. This way you'll be able to decide when to upgrade your code to a newer version of the API.</li>
+<li><strong>IMPORTANT:</strong> The API calls without this header will default to version 1 until 30 September 2019. After this date the API would not respond to calls without this header</li>
+<li>Version of the API is totally independent of the version of the classification that you are using. </li>
+</ul>
+<h3 id="handling-indexterm-inclusion-exclusion-and-foundationchildelsewhere-properties">Handling indexTerm, inclusion, exclusion and foundationChildElsewhere properties</h3>
+<p>In the foundation entity and linearization entity endpoints, the way we return information on properties <code>exclusion</code>, <code>inclusion</code>,  <code>indexTerm</code> and <code>foundationChildElsewhere</code> are slightly changed. This is made in order to be able to provide some additional information together with these terms.</p>
+<p>Example: 
+We are requesting an entity from the MMS </p>
+<pre><code>https://id.who.int/icd/release/11/2019-04/mms/21500692
+
+</code></pre>
+
+<p>Exclusions are rendered like this in version 1</p>
+<pre><code> &quot;exclusion&quot;: [
+        {
+            &quot;@language&quot;: &quot;en&quot;,
+            &quot;@value&quot;: &quot;Transitory endocrine or metabolic disorders specific to foetus or newborn&quot;
+        },
+        {
+            &quot;@language&quot;: &quot;en&quot;,
+            &quot;@value&quot;: &quot;Complications of pregnancy, childbirth and the puerperium&quot;
+        }
+    ]
+</code></pre>
+
+<p>Where as like this version 2</p>
+<pre><code>&quot;exclusion&quot;: [
+        {
+            &quot;label&quot;: {
+                &quot;@language&quot;: &quot;en&quot;,
+                &quot;@value&quot;: &quot;Transitory endocrine or metabolic disorders specific to foetus or newborn&quot;
+            },
+            &quot;foundationReference&quot;: &quot;http://id.who.int/icd/entity/1004987305&quot;,
+            &quot;linearizationReference&quot;: &quot;http://id.who.int/icd/release/11/2019-04/mms/1004987305&quot;
+        },
+        {
+            &quot;label&quot;: {
+                &quot;@language&quot;: &quot;en&quot;,
+                &quot;@value&quot;: &quot;Complications of pregnancy, childbirth and the puerperium&quot;
+            },
+            &quot;foundationReference&quot;: &quot;http://id.who.int/icd/entity/714000734&quot;,
+            &quot;linearizationReference&quot;: &quot;http://id.who.int/icd/release/11/2019-04/mms/714000734&quot;
+        }
+    ]
+</code></pre>
+
+<p>As you see in version1, language and value were directly under these properties. In version 2, they are under the label sub property and we have additional information. Please see the API Reference for more information on the additional properties.</p>
+<h3 id="the-casing-of-the-property-names-in-the-search-results-is-changed">The casing of the property names in the search results is changed</h3>
+<p>In version1, we were using Pascal case (1st character in upper case) in the property names of the search results. Now it is changed to camel case to be in line with the rest of the API and common practices.</p>
+<p><strong>Example:</strong> v1 property name: <code>DestionationEntities</code> now became <code>destinationEntities</code> in version 2</p>
+<h3 id="search-result-output-defaults-have-changed">Search result output defaults have changed.</h3>
+<p>In Version 2, our search engine can return the results either in flat mode (the default) or in hierarchical mode. The version 1 however supported only hierarchical mode. More information could be found in the API reference.</p>
+<h3 id="html-rdfa-is-no-longer-supported">HTML RDFa is no longer supported</h3>
+<p>We do not support HTML RDFa in version 2. We didn't observe much use of this function and also we think that if needed, generating HTML from our JSON API is very straight forward and more flexible than using our HTML results. </p>
+<h2 id="new-additions-to-the-api-non-breaking-changes">New Additions to the API (non-breaking changes)</h2>
+<h3 id="post-coordination-information-added-to-linearization-entity-endpoints">Post-coordination information added to linearization entity endpoints</h3>
+<p>ICD-API now provides information on applicable or required postcoordination on individual entities. 
+It provides
+- Which axes are allowed or required for postcoordination
+- It will provide information on the value set that is allowed for individual axes.</p>
+<p>For example, when we request 
+<code>https://id.who.int/icd/release/11/2019-04/mms/1718833206/unspecified</code></p>
+<p>We get the following:</p>
+<pre><code>{
+    &quot;@context&quot;: &quot;http://id.who.int/icd/contexts/contextForLinearizationEntity.json&quot;,
+    &quot;@id&quot;: &quot;http://id.who.int/icd/release/11/2019-04/mms/1718833206/unspecified&quot;,
+
+    ...
+
+    &quot;postcoordinationScale&quot;: [
+        {
+            &quot;@id&quot;: &quot;http://id.who.int/icd/release/11/2019-04/mms/1718833206/unspecified/postcoordinationScale/specificAnatomy&quot;,
+            &quot;axisName&quot;: &quot;http://id.who.int/icd/schema/specificAnatomy&quot;,
+            &quot;requiredPostcoordination&quot;: &quot;false&quot;,
+            &quot;allowMultipleValues&quot;: &quot;AllowAlways&quot;,
+            &quot;scaleEntity&quot;: [
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/198809973&quot;
+            ]
+        },
+        {
+            &quot;@id&quot;: &quot;http://id.who.int/icd/release/11/2019-04/mms/1718833206/unspecified/postcoordinationScale/histopathology&quot;,
+            &quot;axisName&quot;: &quot;http://id.who.int/icd/schema/histopathology&quot;,
+            &quot;requiredPostcoordination&quot;: &quot;false&quot;,
+            &quot;allowMultipleValues&quot;: &quot;NotAllowed&quot;,
+            &quot;scaleEntity&quot;: [
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/406219877&quot;,
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/978715456&quot;,
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/1936976727&quot;,
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/948797042&quot;,
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/1032412464&quot;,
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/2008137384&quot;,
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/436781428&quot;,
+                &quot;http://id.who.int/icd/release/11/2019-04/mms/237449042&quot;,
+
+                  ...
+            ]
+        }
+    ],
+
+    ...
+
+}
+</code></pre>
+
+<p>As you see, the <code>postcoordinationScale</code> property tells us that this entity can be postcoordinated with <code>specificAnatomy</code> and <code>histopathology</code> axes. They are not required postcoordination (i.e. optional) It also provides the hierarchical starting points of the allowed value set. i.e. any descendant of the entities provided under the <code>scaleEntity</code> property can be used during postcoordination.</p>
+<h2 id="more-search-options-and-richer-results">More search options and richer results</h2>
+<ul>
+<li>In the version 1 of the API, there weren't much to control the searching behavior where as in version 2 we have provided several additional parameters that could be used to set where to search, switch to flexible search mode, etc. More information could be found in the API Reference.</li>
+<li>Word completion and word suggestion information are added to the search endpoints of the API.</li>
+</ul>
+<h2 id="codeinfo-endpoint-to-query-based-on-codes-and-receiving-more-information-on-postcoordinated-code-strings">Codeinfo endpoint to query based on codes and receiving more information on postcoordinated code strings.</h2>
+<ul>
+<li>A specific endpoint in the API now allows accessing the API using ICD-11 codes or code combination strings. If provided with a postcoordination code string the API now provides information on the given code combination. i.e. what is the stem code, which axes are used in the postcoordination with which values, etc. See <code>codeinfo</code> endpoint from the API reference for more information</li>
+</ul>
+<p><strong>Example</strong> 
+We are querying on the code string 2C25.Z&amp;XK8G&amp;XA9HN5</p>
+<p><code>https://id.who.int/icd/release/11/2019-04/mms/codeinfo/2C25.Z%26XK8G%26XA9HN5</code></p>
+<p>Note that the &amp; and / in the code are URL encoded </p>
+<p>The result we get is as follows:</p>
+<pre><code>{
+    &quot;@context&quot;: &quot;http://id.who.int/icd/contexts/contextForCodeInfo.json&quot;,
+    &quot;@id&quot;: &quot;http://id.who.int/icd/release/11/2019-04/mms/codeinfo/2C25.Z%26XK8G%26XA9HN5&quot;,
+    &quot;code&quot;: &quot;2C25.Z&amp;XK8G&amp;XA9HN5&quot;,
+    &quot;stemId&quot;: &quot;http://id.who.int/icd/release/11/2019-04/mms/316539081/unspecified&quot;,
+    &quot;stemCode&quot;: &quot;2C25.Z&quot;,
+    &quot;laterality&quot;: [
+        &quot;XK8G&quot;
+    ],
+    &quot;specificAnatomy&quot;: [
+        &quot;XA9HN5&quot;
+    ]
+}
+</code></pre>
+
+<p>We get stem linearization URI, stem code together with the axis names and values.</p>
+<h2 id="json-ld-contexts-are-smaller">JSON-LD contexts are smaller</h2>
+<p>With version 2, we move to a more condensed JSON-LD context format in which we provide a link to the context information rather than the actual context. This significantly decreases the payload on individual calls to the API.</p>
+<p><strong>Example:</strong>
+When we request <code>https://id.who.int/icd/entity/1766440644</code> i.e. top level foundation URI</p>
+<p>In version 1 we have </p>
+<pre><code>{
+    &quot;@context&quot;: {
+        &quot;title&quot;: &quot;http://www.w3.org/2004/02/skos/core#prefLabel&quot;,
+        &quot;definition&quot;: &quot;http://www.w3.org/2004/02/skos/core#definition&quot;,
+        &quot;longDefinition&quot;: &quot;http://id.who.int/icd/schema/longDefinition&quot;,
+        &quot;parent&quot;: &quot;http://www.w3.org/2004/02/skos/core#broaderTransitive&quot;,
+        &quot;child&quot;: &quot;http://www.w3.org/2004/02/skos/core#narrowerTransitive&quot;,
+        &quot;synonym&quot;: &quot;http://www.w3.org/2004/02/skos/core#altLabel&quot;,
+        &quot;fullySpecifiedName&quot;: &quot;http://id.who.int/icd/schema/fullySpecifiedName&quot;,
+        &quot;narrowerTerm&quot;: &quot;http://id.who.int/icd/schema/narrowerTerm&quot;,
+        &quot;exclusion&quot;: &quot;http://id.who.int/icd/schema/exclusion&quot;,
+        &quot;inclusion&quot;: &quot;http://id.who.int/icd/schema/inclusion&quot;,
+        &quot;browserUrl&quot;: &quot;http://id.who.int/icd/schema/browserUrl&quot;,
+        &quot;foundationReference&quot;: &quot;http://id.who.int/icd/schema/foundationReference&quot;
+    },
+    &quot;@id&quot;: &quot;http://id.who.int/icd/entity/1766440644&quot;,
+    &quot;parent&quot;: [
+        &quot;http://id.who.int/icd/entity&quot;
+    ],
+   ...
+}
+</code></pre>
+
+<p>where as in version 2 we have:</p>
+<pre><code>
+{
+    &quot;@context&quot;: &quot;http://id.who.int/icd/contexts/contextForFoundationEntity.json&quot;,
+    &quot;@id&quot;: &quot;http://id.who.int/icd/entity/1766440644&quot;,
+    &quot;parent&quot;: [
+        &quot;http://id.who.int/icd/entity&quot;
+    ],
+    ...
+}
+</code></pre>
+
+<h2 id="old-foundation-releases">Old Foundation releases</h2>
+<p>With version 2 of the API, we can now provide old releases of the ICD-11 foundation as well.
+This is done by using the releaseId request parameter.</p>
+<p><strong>Example</strong>
+<code>http://localhost:5382/icd/entity?releaseId=2018</code> will return us the foundation as it has been released in 2018.</p>
+<p>Note that further queries that you made need to have the <code>releaseId</code> parameter as well. Without this request parameter, foundation URIs resolve to the latest release of the ICD-11 Foundation.</p>
+<p>For linearizations such as MMS, the releaseId is already in the URI from the beginning. This has not changed.</p>
+<h2 id="swagger-open-api-support">Swagger (Open API) Support</h2>
+<p>Version 2 of the ICD-API supports Open API formatted meta information and documentation. This standard format of formally documenting the API has several benefits:</p>
+<ul>
+<li><strong>Documentation:</strong> It provides very detailed API documentation in a common format. Ours is accessible from this link <a href="https://id.who.int/swagger/index.html">https://id.who.int/swagger/index.html</a></li>
+<li><strong>Trying the API</strong> From this swagger URL, one could also try the API by making requests and see the responses coming. You need to use your client-id and client secret that you get from the <a href="../../icdapi.html">ICD-API Home page</a></li>
+<li><strong>Automatic client code Generation</strong> There are several free and open source software which could generate client code in various programming languages using the Open API documentation. This will make consuming our APIs much easier in the programming language of your choice.</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="js/theme.js" defer></script>
+      <script src="search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

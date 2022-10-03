@@ -1,0 +1,436 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Embedded Browser (version 1.4) - ICD-API Homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Embedded Browser (version 1.4)";
+    var mkdocs_page_input_path = "icd11ect-1.4-EmbeddedBrowser.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <!-- <a href=".." class="icon icon-home"> ICD-API Homepage</a> -->
+        <a href="../../index.html"> ICD-API Homepage</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="https://icd.who.int/icdapi/docs2/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption custom-caption"><span class="caption-text">ICD-API Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ReleaseNotes/index.html">Release Notes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version2.html">API Documentation (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-reference">API Reference (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../API-Authentication.html">ICD API Authentication</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../SupportedClassifications.html">Supported Classification Versions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-github-repository">Samples Github Repository</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Embedded Classification Tool</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5/index.html">Embedded Classification Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedCodingTool/index.html">Embedded Coding Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedBrowser/index.html">Embedded Browser</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-AdvancedSettings/index.html">Advanced settings</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Installing the ICD-API locally</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-LocalDeployment.html">General Information on Installing the API locally</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-DockerContainer.html">Installing ICD-API as a Docker container</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-WindowsService.html">Installing ICD-API as a Windows Service</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-SystemdService.html">Installing ICD-API as a systemd Service in Linux</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">OLD Version Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version1/index.html">API Documentation (version 1)</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">ICD-API Homepage</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <!-- <li><a href="..">ICD-API</a> &raquo;</li> -->
+    <li><a href="../../index.html">ICD-API Homepage</a> &raquo;</li>
+    
+      
+    
+    <li>Embedded Browser (version 1.4)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="embedded-browser-version-14">Embedded Browser (version 1.4)</h1>
+<p><small>This document refers to the <strong>ECT version 1.4</strong>. Please check the documentation for the <strong><a href="../icd11ect/index.html">latest version</a></strong></small></p>
+<p>The Embedded Browser allows the integration of a complete ICD-11 Browser into your web application.   <br />
+The Embedded Browser is a component of the <a href="../icd11ect-1.4/index.html">Embedded Classification Tool (ECT)</a> library, please refer to its <a href="../icd11ect-1.4/index.html">documentation page</a> for an overview about installation. </p>
+<p><br/></p>
+<h2 id="getting-started">Getting started</h2>
+<p>To get started, you need to insert this HTML element into your markup (the attribute <code>data-ctw-ino</code> is the id of the Embedded Browser):</p>
+<pre><code class="html">&lt;!-- div element used for building the Embedded Browser --&gt;
+&lt;div class=&quot;ctw-eb-window&quot; data-ctw-ino=&quot;1&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<p>Then, insert your Embedded Browser by calling the configure function and providing the ICD-API URL you want to use (the <code>apiServerUrl</code> is the only one <em>required</em> setting).</p>
+<pre><code class="javascript">const mySettings = {
+    apiServerUrl: &quot;https://icd11restapi-developer-test.azurewebsites.net&quot;   
+};
+
+// configure the ECT Handler
+ECT.Handler.configure(mySettings);
+</code></pre>
+
+<p>The Embedded Browser is now plugged in.</p>
+<p>Try out the <a href="https://codepen.io/mdonada/pen/MWpVyLv" target="_blank">Playground</a> and play around with the example.</p>
+<p>Please note that the above example is using an API deployment located at https://icd11restapi-developer-test.azurewebsites.net. This version does not require authentication but you should use it only for software development and testing. <strong>ICD content at this location might not be up to date or complete</strong>. For production, use the API located at id.who.int with proper OAUTH authentication.  <br />
+You'll find further details below in this document</p>
+<p><br/></p>
+<h2 id="usage">Usage</h2>
+<p>The Embedded Browser supplies a Handler <code>ECT.Handler</code> that provides customizable <a href="index.html#settings">Settings</a>, customizable <a href="index.html#callbacks">Callbacks</a> and <a href="index.html#functions">Functions</a> for maximizing the integration in your webapp</p>
+<pre><code class="javascript">ECT.Handler.configure(mySettings, myCallbacks);
+</code></pre>
+
+<p>This <code>configure</code> function gets 2 argument:</p>
+<ul>
+<li><code>mySettings</code> is an object which defines your custom settings</li>
+<li><code>myCallbacks</code> is an object which contains your callbacks implementation. This argument is <strong>optional</strong>, you can call the configure function with only the first argument: <code>ECT.Handler.configure(mySettings);</code></li>
+</ul>
+<p><br/></p>
+<h3 id="settings">Settings</h3>
+<p>The <code>mySettings</code> object has these properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th align="center">Required</th>
+<th align="center">Type</th>
+<th align="center">Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apiServerUrl</td>
+<td align="center"><em>required</em></td>
+<td align="center"><code>string</code></td>
+<td align="center"></td>
+<td>Used to set the ICD-API server URL</td>
+</tr>
+<tr>
+<td>apiSecured</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>boolean</code></td>
+<td align="center"><code>false</code></td>
+<td>Set to “true” for using the API with OAUTH 2.0 Authentication</td>
+</tr>
+<tr>
+<td>icdMinorVersion</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>string</code></td>
+<td align="center"></td>
+<td>Used to set the ICD minor version. Leave empty for always using the last minor version released</td>
+</tr>
+<tr>
+<td>icdLinearization</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>string</code></td>
+<td align="center"><code>"mms"</code></td>
+<td>Used to set the ICD linearization</td>
+</tr>
+<tr>
+<td>language</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>string</code></td>
+<td align="center"><code>"en"</code></td>
+<td>Used to set the language. Please refer to the <a href="index.html#multilingual-support">multilingual support</a> section for more details about this property</td>
+</tr>
+<tr>
+<td>sourceApp</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>string</code></td>
+<td align="center"></td>
+<td>Set your application name (used for analytics)</td>
+</tr>
+<tr>
+<td>autoBind</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>boolean</code></td>
+<td align="center"><code>true</code></td>
+<td>Please refer to the <a href="index.html#advanced-settings">advanced settings</a> section for more details about this property</td>
+</tr>
+<tr>
+<td>browserSearchAvailable</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>boolean</code></td>
+<td align="center"><code>true</code></td>
+<td>Set to “true” for making available the search function</td>
+</tr>
+<tr>
+<td>browserURI</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>string</code></td>
+<td align="center"></td>
+<td>Set the URI of the ICD-11 entity you want to display in the Embedded Browser</td>
+</tr>
+<tr>
+<td>browserHierarchyRootURIs</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>string[]</code></td>
+<td align="center"></td>
+<td>If you want to use only one or more subsets of the ICD-11 hierarchy, use this property for setting the root URIs of these subsets. Please note that the property type is an array of string (URI)</td>
+</tr>
+<tr>
+<td>hierarchyTitle</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>string</code></td>
+<td align="center"></td>
+<td>For setting a custom title above the entities hierarchy</td>
+</tr>
+<tr>
+<td>height</td>
+<td align="center"><em>optional</em></td>
+<td align="center"><code>string</code></td>
+<td align="center"></td>
+<td>This is for setting the maximum height of the Embedded Browser in your page (accepts CSS px unit or CSS vh unit). Leave empty to do not set a default height</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-using-a-locally-deployed-version-of-the-api-without-oauth-authentication">Example using a locally deployed version of the API (without OAUTH Authentication):</h4>
+<p>For using the Embedded Browser with a locally deployed version of the API without Authentication, you have to set these 2 properties: </p>
+<ul>
+<li><code>apiServerUrl</code>  this points to the URL where the ICD-API is deployed (for example, if the API is running on your host <code>http://mycontainerhost.com</code> just set this URL)   </li>
+<li><code>apiSecured</code>  to <code>false</code> </li>
+</ul>
+<p>For more details about how to run an ICD API locally please refer to the <a href="../ICDAPI-LocalDeployment.html">ICD-API Local Deployment</a>  </p>
+<pre><code class="javascript">const mySettings = {
+    apiServerUrl: &quot;http://mycontainerhost.com&quot;,   
+    apiSecured: false
+};
+</code></pre>
+
+<h4 id="example-using-the-cloud-hosted-version-of-the-api-with-oauth-authentication">Example using the cloud hosted version of the API (with OAUTH Authentication)</h4>
+<p>For using the Embedded Browser with the cloud hosted version of the API (Authentication is mandatory) you have to set these 2 properties: </p>
+<ul>
+<li><code>apiServerUrl</code>  to <code>https://id.who.int</code>    </li>
+<li><code>apiSecured</code>  to <code>true</code> </li>
+</ul>
+<pre><code class="javascript">const mySettings = {
+    apiServerUrl: &quot;https://id.who.int&quot;,   
+    apiSecured: true
+};
+</code></pre>
+
+<p>In order to be able to use the cloud hosted version of the API, you need to provide an OAUTH 2.0 token.  <br />
+Of course, it is not a good idea putting your Client Id and Client Secret directly in a javaScript source code, so the best practice is using the <code>getNewTokenFunction()</code> callback function for calling your custom server-side script that returns back the token. <br />
+The next paragraph <a href="index.html#callbacks">Callbacks</a> explains how to implement this function.</p>
+<p>For more details about ICD API Authentication please refer to <a href="../API-Authentication.html">ICD API Authentication Docs</a></p>
+<p><br/></p>
+<h3 id="callbacks">Callbacks</h3>
+<p>The <code>myCallbacks</code> object provides 4 callbacks:</p>
+<pre><code class="javascript">const myCallbacks = {
+    selectedEntityFunction: (selectedEntity) =&gt; {
+        //...
+    },
+    getNewTokenFunction: async () =&gt; {
+        //...
+    }
+};
+</code></pre>
+
+<p>It is not necessary to implement all the <code>myCallbacks</code> functions, you can only use the ones you need.  </p>
+<h4 id="1-callback-function-for-using-the-users-selection">1. Callback function for using the user's selection</h4>
+<p>The callback function <code>selectedEntityFunction(selectedEntity)</code> is fired when an ICD-11 code is selected by mouse click. In other words, this callback function is called when the user makes a code selection from the Browser content.</p>
+<pre><code class="javascript">selectedEntityFunction: (selectedEntity) =&gt; { 
+    // write the code selected by a user in the console
+    console.log(selectedEntity.code);
+}        
+</code></pre>
+
+<p>The function <code>selectedEntityFunction(selectedEntity)</code> has as parameter the <code>selectedEntity</code> object that is represented using JSON dataformat. 
+This object contains the information about the selected entity. The structure of this object is the follow:</p>
+<pre><code class="javascript">selectedEntity {
+    iNo: 'the “identifier” of the Embedded Coding Tool (set in data-ctw-ino)',
+    uri: 'the entity URI',
+    code: 'the entity Code',
+    title: 'the Title of the stemcode',
+    bestMatchText: 'the BestMatchText',
+    searchQuery: 'the SearchQuery'
+}
+</code></pre>
+
+<h4 id="2-callback-function-for-getting-the-token">2. Callback function for getting the token</h4>
+<p>The callback function <code>getNewTokenFunction()</code> is a required callback to provide the OAUTH 2.0 token (used only with the cloud hosted version of the API as explained <a href="index.html#example-using-the-cloud-hosted-version-of-the-api-with-oauth-authentication">here</a>). The <code>getNewTokenFunction()</code> has to return the token string.</p>
+<pre><code class="javascript">getNewTokenFunction: async () =&gt; {
+    // if the embedded browser is working with the cloud hosted ICD-API, you need to set apiSecured=true
+    // In this case embedded browser calls this function when it needs a new token.
+    // In this case you backend web application should provide updated tokens 
+
+    const url = 'http://myhost.com/mybackendscript' // we assume this backend script returns a JSON {'token': '...'} 
+    try {
+        const response = await fetch(url);
+        const result = await response.json();
+        const token = result.token;
+        return token; // the function return is required 
+    } catch (e) {
+        console.log(&quot;Error during the request&quot;);
+    }
+}
+</code></pre>
+
+<p><br/></p>
+<h3 id="functions">Functions</h3>
+<p>We provide several functions to control the behavior of the Embedded Browser.</p>
+<h4 id="1-set-the-browser-content-using-an-icd-11-uri">1. Set the browser content using an ICD-11 URI</h4>
+<p>Normally, the Embedded Browser content only depends on the user interaction. However, you could use this function to programmatically set the ICD-11 entity you want to display in the Embedded Browser</p>
+<pre><code class="javascript">ECT.Handler.setBrowserUri(iNo, uri);
+</code></pre>
+
+<p>Arguments:</p>
+<ul>
+<li><code>iNo</code> (string): the “identifier” of the Embedded Browser (set in <code>data-ctw-ino</code>)</li>
+<li><code>uri</code> (string): the URI of the ICD-11 entity you want to display in the Embedded Browser. The argument <code>uri</code> accepts a single URI or a postcoordination combination of URI (it is necessary to add a space before and after the postcoordination separator, i.e <code>URI1 &amp; URI2</code>)</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="javascript">ECT.Handler.setBrowserUri('1', 'https://id.who.int/icd/release/11/2021-05/mms/729372485');
+
+
+ECT.Handler.setBrowserUri('1', 'https://id.who.int/icd/release/11/2020-09/mms/316539081/unspecified &amp; https://id.who.int/icd/release/11/2020-09/mms/1240651973');
+</code></pre>
+
+<h4 id="2-set-the-browser-content-using-an-icd-11-code">2. Set the browser content using an ICD-11 code</h4>
+<p>In addition to the above function, we also provide a function to programmatically set the ICD-11 entity you want to display in the Embedded Browser using the ICD-11 code. </p>
+<pre><code class="javascript">ECT.Handler.setBrowserCode(iNo, code);
+</code></pre>
+
+<p>Arguments:</p>
+<ul>
+<li><code>iNo</code> (string): the “identifier” of the Embedded Browser (set in <code>data-ctw-ino</code>)</li>
+<li><code>code</code> (string): the Code of the ICD-11 entity you want to display in the Embedded Browser. The argument <code>code</code> accepts a single ICD-11 code or a postcoordination combination of ICD-11 codes.</li>
+</ul>
+<p>Examples:</p>
+<pre><code class="javascript">ECT.Handler.setBrowserCode('1', '1B11');
+
+
+ECT.Handler.setBrowserCode('1', '2C25.Z&amp;XA2UD3');
+</code></pre>
+
+<p><br/><br/></p>
+<h2 id="multilingual-support">Multilingual support</h2>
+<p>The Embedded Browser is available in different languages. In order to use another language, you have to set the property <code>language</code>.                        </p>
+<p>Example:</p>
+<pre><code class="javascript">const mySettings = {
+    apiServerUrl: &quot;http://mycontainerhost.com&quot;,   
+    language: &quot;es&quot; // set the language to Spanish
+};
+</code></pre>
+
+<p>If the <code>language</code> property is not set, the default value is <code>"en"</code> (English).  <br />
+Please refer to the list of the <a href="../SupportedClassifications.html">ICD-11 supported classifications</a> for the available languages.</p>
+<p>Try out the <a href="https://codepen.io/mdonada/pen/ZEexWdv" target="_blank">Playground</a> and play around with the example in the Spanish language.</p>
+<p><br/><br/></p>
+<h2 id="advanced-settings">Advanced settings</h2>
+<p>Read the <a href="../icd11ect-1.4-AdvancedSettings/index.html">Advanced settings</a> documentation to learn more about other options, like the use of multiple instances of Embedded Coding Tool and/or Embedded Browser</p>
+<p><br/></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

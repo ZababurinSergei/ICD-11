@@ -1,0 +1,568 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="fragment" content="!" />
+    <meta name="google-site-verification" content="INKtg_4AcvauV4s-ZBZ5SidBwCFkxK2XfoiOE3iYM-g" />
+    <meta name="msvalidate.01" content="9BB0063D535B2050751F8A6D728E83F7" />
+    <meta name="buildDate" content='2022 Jul 07 - 08:30' />
+    <meta name="icd11Date" content='2022 Feb 07' />
+
+    
+
+    <title>CIE-11 para estad&#237;sticas de mortalidad y morbilidad-Lista de tabulaci&#243;n especial de agentes infecciosos </title>
+
+            
+<link href="../Styles/misc%3Fv=dfAVCc9GiqiW7HOGofUpKJc10Ni2nMC4BeTU_bMAoak1.css" rel="stylesheet"/>
+
+<link href="../Styles/project%3Fv=u74R43iV1Rol_6He5PFQAA125GEACTpsk6uhG9aDHbk1.css" rel="stylesheet"/>
+
+
+<script src="../Scripts/library%3Fv=e0v_ja_3_9uo8yD7NwA5JgReh3Y4IXd2XojAeT5ODXg1"></script>
+
+<script src="../Scripts/common%3Fv=z495DuYbCMDEIrp7znqqprhzZF00RizJIvZ9IAUvnno1"></script>
+
+
+
+
+     
+     
+     
+
+
+    <script src="../Scripts/jquery.layout-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    
+    
+
+    <script src="../Scripts/projectscript%3Fv=fQNbgut12T7PaxqkfCAaBYOoTdmmAozmamBbTY-Btyo1"></script>
+
+
+        <meta name="description" content="ICD-11 Browser contains the ICD-11 (International Classification of Diseases 11th Revision) " />
+
+
+
+    
+    <link rel="icon" href="../Content/ICD11.RELEASE.png" />
+
+    
+  <script type="text/javascript">
+
+       var oInfo = new OntologyBasicInfo();
+       oInfo.ontologyKey = "l-m_st_infections";
+       oInfo.ontologyId = "ICD11_MMS_st_infections";
+       oInfo.theLanguage = "es";
+       oInfo.isLinearization =  false;
+       oInfo.baseURL = location.protocol + "//" + location.hostname + ":" + location.port + '/browse11/';
+        //oInfo.ontologyLabel = "CIE-11 - CIE-11 para estad&#237;sticas de mortalidad y morbilidad Lista de tabulaci&#243;n especial de agentes infecciosos";
+       oInfo.ontologyLabel = "CIE-11 para estad&#237;sticas de mortalidad y morbilidad-Lista de tabulaci&#243;n especial de agentes infecciosos";
+       oInfo.usesElastic = true;
+
+       
+
+       var appState = new ApplicationStateInformation();
+       appState.userLoggedIn =  false;
+       appState.appMode = "ICD11.RELEASE";
+       appState.scrollToEntity = false;
+       appState.defaultShowGrayNodes = true;
+       $(document).ready(function(){
+           OBrowserNavigation.getInstance().navigationMode=NavigationMode.Browser;
+           OBrowserNavigation.getInstance().initialize(oInfo,appState);
+           OBrowserContributions.getInstance().initialize(oInfo.baseURL,OBrowserNavigation.getInstance());
+       });
+
+                </script>
+            
+
+
+</head>
+<body>
+
+
+
+    <div id="showinpopudiv" style="display:none"></div>
+       
+<script type="text/javascript">
+    function checkAllSearchFields() {
+        $("form input:checkbox").prop('checked', true);
+    }
+
+    function uncheckAllSearchFields() {
+        $("form input:checkbox").prop('checked', false);
+    }
+    
+</script>
+<div id="advancedSearchBox" class="advancedsearch ">
+
+
+        <form id ="advancedSearchForm" method="post" >
+
+        Texto de b&#250;squeda :
+                   <span style="float:right;margin-right:-12px;margin-bottom:2px">
+            
+
+        <span id="imagebutton_c31d97cc-d626-4d43-adf9-56a6561f0ae9advancedsearch" title="Ayuda" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('c31d97cc-d626-4d43-adf9-56a6561f0ae9advancedsearch','Ayuda')"  >
+                &nbsp;
+            </span>
+    <div id="content_c31d97cc-d626-4d43-adf9-56a6561f0ae9advancedsearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+<h2>Búsqueda avanzada: ayuda</h2>
+
+<p>
+    <img class="dropshadow" alt="Advanced search help image" src="../Content/helpfiles.ICD11_es/images/advancedsearch1.png" />
+</p>
+<p>
+
+    La búsqueda avanzada permite hacer búsquedas en todas las propiedades de la clasificación o en un subconjunto específico de propiedades.
+</p>
+<p>
+
+    Escriba las palabras clave en el campo <strong>Texto de búsqueda</strong> y marque las propiedades que desee incluir en la búsqueda. El sistema buscará las palabras clave en las propiedades que haya marcado. El sistema buscará las palabras clave en las propiedades que haya marcado.
+</p>
+
+<p>
+    Los resultados se clasifican por el grado de coincidencia entre el texto buscado y las frases en la CIE. También se agrupan usando la jerarquía de la CIE: si el texto de búsqueda coincide con una categoría padre y varias entidades hijas, aparecerán de manera que resulte fácil visualizar esta relación. En la lista solo se muestran los títulos o, en caso de que las palabras clave no estén en un título, la mejor coincidencia entre los términos encontrados. Al hacer clic en el botón <span class="detailsicon">&#9636;</span> podrán verse otros resultados debajo de la entidad.
+</p>
+
+<p>Si la búsqueda arroja más de 200 resultados, solo se mostrarán los primeros 200.</p>
+<p>
+
+    Si escribe más de una palabra clave, el sistema buscará los elementos que contengan todas las palabras clave.
+</p>
+
+<p>
+
+    <strong>Comodín:</strong>
+
+    También puede usar el asterisco (*) como carácter comodín.
+</p>
+<p>
+
+    Por ejemplo, si busca <b>diabet*</b> encontrará todas las entidades que tienen una palabra que comienza con "diabet".
+</p>
+
+<h4>Resultados de la búsqueda</h4>
+<p>
+    <img class="dropshadow" alt="Advanced search help image" src="../Content/helpfiles.ICD11_es/images/advancedsearch2.png" />
+</p>
+<p>
+<p>Después de hacer la búsqueda, los resultados se muestran en la parte inferior derecha de la pantalla. Al hacer clic en un resultado se cargará esa entidad.</p>
+<p>Puede cerrar la ventana de <b>búsqueda avanzada</b> o el panel de <b>resultados de búsqueda</b> haciendo clic en la X en la esquina superior derecha de la ventana.</p>
+
+        
+        </div>
+    </div>
+ 
+                </span>
+            <input autocomplete="off" class="advancedSearchTextBox" id="SearchText" name="SearchText" type="text" value="" />
+
+     
+        <br />
+        
+            <span style="font-style:italic">
+                Marque las propiedades que desea incluir en la b&#250;squeda
+            </span>
+        <div style="float: right">
+            <span class="buttonLike" onclick="checkAllSearchFields(); " >
+                [ 
+                Marcar todo  
+                ]
+            </span> 
+            &nbsp;&nbsp;&nbsp;
+            <span class="buttonLike" onclick="uncheckAllSearchFields(); " >
+                [ 
+                Desmarcar todo
+                ]
+            </span>   
+        </div>
+        <br />
+            <div class="advsearchpropertiesdiv">
+                <div class="advsearchpropertiesdivLeft">
+
+<input checked="checked" id="Search_Title" name="Search_Title" type="checkbox" value="true" /><input name="Search_Title" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Title')">
+                            T&#237;tulo
+                        </span>
+                        <br />
+<input id="Search_Synonym" name="Search_Synonym" type="checkbox" value="true" /><input name="Search_Synonym" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Synonym')">
+                            Sin&#243;nimo
+                        </span>
+                        <br />
+<input id="Search_Definition" name="Search_Definition" type="checkbox" value="true" /><input name="Search_Definition" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Definition')">
+                            Descripci&#243;n
+                        </span>
+                        <br />
+<input id="Search_Inclusion" name="Search_Inclusion" type="checkbox" value="true" /><input name="Search_Inclusion" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Inclusion')">
+                            Inclusi&#243;n
+                        </span>
+                        <br />
+<input id="Search_Exclusion" name="Search_Exclusion" type="checkbox" value="true" /><input name="Search_Exclusion" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Exclusion')">
+                            Exclusi&#243;n
+                        </span>
+                        <br />
+
+                </div>
+                <div class="advsearchpropertiesdivRight">
+
+
+                </div>
+                </div>
+
+                
+
+
+</form>
+
+</div>
+
+
+
+    <div class='outer-north header-ltr headerICD11RELEASE'>
+
+        <div id="headerleft" style="height: 100%">
+            
+                <h1>CIE-11 para estad&#237;sticas de mortalidad y morbilidad-Lista de tabulaci&#243;n especial de agentes infecciosos</h1>
+
+            
+            
+                <div id="searchcontainer">
+                    
+Buscar 
+<input class="search" id="searchbox" data-searchType="full"  type="text" />
+<img class="searchwait" src="../Content/load.gif"/>
+
+
+        <span id="imagebutton_65057882-7b05-4ba6-a434-eb74c8f1ac0dquicksearch" title="Ayuda" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('65057882-7b05-4ba6-a434-eb74c8f1ac0dquicksearch','Ayuda')"  >
+                &nbsp;
+            </span>
+    <div id="content_65057882-7b05-4ba6-a434-eb74c8f1ac0dquicksearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+<h2>Búsqueda rápida: ayuda</h2>
+
+<p>
+    <img class="dropshadow" alt="quicksearch image" src="../Content/helpfiles.ICD11_es/images/quicksearch.png" />
+</p>
+<p>
+    La búsqueda rápida ayuda al usuario a navegar rápidamente en una categoría particular. Busca en los títulos, las inclusiones, los sinónimos y los términos más específicos; la búsqueda arranca cuando el usuario escribe el término y presenta los resultados en una lista desplegable dinámica.
+</p>
+<p>
+    Al hacer clic en una de las entidades que aparecen en esta lista se cargará la entidad.
+</p>
+
+<p>
+    Los resultados se clasifican por el grado de coincidencia entre el texto buscado y las frases en la CIE. También se agrupan usando la jerarquía de la CIE: si el texto de búsqueda coincide con una categoría padre y varias entidades hijas, aparecerán de manera que resulte fácil visualizar esta relación. En la lista solo se muestran los títulos o, en caso de que las palabras clave no estén en un título, la mejor coincidencia entre los términos encontrados. Al hacer clic en el botón <span class="detailsicon">&#9636;</span>
+    podrán verse otros resultados debajo de la entidad.
+</p>
+
+<p>
+    También puede usar comodines para encontrar palabras similares o simplemente para escribir menos. Por ejemplo, al escribir transp <strong>accidente transp* </strong>encontrará entidades con los términos “transporte” y “accidente”.
+</p>
+
+
+        
+        </div>
+    </div>
+ 
+
+
+                    <a class="buttonLike" id="advancedSearchButton">
+                        [
+                        B&#250;squeda avanzada
+                        ]
+                    </a>
+                </div>
+            
+            
+        </div>
+        <div class="toplogbuttons">
+            
+    
+        </div>
+        <div id="messageArea"></div>
+        <div style="display:none" id="notificationdomainsarea"></div>
+    </div>
+
+
+<div id="menu" class="menu-ltr">
+    <ul class="tabs">
+
+                    <li>
+                        <a id="mainmenu-Navegaci&#243;n" href="../l-m/es.html" title="CIE-11 - CIE-11 para estad&#237;sticas de mortalidad y morbilidad"
+                           >
+                            Navegaci&#243;n
+                        </a>
+
+                    </li>
+                <li class="hasmore" id="pmenu_Informaci&#243;n">
+                    <a title=""><span>Informaci&#243;n</span></a>
+                    <ul class="dropdown">
+                                    <li>
+                                        <a id="submenu-Gu&#237;a_del_usuario"
+                                           href="../Help/es.html"
+                                           title="Gu&#237;a del usuario para el navegador de la CIE-11"
+                                                                                      >
+                                            Gu&#237;a del usuario
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Versiones_impresas"
+                                           href="../Downloads/Download%3FfileName=print_es.zip"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            Versiones impresas
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Archivo_de_hoja_de_c&#225;lculo"
+                                           href="../Downloads/Download%3FfileName=simpletabulation_es.zip"
+                                           title="Tabulaci&#243;n sencilla"
+                                                                                        target="_blank"
+>
+                                            Archivo de hoja de c&#225;lculo
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Tablas_de_mapeo_de_la_CIE-10_y_la_CIE-11"
+                                           href="../Downloads/Download%3FfileName=mapping.zip"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            Tablas de mapeo de la CIE-10 y la CIE-11
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Mantenimiento_de_la_CIE-11,_Contribuciones,_Propuestas"
+                                           href="../../dev11.html"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            Mantenimiento de la CIE-11, Contribuciones, Propuestas
+                                        </a>
+
+
+        <span id="imagebutton_1db53543-9e5b-4c4d-a3aa-412b32b027aalivebrowser" title="Ayuda" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('1db53543-9e5b-4c4d-a3aa-412b32b027aalivebrowser','Ayuda')"  >
+                &nbsp;
+            </span>
+    <div id="content_1db53543-9e5b-4c4d-a3aa-412b32b027aalivebrowser" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+
+<h3>Plataforma de mantenimiento de la CIE-11</h3>
+
+<p>
+    El mantenimiento de la CIE permitirá adaptarla constantemente conforme evolucionen los conocimientos acerca de las 
+    enfermedades, su tratamiento y prevención. Este proceso es transparente gracias a un mecanismo que permite enviar  
+    propuestas y hacer una revisión por medio de una plataforma en línea.
+
+    Esta plataforma permite que los usuarios vean las actualizaciones propuestas, formulen propuestas de cambio o sugieran
+    correcciones. Además, cuenta con un mecanismo para contribuir con la traducción de la CIE-11.
+
+</p>
+
+<p>
+    El navegador de la plataforma de mantenimiento (la plataforma de color naranja) está destinado principalmente a quienes contribuyen con la clasificación. Las principales diferencias con el navegador de la CIE-11 son las siguientes: 
+    <ul>
+        <li>
+           Muestra el trabajo actual en progreso. Puede tener contenidos que aún no son públicos, por lo que pueden variar antes de hacerse públicos. Por ello, no debe usarse para la codificación.
+        </li>
+        <li>Muestra el componente fundamental de la CIE-11 así como varias linealizaciones, incluida la CIE-11 para estadísticas de mortalidad y morbilidad (EMM).</li>
+        <li>Tiene funciones que facilitan el proceso de contribución, como las de enviar comentarios y formular propuestas. </li>
+        <li>Tiene una herramienta de traducción para ayudar con las traducciones.</li>
+    </ul>
+
+</p>
+        
+        </div>
+    </div>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-P&#225;gina_de_inicio_de_la_CIE"
+                                           href="../../index.html"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            P&#225;gina de inicio de la CIE
+                                        </a>
+                                    </li>
+                    </ul>
+                </li>
+    </ul>
+
+</div>
+
+
+
+    <div id="langarea" class="langarea-ltr">
+        <div id="langbutton">
+            <img id="mlimg" alt="language change icon" src="../Content/globe.svg" />
+            ES
+        </div>
+        <ul id="languagelist">
+                <li>
+                        <a href="../../browse11.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            English
+                        </a>
+                </li>
+                <li>
+                        <a href="../l-m/ar.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Arabic
+                        </a>
+                </li>
+                <li>
+                        <span class="languageselected">
+                            <span class="selstatus">&#x2713</span>
+                            Spanish
+                        </span>
+                </li>
+                <li>
+                        <a href="../l-m/fr.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            French
+                        </a>
+                </li>
+                <li>
+                        <a href="../l-m/zh.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Chinese
+                        </a>
+                </li>
+            <hr class="secondlanguageinmenu"></hr>
+                <li>
+                    <a title="Abierto como segundo idioma" onclick="OBrowserNavigation.getInstance().setSecondLanguage('en')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ English
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Abierto como segundo idioma" onclick="OBrowserNavigation.getInstance().setSecondLanguage('ar')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Arabic
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Abierto como segundo idioma" onclick="OBrowserNavigation.getInstance().setSecondLanguage('fr')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ French
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Abierto como segundo idioma" onclick="OBrowserNavigation.getInstance().setSecondLanguage('zh')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Chinese
+                    </a>
+
+                </li>
+
+        </ul>
+
+    </div>
+    <div class="outer-center" id="xx" style="padding: 0 !important; border: 0 !important;">
+        <div class="inner-center">
+            <div class="inner2-center details" id="firstright">
+                <img id="conceptdetailswaitimg" alt="waiting" style="display: none; float: right" src='../Content/wait.gif' />
+                <div class="initialpageRight">
+                    
+                
+<h3 class="page_heading1">
+    CIE-11 para las estadísticas de mortalidad y morbilidad (CIE-11 EMM) <br /> 
+</h3>
+
+
+            
+                </div>
+            </div>
+            <div class="inner2-east details" id="secondright">
+                
+                <div class="slclose">
+                    <span onclick="OBrowserNavigation.getInstance().removeSecondLanguage()" title="close">&times;</span>
+                </div>
+                <div id="secondlanguage"></div>
+                
+            
+            </div>
+            <div class="inner2-south" id="searchResultPane" style="overflow:hidden!important;display:none">
+                
+
+<div class="tableWrapper ui-widget ui-widget-header  ui-dialog-title" style="font-size:0.75em;">
+ 
+    <table style="width:100%; table-layout:fixed">
+        <tr><td>
+     <span class="ui-dialog-title">
+         Resultados de la b&#250;squeda </span>
+         <span class="ui-icon close" 
+               style ="background-position: -96px -128px; float:right;cursor:pointer" 
+               
+               title="Close search results. (It will reopen when you make another advanced search)">close</span>
+          </td></tr>
+
+        </table>
+     </div>
+    
+<img class="searchresultwaitimg" alt="waiting"  src='../Content/waitbig.gif'  />
+
+<div class="searchResultDiv data tableWrapper" style="position:relative;height:100%;">
+    <div class="innerWrapper">
+        <table style="width:100%; table-layout:fixed">
+
+        </table>
+    </div>
+</div>
+
+ 
+            </div>
+        </div>
+        <div class="inner-west details">
+            
+
+
+            
+        </div>
+    </div>
+
+    <div class="outer-west details ltr">
+        
+                
+<div id ="mainhiearchydiv" >
+<div class='topicons2'>    
+    <div class="fx">
+        
+
+        <img class="sidebutton" alt='contraer todos los n&#243;dulos' title='contraer todos los n&#243;dulos'
+             src="../Content/collapse.png"
+             onclick="OBrowserNavigation.getInstance().theHierarchy.collapseTree()" />
+
+    </div>
+
+</div>
+    <div  id="hierarchy"  class="ygtv-highlight " >
+    </div>
+
+</div>
+
+
+            
+    </div>
+
+    
+</body>
+</html>
+
+

@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Installing ICD-API as a Docker container - ICD-API Homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Installing ICD-API as a Docker container";
+    var mkdocs_page_input_path = "ICDAPI-DockerContainer.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <!-- <a href=".." class="icon icon-home"> ICD-API Homepage</a> -->
+        <a href="../../index.html"> ICD-API Homepage</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="https://icd.who.int/icdapi/docs2/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption custom-caption"><span class="caption-text">ICD-API Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ReleaseNotes/index.html">Release Notes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version2.html">API Documentation (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-reference">API Reference (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../API-Authentication.html">ICD API Authentication</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../SupportedClassifications.html">Supported Classification Versions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-github-repository">Samples Github Repository</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Embedded Classification Tool</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5/index.html">Embedded Classification Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedCodingTool/index.html">Embedded Coding Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedBrowser/index.html">Embedded Browser</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-AdvancedSettings/index.html">Advanced settings</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Installing the ICD-API locally</span></p>
+                <ul class="current">
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-LocalDeployment.html">General Information on Installing the API locally</a>
+                    </li>
+                    <li class="toctree-l1 current"><a class="reference internal current" href="../ICDAPI-DockerContainer.html">Installing ICD-API as a Docker container</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-DockerContainer.html#installing-the-icd-api-as-a-docker-container">Installing the ICD-API as a Docker container</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-DockerContainer.html#basic-configuration">Basic configuration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-DockerContainer.html#using-different-language-versions">Using different language versions</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-DockerContainer.html#using-an-older-release">Using an older release</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-DockerContainer.html#using-a-different-port">Using a different port</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-DockerContainer.html#coding-tool-and-browser-are-included">Coding Tool and Browser are included</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-DockerContainer.html#more-docker-information">More Docker Information</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="../ICDAPI-DockerContainer.html#internet-access-and-proxy-server-configuration">Internet access and proxy server configuration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-DockerContainer.html#updating-the-container">Updating the Container</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-WindowsService.html">Installing ICD-API as a Windows Service</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-SystemdService.html">Installing ICD-API as a systemd Service in Linux</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">OLD Version Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version1/index.html">API Documentation (version 1)</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">ICD-API Homepage</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <!-- <li><a href="..">ICD-API</a> &raquo;</li> -->
+    <li><a href="../../index.html">ICD-API Homepage</a> &raquo;</li>
+    
+      
+        
+          
+            <li>Installing the ICD-API locally &raquo;</li>
+                    
+        
+      
+    
+    <li>Installing ICD-API as a Docker container</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="icd-api-in-a-container">ICD-API in a Container</h1>
+<p>You may find generic information on deploying the ICD-API locally at the <a href="../ICDAPI-LocalDeployment.html">ICD-API Local Deployment Page</a></p>
+<h2 id="installing-the-icd-api-as-a-docker-container">Installing the ICD-API as a Docker container</h2>
+<p>You may install our docker image in to any computer that has Docker (You could use Linux, Mac, Windows 10/11 or a recent Windows Server, etc.)</p>
+<p>First you need to install docker if you don't have it already. This depends on the operating therefore we are not providing the details of this. However, it is a fairly a straight forward process.</p>
+<p>Once you have docker, you need to run a container with our image.</p>
+<p><code>docker run</code> command creates the container from the image we provide. You may use some parameters in the docker run command to configure the container that you are creating. The command will load the container image and ICD-11 therefore it may take some time if you have a slow Internet connection. Once the container is created you will not need Internet connection to run the API locally.</p>
+<h2 id="basic-configuration">Basic configuration</h2>
+<pre><code>docker run -p 80:80 -e acceptLicense=true -e saveAnalytics=true whoicd/icd-api
+</code></pre>
+
+<p><code>-e acceptLicense=true</code> is a required parameter which means you agree with the  <a href="../license.html">license agreement</a> </p>
+<p><code>-e saveAnalytics=true</code> If you set this option to true, the container that is deployed can send data to WHO on the searches made in order to improve search capability of ICD-11 tools. The data that is sent <strong>does not</strong> contain any ids or IP addresses. </p>
+<p>If you don't provide this parameter or set it to <code>false</code> the container will not collect or send any data.</p>
+<h2 id="using-different-language-versions">Using different language versions</h2>
+<p>By default the container loads the latest release of the ICD-11 in English <code>2022-02_en</code>. However, you could use the <code>include</code> parameter to use a different release or a language version.</p>
+<pre><code>docker run -p 80:80 -e include=2022-02_es -e acceptLicense=true -e saveAnalytics=true whoicd/icd-api
+</code></pre>
+
+<p>In the example above, we load the Spanish version.</p>
+<p>One could load multiple language versions as well:</p>
+<pre><code>docker run -p 80:80 -e include=2022-02_ar-en -e acceptLicense=true -e saveAnalytics=true whoicd/icd-api
+</code></pre>
+
+<p>In the example above, we load the English and Arabic versions.</p>
+<h2 id="using-an-older-release">Using an older release</h2>
+<p>It's possible to load an older release of ICD-11 in the container using the <code>include</code> parameter</p>
+<pre><code>docker run -p 80:80 -e include=2021-05_en -e acceptLicense=true -e saveAnalytics=true whoicd/icd-api
+</code></pre>
+
+<p>Available versions and languages of ICD-11 are listed at the <a href="../SupportedClassifications.html">supported classifications</a>. ICD-10 is not supported in the containers at the moment.</p>
+<p><em>It is recommended that you load only the languages that you need because each version/language increase the amount of resources your container will require.</em></p>
+<h2 id="using-a-different-port">Using a different port</h2>
+<p>You may configure your container to serve the API from a different port than 80.</p>
+<pre><code>docker run -p 8000:80 -e acceptLicense=true -e saveAnalytics=true whoicd/icd-api 
+</code></pre>
+
+<p>Here, the container is configured to run from the port 8000</p>
+<p>Once the container is ready you'll see this screen</p>
+<pre><code>____________________________________________________________________________
+
+  ooooo   .oooooo.  oooooooooo.               .o.       ooooooooo.   ooooo
+   888   d8P    Y8b  888     Y8b             .888.       888    Y88.  888
+   888  888          888      888           .8 888.      888   .d88   888
+   888  888          888      888          .8   888.     888ooo88P    888
+   888  888          888      888  88888  .88ooo8888.    888          888
+   888   88b    ooo  888     d88         .8       888.   888          888
+  o888o   Y8bood8P  o888bood8P          o88o     o8888o o888o        o888o
+
+                         https://icd.who.int/icdapi
+____________________________________________________________________________
+
+Saving Analytics is ON
+Starting ICD-API
+ICD-11 Container is Running!
+You may close the shell window or Ctrl-C to return to shell (container will continue to run)
+
+</code></pre>
+
+<p>At this point your container with the ICD-API is up and running. You may check it by opening the swagger endpoint  <code>/swagger/index.html</code> (if your container is deployed at the localhost, this would be <code>http://localhost/swagger/index.html</code>)</p>
+<h2 id="coding-tool-and-browser-are-included">Coding Tool and Browser are included</h2>
+<p>ICD-11 Coding Tool and ICD-11 Browser applications are included as a part of the ICD-API container. Coding Tool is available at the URL <code>/ct11</code> and
+the ICD-11 Browser is available at <code>/browse11</code>   <br />
+If your container is deployed at the localhost, this would be <code>http://localhost/ct11</code> and <code>http://localhost/browse11</code></p>
+<p>So, you could check if your container is correctly running by loading the Coding Tool within your container at the <code>/ct11</code> or the ICD-11 Browser at the <code>/browse11</code>.</p>
+<h2 id="more-docker-information">More Docker Information</h2>
+<p><code>docker run</code> command creates a container in your system and runs it. Once this is done you could start and stop your container without providing any of the configuration parameters mentioned above by using the <code>docker stop</code> and <code>docker start</code> commands. For more information please see <a href="https://docs.docker.com/">Docker documentation</a>.</p>
+<h4 id="internet-access-and-proxy-server-configuration">Internet access and proxy server configuration</h4>
+<p>The container needs to have Internet access during the <code>docker run</code> command when the container is being created and the first time it runs. After that, the container can work without access to the Internet. </p>
+<p>If you are accessing the Internet behind a proxy server that information needs to passed to the container so that it can access the Internet. This can be done by adding an additional parameter to the <code>docker run</code> command</p>
+<p>For example, if you are behind a proxy server http://proxy.myserver.com:8080, you need to add</p>
+<p><code>-e https_proxy=http://proxy.myserver.com:8080</code> to the <code>docker run</code> command</p>
+<pre><code>docker run -p 80:80 -e acceptLicense=true -e saveAnalytics=true -e https_proxy=http://proxy.myserver.com:8080 whoicd/icd-api
+</code></pre>
+
+<h2 id="updating-the-container">Updating the Container</h2>
+<p>You may update your Docker container when there is a new docker image. We generally update our docker images when there is a new version of the classification. </p>
+<p><strong>Updating the image</strong>
+<code>docker pull who-icd/icd-api</code> command will update the <code>icd-api</code> docker image that you have in your computer. If you already have the latest image, this command will result with the message <code>Image is up to date for whoicd/icd-api:latest</code> In that case you don't need to do anything as you are already using the latest version.</p>
+<p><code>docker pull</code> command updates the image but this does not update the existing containers running an earlier version of the  image. To do that, you need to remove the existing container and create a new one.</p>
+<p><strong>Removing existing container</strong></p>
+<p><code>docker ps</code>  command will give the running containers.</p>
+<pre><code>CONTAINER ID   IMAGE            COMMAND     CREATED    STATUS    PORTS        NAMES
+6094414a756c   whoicd/icd-api
+</code></pre>
+
+<p>In this example the system is running <code>whoicd/icd-api</code> image in the container <code>6094414a756c</code></p>
+<p><code>docker rm 6094414a756c -f</code> will remove this container.</p>
+<p>Once the existing container is removed, you could run the <code>docker run</code> command as explained in the installation part of this document to create a new container. Since the docker image is already updated, the newly created containers will be using the new version.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ICDAPI-WindowsService.html" class="btn btn-neutral float-right" title="Installing ICD-API as a Windows Service">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../ICDAPI-LocalDeployment.html" class="btn btn-neutral" title="General Information on Installing the API locally"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../ICDAPI-LocalDeployment.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ICDAPI-WindowsService.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

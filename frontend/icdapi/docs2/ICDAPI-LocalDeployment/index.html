@@ -1,0 +1,209 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>General Information on Installing the API locally - ICD-API Homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "General Information on Installing the API locally";
+    var mkdocs_page_input_path = "ICDAPI-LocalDeployment.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <!-- <a href=".." class="icon icon-home"> ICD-API Homepage</a> -->
+        <a href="../../index.html"> ICD-API Homepage</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="https://icd.who.int/icdapi/docs2/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption custom-caption"><span class="caption-text">ICD-API Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ReleaseNotes/index.html">Release Notes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version2.html">API Documentation (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-reference">API Reference (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../API-Authentication.html">ICD API Authentication</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../SupportedClassifications.html">Supported Classification Versions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-github-repository">Samples Github Repository</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Embedded Classification Tool</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5/index.html">Embedded Classification Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedCodingTool/index.html">Embedded Coding Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedBrowser/index.html">Embedded Browser</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-AdvancedSettings/index.html">Advanced settings</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Installing the ICD-API locally</span></p>
+                <ul class="current">
+                    <li class="toctree-l1 current"><a class="reference internal current" href="../ICDAPI-LocalDeployment.html">General Information on Installing the API locally</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-LocalDeployment.html#deployment-options">Deployment options</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="../ICDAPI-LocalDeployment.html#coding-tool-and-browser-in-the-locally-deployed-icd-api">Coding Tool and Browser in the Locally Deployed ICD-API</a>
+    </li>
+    </ul>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-DockerContainer.html">Installing ICD-API as a Docker container</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-WindowsService.html">Installing ICD-API as a Windows Service</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-SystemdService.html">Installing ICD-API as a systemd Service in Linux</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">OLD Version Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version1/index.html">API Documentation (version 1)</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">ICD-API Homepage</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <!-- <li><a href="..">ICD-API</a> &raquo;</li> -->
+    <li><a href="../../index.html">ICD-API Homepage</a> &raquo;</li>
+    
+      
+        
+          
+            <li>Installing the ICD-API locally &raquo;</li>
+                    
+        
+      
+    
+    <li>General Information on Installing the API locally</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="icd-api-local-deployment">ICD-API Local Deployment</h1>
+<p>You may deploy the ICD-API to your local environment using one of the methods explained below which share some common behaviour.</p>
+<p>The software running in the locally deployed versions of the ICD-API is the same as the version that is hosted in the cloud at the <code>https://id.who.int/icd/...</code> with the following differences:</p>
+<p>1- The actual ICD-API end point URIs start with <code>https://id.who.int/icd</code> . The endpoint URIs of the locally deployed versions are the same except for this header. 
+So if you deploy the container at <code>http://yourserver.com</code> then the main foundation URI <code>https://id.who.int/icd/entity</code> becomes <code>http://yourserver.com/icd/entity</code> in the container</p>
+<p>The API, even when deployed locally, refers to ICD entities with their canonical URIs (i.e. URIs that start with <code>http://id.who.int/icd/...</code>) Therefore, you need to change them to your local API addresses when you use the API from a local installation.</p>
+<p>2- The locally deployed versions do not require OAUTH-2 authentication</p>
+<h2 id="deployment-options">Deployment options</h2>
+<p>There are 3 different options to install the ICD-API locally in your environment. </p>
+<p><img alt="Docker container" src="../../images/docker.png" /> as a Docker container <a href="../ICDAPI-DockerContainer.html">Learn more</a></p>
+<p>The Docker version could be installed on any computer that supports Docker. </p>
+<p><img alt="Windows service" src="../../images/windows.png" /> as Windows service <a href="../ICDAPI-WindowsService.html">Learn more</a></p>
+<p>The Windows service version can be installed on Windows computers and it does not have any additional requirements.</p>
+<p><img alt="Linux systemd service" src="../../images/linux.png" /> as Linux systemd service <a href="../ICDAPI-SystemdService.html">Learn more</a></p>
+<p>The Linux systemd service version can run on any Linux system with systemd support. Most of the Linux distrubutions already have support for systemd services by default.</p>
+<h2 id="coding-tool-and-browser-in-the-locally-deployed-icd-api">Coding Tool and Browser in the Locally Deployed ICD-API</h2>
+<p>All local deployment options for the ICD-API contains a pre-installed ICD-11 Coding Tool and ICD-11 Browser. They are accessible from the <code>../ct11</code> and <code>../browse11</code> endpoints.</p>
+<p>For example, if you installed the docker version locally, <code>http://localhost/ct11</code> and <code>http://localhost/browse11</code> are the addresses for the locally deployed versions of the Coding Tool and the Browser.</p>
+<p>API Reference in Open API (Swagger) format is also available in all local deployments at the <code>../swagger/index.html</code> URL.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../ICDAPI-DockerContainer.html" class="btn btn-neutral float-right" title="Installing ICD-API as a Docker container">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../icd11ect-1.5-AdvancedSettings/index.html" class="btn btn-neutral" title="Advanced settings"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../icd11ect-1.5-AdvancedSettings/index.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../ICDAPI-DockerContainer.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

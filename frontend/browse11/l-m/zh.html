@@ -1,0 +1,624 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="fragment" content="!" />
+    <meta name="google-site-verification" content="INKtg_4AcvauV4s-ZBZ5SidBwCFkxK2XfoiOE3iYM-g" />
+    <meta name="msvalidate.01" content="9BB0063D535B2050751F8A6D728E83F7" />
+    <meta name="buildDate" content='2022 Jul 07 - 08:30' />
+    <meta name="icd11Date" content='2022 Feb 07' />
+
+    
+
+    <title>用于死因与疾病统计的ICD-11 </title>
+
+            
+<link href="../Styles/misc%3Fv=dfAVCc9GiqiW7HOGofUpKJc10Ni2nMC4BeTU_bMAoak1.css" rel="stylesheet"/>
+
+<link href="../Styles/project%3Fv=u74R43iV1Rol_6He5PFQAA125GEACTpsk6uhG9aDHbk1.css" rel="stylesheet"/>
+
+
+<script src="../Scripts/library%3Fv=e0v_ja_3_9uo8yD7NwA5JgReh3Y4IXd2XojAeT5ODXg1"></script>
+
+<script src="../Scripts/common%3Fv=z495DuYbCMDEIrp7znqqprhzZF00RizJIvZ9IAUvnno1"></script>
+
+
+
+
+     
+     
+     
+
+
+    <script src="../Scripts/jquery.layout-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    
+    
+
+    <script src="../Scripts/projectscript%3Fv=fQNbgut12T7PaxqkfCAaBYOoTdmmAozmamBbTY-Btyo1"></script>
+
+
+        <meta name="description" content="ICD-11 Browser contains the ICD-11 (International Classification of Diseases 11th Revision) " />
+
+
+
+    
+    <link rel="icon" href="../Content/ICD11.RELEASE.png" />
+
+    
+  <script type="text/javascript">
+
+       var oInfo = new OntologyBasicInfo();
+       oInfo.ontologyKey = "l-m";
+       oInfo.ontologyId = "ICD11_MMS";
+       oInfo.theLanguage = "zh";
+       oInfo.isLinearization =  true;
+       oInfo.baseURL = location.protocol + "//" + location.hostname + ":" + location.port + '/browse11/';
+        //oInfo.ontologyLabel = "ICD-11 - 用于死因与疾病统计的ICD-11";
+       oInfo.ontologyLabel = "用于死因与疾病统计的ICD-11";
+       oInfo.usesElastic = true;
+
+       
+
+       var appState = new ApplicationStateInformation();
+       appState.userLoggedIn =  false;
+       appState.appMode = "ICD11.RELEASE";
+       appState.scrollToEntity = false;
+       appState.defaultShowGrayNodes = true;
+       $(document).ready(function(){
+           OBrowserNavigation.getInstance().navigationMode=NavigationMode.Browser;
+           OBrowserNavigation.getInstance().initialize(oInfo,appState);
+           OBrowserContributions.getInstance().initialize(oInfo.baseURL,OBrowserNavigation.getInstance());
+       });
+
+                </script>
+            
+
+
+</head>
+<body>
+
+
+
+    <div id="showinpopudiv" style="display:none"></div>
+       
+<script type="text/javascript">
+    function checkAllSearchFields() {
+        $("form input:checkbox").prop('checked', true);
+    }
+
+    function uncheckAllSearchFields() {
+        $("form input:checkbox").prop('checked', false);
+    }
+    
+</script>
+<div id="advancedSearchBox" class="advancedsearch ">
+
+
+        <form id ="advancedSearchForm" method="post" >
+
+        查找文本 :
+                   <span style="float:right;margin-right:-12px;margin-bottom:2px">
+            
+
+        <span id="imagebutton_2ec36270-0d3d-4639-beec-ed6439689e58advancedsearch" title="帮助" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('2ec36270-0d3d-4639-beec-ed6439689e58advancedsearch','帮助')"  >
+                &nbsp;
+            </span>
+    <div id="content_2ec36270-0d3d-4639-beec-ed6439689e58advancedsearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+<h2>高级查找帮助</h2>
+
+<p>
+    <img class="dropshadow" alt="高级查找帮助图像"  src="../Content/helpfiles.ICD11_zh/images/advancedsearch1.png" /></p>
+<p>
+
+    高级查找可以在选择的分类属性中进行查找。你可以选择所有属性或仅仅选择某一个分类属性进行查找。</p>
+<p>
+
+    请在查找文本框中键入关键词，然后勾选你希望查找时所包含的属性。</p>
+<p>
+
+    系统会在你所勾选的属性范围内查找关键词。 </p>
+
+
+<p>
+    检索的结果按照键入文本与ICD词汇匹配度由高到低排列。
+    同时结果还将以ICD层级结构形式排列，所以当你所查找的文本恰好与一个父节分类和一些子节内容相匹配时，显示的查找结果能够让你更加容易分辨他     们之前的层级关系。结果列表仅显示所有匹配词条的名称。当词条标题不匹配时，仅显示匹配度最佳的词条。然而, 点击<span     class="detailsicon">&#9636;</span>按钮，系统将显示该实体下更多匹配的结果。
+
+    <p>如果查找到的结果超过200条，系统仅显示前200条结果。</p>
+<p>
+
+    如果关键词不只一个，系统会检索包含所有关键词的项目。</p>
+
+<p>
+
+    <strong>Wildcards:</strong>
+
+    你还可以使用通配符 *</p>
+<p>
+
+    For example, searching  <b>diabet*</b> finds all entities that have a word that start with 
+    &quot;diabet&quot; </p>
+
+<h4>查找结果</h4>
+<p>
+    <img  class="dropshadow" alt="高级查找帮助图像"  src="../Content/helpfiles.ICD11_zh/images/advancedsearch2.png" /></p>
+<p>
+<p>查找后的结果将在屏幕右下区域显示。点击任何结果，则会加载到实体界面。</p>
+<p>你也可以通过点击屏幕左上角的X符号，关闭高级查找窗口或查找结果窗口。</p>
+
+        
+        </div>
+    </div>
+ 
+                </span>
+            <input autocomplete="off" class="advancedSearchTextBox" id="SearchText" name="SearchText" type="text" value="" />
+
+     
+        <br />
+        
+            <span style="font-style:italic">
+                请勾选您希望在查找中包含的内容
+            </span>
+        <div style="float: right">
+            <span class="buttonLike" onclick="checkAllSearchFields(); " >
+                [ 
+                全选  
+                ]
+            </span> 
+            &nbsp;&nbsp;&nbsp;
+            <span class="buttonLike" onclick="uncheckAllSearchFields(); " >
+                [ 
+                取消全选
+                ]
+            </span>   
+        </div>
+        <br />
+            <div class="advsearchpropertiesdiv">
+                <div class="advsearchpropertiesdivLeft">
+
+<input checked="checked" id="Search_Title" name="Search_Title" type="checkbox" value="true" /><input name="Search_Title" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Title')">
+                            标题
+                        </span>
+                        <br />
+<input id="Search_Synonym" name="Search_Synonym" type="checkbox" value="true" /><input name="Search_Synonym" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Synonym')">
+                            同义词
+                        </span>
+                        <br />
+<input id="Search_Definition" name="Search_Definition" type="checkbox" value="true" /><input name="Search_Definition" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Definition')">
+                            描述
+                        </span>
+                        <br />
+<input id="Search_Inclusion" name="Search_Inclusion" type="checkbox" value="true" /><input name="Search_Inclusion" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Inclusion')">
+                            包括
+                        </span>
+                        <br />
+<input id="Search_Exclusion" name="Search_Exclusion" type="checkbox" value="true" /><input name="Search_Exclusion" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Exclusion')">
+                            不包括
+                        </span>
+                        <br />
+
+                </div>
+                <div class="advsearchpropertiesdivRight">
+
+
+                </div>
+                </div>
+
+                
+
+
+</form>
+
+</div>
+
+
+
+    <div class='outer-north header-ltr headerICD11RELEASE'>
+
+        <div id="headerleft" style="height: 100%">
+            
+                <h1>用于死因与疾病统计的ICD-11</h1>
+                        <span class="lfdetail">(版本 : 02/2022)</span>
+
+            
+            
+                <div id="searchcontainer">
+                    
+查找 
+<input class="search" id="searchbox" data-searchType="full"  type="text" />
+<img class="searchwait" src="../Content/load.gif"/>
+
+
+        <span id="imagebutton_bd323fd7-c1b4-4b17-a184-94eef9c6b4c6quicksearch" title="帮助" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('bd323fd7-c1b4-4b17-a184-94eef9c6b4c6quicksearch','帮助')"  >
+                &nbsp;
+            </span>
+    <div id="content_bd323fd7-c1b4-4b17-a184-94eef9c6b4c6quicksearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+<h2>快速查找帮助</h2>
+
+<p>
+    <img class="dropshadow" alt="快速查找图像" src="../Content/helpfiles.ICD11_zh/images/quicksearch.png" /></p>
+<p>
+    快速查找功能帮助你快速定位到某一个分类。快速查找在标题、包括、同义词和狭义词中进行查询，在你键入索引词时系统以动态下拉式列表形式显示可供选择的结果。
+</p>
+<p>
+   点击下拉列表中出现的任何一个实体，系统将加载该实体。</p>
+
+<p> 检索的结果按照键入文本与ICD词汇匹配度由高到低排列。同时结果还将以ICD层级结构形式显示，所以当你所查找的文本恰好与一个父节分类和一些子节分类内容相匹配时，显示的结果能够让你更加容易分辨他们之前的层级关系。结果列表仅显示所有匹配词条的名称。当词条标题不匹配时，仅显示匹配度最佳的词条。 然而， 点击<span class="detailsicon">&#9636;</span>按钮，系统将显示该实体下更多匹配结果。</p>
+
+<p>
+    你还可以使用通配符查找相似词或者仅仅是为省去打字。
+
+    For example, <strong>transp* accident </strong>will find entities with 
+    transport and accident</p>
+
+
+        
+        </div>
+    </div>
+ 
+
+
+                    <a class="buttonLike" id="advancedSearchButton">
+                        [
+                        高级查找
+                        ]
+                    </a>
+                </div>
+            
+            
+        </div>
+        <div class="toplogbuttons">
+            
+    
+        </div>
+        <div id="messageArea"></div>
+        <div style="display:none" id="notificationdomainsarea"></div>
+    </div>
+
+
+<div id="menu" class="menu-ltr">
+    <ul class="tabs">
+
+                    <li>
+                        <a id="mainmenu-浏览" href="zh.html" title="ICD-11 - 用于死因与疾病统计的ICD-11"
+                           >
+                            浏览
+                        </a>
+
+                    </li>
+                    <li>
+                        <a id="mainmenu-编码工具" href="../../ct11/icd11_mms/zh/release.html" title="编码工具 (ICD-11 - 用于死因与疾病统计的ICD-11"
+                             target="_blank"
+>
+                            编码工具
+                        </a>
+
+
+
+        <span id="imagebutton_54b35013-8799-462c-95dd-bf5f4961d76ccodingtool" title="帮助" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('54b35013-8799-462c-95dd-bf5f4961d76ccodingtool','帮助')"  >
+                &nbsp;
+            </span>
+    <div id="content_54b35013-8799-462c-95dd-bf5f4961d76ccodingtool" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+
+<h3>编码工具</h3>
+
+<p>
+    ICD-11编码工具是帮助用户使用ICD-11进行编码的一个软件。
+ </p>
+<p>
+
+   <p> 使用编码工具进行实体查找较ICD-11浏览器的查找方式存在不同：</p>
+<ul>
+    <li>
+        浏览器查找结果除提供具有编码的实体外，还同时提供分类组别的结果。然而，编码工具仅提供具有编码的实体结果。
+    </li>
+    <li>
+        浏览器具有高级查找功能，允许选择具体查找范围 (如在不包括、定义等中查找) ，而编码工具仅能在标题中进行查找。
+    </li>
+    <li>
+        编码工具具有文字完备化和文字建议功能。
+    </li>
+    <li>
+        编码工具具有章节过滤功能，默认状态下不显示“扩展码”章节和“传统医学”章节。
+    </li>
+</ul>
+
+        
+        </div>
+    </div>
+                    </li>
+                <li class="hasmore" id="pmenu_特殊视图">
+                    <a title=""><span>特殊视图</span></a>
+                    <ul class="dropdown">
+                                    <li>
+                                        <a id="submenu-感染性病原体的特殊疾病列表"
+                                           href="../l-m_st_infections/zh.html"
+                                           title=""
+                                             class="indent"
+                                           >
+                                            感染性病原体的特殊疾病列表
+                                        </a>
+                                    </li>
+                    </ul>
+                </li>
+                <li class="hasmore" id="pmenu_信息">
+                    <a title=""><span>信息</span></a>
+                    <ul class="dropdown">
+                                    <li>
+                                        <a id="submenu-用户指南"
+                                           href="../Help/zh.html"
+                                           title="ICD11浏览器用户指南"
+                                                                                      >
+                                            用户指南
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-电子表格文件"
+                                           href="../Downloads/Download%3FfileName=simpletabulation_zh.zip"
+                                           title="简明列表"
+                                                                                        target="_blank"
+>
+                                            电子表格文件
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD-10___ICD-11映射表"
+                                           href="../Downloads/Download%3FfileName=mapping.zip"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            ICD-10 / ICD-11映射表
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD-11维护,_贡献,_提议"
+                                           href="../../dev11.html"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            ICD-11维护, 贡献, 提议
+                                        </a>
+
+
+        <span id="imagebutton_07688227-5233-45b4-8726-7d7dba66b600livebrowser" title="帮助" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('07688227-5233-45b4-8726-7d7dba66b600livebrowser','帮助')"  >
+                &nbsp;
+            </span>
+    <div id="content_07688227-5233-45b4-8726-7d7dba66b600livebrowser" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+
+<h3>ICD-11维护平台</h3>
+
+<p>
+    ICD维护过程允许ICD随着疾病、治疗和预防的革新而不断改变。在线上平台的提议和审核机制使得该过程透明化。
+
+    这个平台允许用户查看更新建议，提出更改意见或修正建议。同时，我们提供有助于ICD-11翻译的机制。
+
+</p>
+
+<p>
+    在维护平台中的浏览器（橙色背景）主要用于帮助分类体系的不断发展，具有以下特点：
+    <ul>
+        <li>
+               浏览器显示最近的工作进展，例如：显示未发布的内容和发布前已经变更的内容。因此该浏览器不能用于编码。
+        </li>
+        <li>浏览器既显示ICD-11基础组件同时也显示包括ICD-11死亡与疾病统计（MMS）在内的多个线性组合(MMS)</li>
+        <li>同时包含如评论和提议机制以助力分类与时俱进</li>
+        <li>包含翻译工具以辅助翻译</li>
+    </ul>
+
+</p>
+        
+        </div>
+    </div>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-ICD首页"
+                                           href="../../index.html"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            ICD首页
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-_Earlier_releases_and_Update_history_"
+                                           href="../../browse/releases/mms.html"
+                                           title=""
+                                                                                      >
+                                            _Earlier releases and Update history_
+                                        </a>
+                                    </li>
+                    </ul>
+                </li>
+    </ul>
+
+</div>
+
+
+
+    <div id="langarea" class="langarea-ltr">
+        <div id="langbutton">
+            <img id="mlimg" alt="language change icon" src="../Content/globe.svg" />
+            ZH
+        </div>
+        <ul id="languagelist">
+                <li>
+                        <a href="../../browse11.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            English
+                        </a>
+                </li>
+                <li>
+                        <a href="ar.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Arabic
+                        </a>
+                </li>
+                <li>
+                        <a href="es.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Spanish
+                        </a>
+                </li>
+                <li>
+                        <a href="fr.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            French
+                        </a>
+                </li>
+                <li>
+                        <span class="languageselected">
+                            <span class="selstatus">&#x2713</span>
+                            Chinese
+                        </span>
+                </li>
+            <hr class="secondlanguageinmenu"></hr>
+                <li>
+                    <a title="作为第二语种打开" onclick="OBrowserNavigation.getInstance().setSecondLanguage('en')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ English
+                    </a>
+
+                </li>
+                <li>
+                    <a title="作为第二语种打开" onclick="OBrowserNavigation.getInstance().setSecondLanguage('ar')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Arabic
+                    </a>
+
+                </li>
+                <li>
+                    <a title="作为第二语种打开" onclick="OBrowserNavigation.getInstance().setSecondLanguage('es')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Spanish
+                    </a>
+
+                </li>
+                <li>
+                    <a title="作为第二语种打开" onclick="OBrowserNavigation.getInstance().setSecondLanguage('fr')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ French
+                    </a>
+
+                </li>
+
+        </ul>
+
+    </div>
+    <div class="outer-center" id="xx" style="padding: 0 !important; border: 0 !important;">
+        <div class="inner-center">
+            <div class="inner2-center details" id="firstright">
+                <img id="conceptdetailswaitimg" alt="waiting" style="display: none; float: right" src='../Content/wait.gif' />
+                <div class="initialpageRight">
+                    
+                
+
+<h3 class="page_heading1">
+    ICD-11死亡与疾病统计 (ICD-11 MMS) 
+</h3>
+
+
+            
+                </div>
+            </div>
+            <div class="inner2-east details" id="secondright">
+                
+                <div class="slclose">
+                    <span onclick="OBrowserNavigation.getInstance().removeSecondLanguage()" title="close">&times;</span>
+                </div>
+                <div id="secondlanguage"></div>
+                
+            
+            </div>
+            <div class="inner2-south" id="searchResultPane" style="overflow:hidden!important;display:none">
+                
+
+<div class="tableWrapper ui-widget ui-widget-header  ui-dialog-title" style="font-size:0.75em;">
+ 
+    <table style="width:100%; table-layout:fixed">
+        <tr><td>
+     <span class="ui-dialog-title">
+         查找结果 </span>
+         <span class="ui-icon close" 
+               style ="background-position: -96px -128px; float:right;cursor:pointer" 
+               
+               title="Close search results. (It will reopen when you make another advanced search)">close</span>
+          </td></tr>
+
+        </table>
+     </div>
+    
+<img class="searchresultwaitimg" alt="waiting"  src='../Content/waitbig.gif'  />
+
+<div class="searchResultDiv data tableWrapper" style="position:relative;height:100%;">
+    <div class="innerWrapper">
+        <table style="width:100%; table-layout:fixed">
+
+        </table>
+    </div>
+</div>
+
+ 
+            </div>
+        </div>
+        <div class="inner-west details">
+            
+
+
+            
+        </div>
+    </div>
+
+    <div class="outer-west details ltr">
+        
+                
+<div id ="mainhiearchydiv" >
+<div class='topicons2'>    
+    <div class="fx">
+                 <span id="fchld" class="sidebutton" alt='切换显示分类于他处的基础组件子节点（灰色子节点）' 
+                                    title='切换显示分类于他处的基础组件子节点（灰色子节点）'
+                                    onclick="OBrowserNavigation.getInstance().toggleAdoptedChildren()"></span>
+        
+
+        <img class="sidebutton" alt='折叠全部节点' title='折叠全部节点'
+             src="../Content/collapse.png"
+             onclick="OBrowserNavigation.getInstance().theHierarchy.collapseTree()" />
+
+    </div>
+
+</div>
+    <div  id="hierarchy"  class="ygtv-highlight " >
+    </div>
+
+</div>
+
+
+            
+    </div>
+
+    
+</body>
+</html>
+
+

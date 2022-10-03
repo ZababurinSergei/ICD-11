@@ -1,0 +1,303 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Outil de Codage en CIM-11 Aide </title>
+    
+    
+        <link rel="stylesheet" href="css/sitemerged.min.css%3Fv131020.css" />
+    
+
+    
+        <link rel="stylesheet" href="css/main.c012c4fb.chunk.css" />
+
+
+
+</head>
+<body style="overflow: hidden; padding: 0 !important;">
+    <div class="navbar navbar-default navbar-default-release navbar-fixed-top ">
+        <div class="container">
+            <div class="navbar-header">
+                <h1 class="cttitle">Outil de Codage en CIM-11 Aide </h1>
+                <div class="sidetitle">
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+            </div>
+        </div>
+    </div>
+    <div class="body-content">
+        
+
+
+
+<a class="ctbutton  helpbutton-release" href="icd11_mms/fr/index.html" title='retour &#xE0; l&#x27;Outil de Codage'>Outil de codage</a>
+
+
+<div class="container-fluid " id="help-container">
+    <div class="row ">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <div id="sidenav">
+    <ul>
+        <li>
+            <a href="Help%3Fstate=Release&amp;lang=fr.html#searching">Recherche</a>
+            <ul>
+                <li><a href="Help%3Fstate=Release&amp;lang=fr.html#word-list">Liste de termes</a></li>
+                <li>
+                    <a href="Help%3Fstate=Release&amp;lang=fr.html#destination-entities">Entités résultantes</a>
+                    <ul>
+                        <li><a href="Help%3Fstate=Release&amp;lang=fr.html#incomplete-results">Résultats incomplets</a></li>
+                        <li><a href="Help%3Fstate=Release&amp;lang=fr.html#flexible-search">Recherche souple</a></li>
+                        <li><a href="Help%3Fstate=Release&amp;lang=fr.html#quick-copying">Copie rapide</a></li>
+                        <li><a href="Help%3Fstate=Release&amp;lang=fr.html#entity-details">Détails de l'entité</a></li>
+                    </ul>
+                </li>
+                <li><a href="Help%3Fstate=Release&amp;lang=fr.html#chapter-distribution-filter">Distribution des chapitres / filtre</a></li>
+
+            </ul>
+        </li>
+        <li><a href="Help%3Fstate=Release&amp;lang=fr.html#integrated-browser">Navigateur intégré</a></li>
+        <li>
+            <a href="Help%3Fstate=Release&amp;lang=fr.html#postcoordination">Postcoordination</a>
+            <ul>
+                <li><a href="Help%3Fstate=Release&amp;lang=fr.html#displaying-searching-value-sets">Affichage / Recherche de jeux de valeurs</a></li>
+                <li><a href="Help%3Fstate=Release&amp;lang=fr.html#building-a-code-string">Construire une chaîne de code</a></li>
+                <li><a href="Help%3Fstate=Release&amp;lang=fr.html#postcoordination-using-multiple-values-from-the-same-axis">Postcoordination utilisant plusieurs valeurs du même axe</a></li>
+                <li><a href="Help%3Fstate=Release&amp;lang=fr.html#nested-postcoordination">Postcoordination nichée</a></li>
+            </ul>
+        </li>
+        <li><a href="Help%3Fstate=Release&amp;lang=fr.html#coding-note">Note de codage</a></li>
+        <li><a href="Help%3Fstate=Release&amp;lang=fr.html#related-categories-in-maternal-chapter">Catégories connexes dans le chapitre maternité</a></li>
+        <li><a href="Help%3Fstate=Release&amp;lang=fr.html#related-categories-in-perinatal-chapter">Catégories connexes dans le chapitre périnatal</a></li>
+    </ul>
+</div>
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-8" id="help-md">
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Recherche </title>
+</head>
+<body>
+
+    <h3 id="recherche">Recherche <a name="searching"></a></h3>
+<p>L'outil de codage fonctionne en effectuant une recherche au fur et à mesure que l'utilisateur continue à taper dans la fenêtre de recherche :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/search-start-v4.png" alt="screenshot of Coding Tool search start" title="Coding Tool search start" /></p>
+<p>L'outil de codage génère (et met dynamiquement à jour) deux sorties différentes au fur et à mesure que la recherche se poursuit :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/search-result-columns-v4.png" alt="screenshot of Coding Tool search results" title="Coding Tool search start" /></p>
+<ol>
+<li><h4 id="liste-de-termes">Liste de termes <a name="word-list"></a></h4>
+<p>Sur le côté gauche, l'outil de codage affiche une liste de mots.</p>
+<p>Si vous êtes au milieu d'un mot, le système essaie de deviner le terme que vous êtes en train de taper.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/wordlist-guessing-v4.png" alt="screenshot of Coding Tool tries to guess the word" title="Coding Tool tries to guess the word" /></p>
+<p>Si vous avez complété un mot (cela signifie que vous avez <strong>saisi un espace</strong> à la fin d'un mot, ou que vous avez <strong>sélectionné un mot</strong> directement dans la liste des mots), le système vous montrera les mots-clés associés.
+Le lien de parenté est calculé en utilisant le nombre de fois où les mots apparaissent ensemble dans la CIM, ainsi que d'autres mesures similaires</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/wordlist-related-v4.png" alt="screenshot of Coding Tool related words" title="Coding Tool related words" /></p>
+<p>Cette liste peut être triée par proximité avec le terme cherché (par défaut) ou par ordre alphabétique.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/wordlist-sort-v4.png" alt="screenshot of Coding Tool word list sort options" title="Coding Tool word list sort options" /></p>
+<p>Il est possible de cliquer sur ces mots au lieu de continuer à taper.</p>
+</li>
+<li><h4 id="entites-resultantes">Entités résultantes <a name="destination-entities"></a></h4>
+<p>La sortie centrale de l'interface de l'outil de codage montre les entités correspondantes de la recherche.</p>
+<p>Cette sortie est triée en fonction de la correspondance entre le texte saisi et la phrase de la CIM. Les mots correspondants sont mis en évidence dans cette liste (par exemple, le mot &quot;tuberculose&quot; dans la capture d'écran ci-dessous).
+Le focus de la souris ou du clavier (vous pouvez également faire défiler la liste des entités avec les touches haut et bas du clavier) est indiqué par la flèche rouge sur le côté gauche de l'entité et par le fond gris clair.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entities-list-v4.png" alt="capture d'écran du résultat de la liste des entités de l’outil de codage" title="Résultat de la liste des entités du L’outil de codage" /></p>
+<p>Sur le côté droit de la liste des résultats des entités, l’outil de codage affiche également de petites icônes qui fournissent des informations spécifiques sur les entités, comme dans la capture d'écran ci-dessous :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entities-list-icons-v4.png" alt="capture d'écran de l'icône de la liste des entités de l'outil de codage" title="Icône de la liste des entités de l'outil de codage" /></p>
+<p>Chaque icône a une signification différente :</p>
+<ul>
+<li>La postcoordination est disponible pour cette entité : <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-pa-v4.png" alt="icône Postcoordination est disponible" title="icône Postcoordination est disponible" /></li>
+<li>La postcoordination est obligatoire pour cette entité : <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-pr-v4.png" alt="icon Postcoordination is mandatory" title="icon Postcoordination is mandatory" /></li>
+<li>Une note de codage est disponible pour cette entité : <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-cn-v4.png" alt="icon Coding note is available" title="icon Coding note is available" /></li>
+<li>Il y a une/des catégorie(s) connexe(s) dans le chapitre maternité pour cette entité : <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-ml-v4.png" alt="icône Catégories connexes dans le chapitre maternité" title="Catégories connexes dans le chapitre maternité" /></li>
+<li>Il y a une/des catégorie(s) connexe(s) dans le chapitre périnatal pour cette entité : <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-pl-v4.png" alt="icône Catégories connexes dans le chapitre périnatal" title="Catégories connexes dans le chapitre périnatal" /></li>
+</ul>
+<p>Si le résultat de la recherche contient une &quot;correspondance parfaite&quot;, l'entité correspondante est mise en évidence par un fond bleu (comme dans la capture d'écran ci-dessous).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entities-list-blu-match-v4.png" alt="capture d'écran du résultat de la liste des entités de L’outil de codage perfect match" title="Liste des entités de L’outil de codage perfect match" /></p>
+<p>La sortie est également groupée en utilisant la hiérarchie de la CIM, de sorte que si le texte de recherche correspond à une catégorie parente et à plusieurs enfants, ils apparaîtront d'une manière facile à identifier visuellement. Les codes des catégories non terminales (c'est-à-dire les catégories qui ont des enfants) sont affichés avec un fond gris dans cette sortie. Par exemple, dans la capture d'écran ci-dessous, le code CA23 après avoir recherché &quot;asthme&quot; :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entities-hierachy-group-v4.png" alt="capture d'écran des entités de L’outil de codage groupées par hiérarchie" title="Entités de L’outil de codage groupées par hiérarchie" /></p>
+<p>Vous pouvez modifier l'ordre de tri en utilisant la liste déroulante en haut de la liste. Nous avons deux options</p>
+<ul>
+<li>Trier par score de correspondance (par défaut)</li>
+<li>Trier par ordre de classification</li>
+</ul>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entities-list-sort-v4.png" alt="capture d'écran des options de tri de la liste des entités du L’outil de codage" title="Options de tri de la liste des entités du L’outil de codage" /></p>
+<p>La liste ne montre que les codes et les titres, sauf si le titre n'est pas un résultat de recherche. Par exemple, dans la capture d'écran ci-dessous, le terme en surbrillance est un terme correspondant :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entity-matching-terms-v4.png" alt="capture d'écran du terme de correspondance des entités de l'outil de codage" title="Terme de correspondance des entités de l'outil de codage" /></p>
+<h4 id="resultats-incomplets">Résultats incomplets <a name="incomplete-results"></a></h4>
+<p>Si le ou les mots saisis dans la recherche ne sont pas assez précis et que le système trouve plus de résultats qu'il ne peut en afficher, il émet les avertissements suivants :</p>
+<p>S'il trouve des résultats dans plus de 100 entités, il affichera les 100 meilleures correspondances et placera l'avertissement suivant : <em>Les résultats affichés sont incomplets</em></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/search-result-incomplete-v4.png" alt="capture d'écran de l'outil de codage lorsque les résultats affichés sont incomplets" title="Outil de codage lorsque les résultats affichés sont incomplets" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/wordlist-result-incomplete-v4.png" alt="capture d'écran de L’outil de codage lorsque le résultat de la liste de mots affichée est incomplet" title="L’outil de codage lorsque le résultat de la liste de mots affichée est incomplet" /></p>
+<p>Dans ces cas, il vous est conseillé de fournir plus d'informations dans la zone de recherche.</p>
+<h4 id="recherche-souple">Recherche souple <a name="flexible-search"></a></h4>
+<p>La fonction de recherche flexible peut être utilisée dans les cas où la recherche régulière de l'outil de codage ne renvoie aucun résultat.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/flexisearch-v4.png" alt="capture d'écran de l'outil de codage lorsque la recherche flexible est disponible" title="Outil de codage lorsque la recherche flexible est disponible" /></p>
+<p>La façon dont la recherche est effectuée dans le mode de recherche flexible est différente dans les aspects suivants :</p>
+<ol>
+<li>En mode de recherche normal, l’outil de codage ne vous donnera que des résultats contenant tous les mots que vous avez utilisés dans votre recherche. Il accepte différentes variantes ou synonymes de mots, mais il recherche essentiellement un résultat qui contient tous les éléments de votre recherche. En revanche, en mode de recherche flexible, les résultats ne doivent pas nécessairement contenir tous les mots saisis. Il essaiera toujours de trouver la meilleure phrase correspondante, mais il se peut que certains mots de votre recherche ne correspondent pas du tout
+<ul>
+<li>Par exemple, disons que l'utilisateur cherche <em>Stéatorrhée primaire</em> et qu'il n'existe aucune phrase dans l'index de la CIM-11 qui contienne ces mots ensemble. La recherche normale de l'outil de codage ne donnera aucun résultat, alors que la recherche flexible donnera des résultats contenant l'un des mots. Le premier résultat dans ce cas sera stéatorrhée qui est un terme de l'index sous Autres symptômes précisés liés au tractus gastro-intestinal inférieur ou à l'abdomen.</li>
+</ul>
+</li>
+</ol>
+ <br/>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/flexisearch-results-v4.png" alt="capture d'écran des résultats de la recherche flexible de L’outil de codage" title="Résultats de la recherche flexible de L’outil de codage" /></p>
+<ol start="2">
+<li>Une autre flexibilité ajoutée est d'essayer également des variantes plus larges des mots. Par exemple, si l'utilisateur recherche <em>Adénosarcome du poumon</em>, il obtiendra <em>Tumeurs malignes des bronches ou du poumon, non précisées</em>. Pour ce faire, on utilise la phrase &quot;Tumeur maligne&quot; au lieu de &quot;Adénosarcome&quot;</li>
+</ol>
+<h4 id="copie-rapide">Copie rapide <a name="quick-copying"></a></h4>
+<p>En cliquant sur le code (ou sur le titre du code), ou en appuyant sur la touche Entrée du clavier, le code sélectionné est copié dans le presse-papiers. Vous pouvez vérifier à tout moment quel code est copié dans le presse-papiers en haut à droite de la page :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entity-clipboard-v4.png" alt="capture d'écran du code d'entité de L’outil de codage copié dans le presse-papiers" title="Code d'entité de L’outil de codage copié dans le presse-papiers" /></p>
+<h4 id="details-de-lentite">Détails de l'entité <a name="entity-details"></a></h4>
+<p>En cliquant sur le lien &quot;détails&quot; (ou sur l'une des petites icônes), à droite de chaque résultat, vous ouvrez le contenu détaillé de l'entité (voir les captures d'écran ci-dessous) :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entity-details-link-v4.png" alt="capture d'écran du lien des détails de l'entité de l'outil de codage" title="Lien des détails de l'entité de l'outil de codage" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entity-details-open-v4.png" alt="capture d'écran des détails de l'entité L’outil de codage" title="Détails de l'entité L’outil de codage" /></p>
+<p>En haut du contenu des détails de l'entité, au moyen du lien &quot;afficher tout&quot;, l'outil de codage affiche tous les termes correspondants à l'entité actuelle.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entity-details-matching-terms-v4.png" alt="capture d'écran des termes de correspondance des détails des entités de l'outil de codage" title="Termes de correspondance des détails des entités de l'outil de codage" /></p>
+<p>En cliquant sur le lien &quot;masquer&quot;, tous les termes correspondants seront masqués, sauf les cinq premiers.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entity-details-matching-terms-all-v4.png" alt="capture d'écran de L’outil de codage entity details show all matching terms" title="l’outil de codage entity details show all matching terms" /></p>
+</li>
+<li><h4 id="distribution-des-chapitres-filtre">Distribution des chapitres / filtre <a name="chapter-distribution-filter"></a></h4>
+<p>Sur le côté droit, au moyen d'un bouton de commutation, l'outil de codage montre la distribution des chapitres et permet de définir des filtres pour la recherche.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entities-list-filter-off-v4.png" alt="capture d'écran du filtre du chapitre de l'outil de codage fermé" title="Filtre du chapitre de l'outil de codage fermé" /></p>
+<p>La distribution des chapitres montre le nombre de correspondances trouvées dans chaque chapitre de la classification.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/entities-list-filter-on-v4.png" alt="capture d'écran du filtre de chapitre de l'outil de codage ouvert" title="Filtre de chapitre de l'outil de codage ouvert" /></p>
+<p>Par défaut, le système recherche dans tous les chapitres, sauf dans les chapitres <em>Codes d'extension</em> et <em>Médecine traditionnelle</em>.<br />
+On peut changer le filtre en cliquant sur les cases à cocher à côté des noms de chapitres. Si la case n'est pas cochée, les résultats de ce chapitre ne sont pas affichés.</p>
+<p>Clicking on a chapter title will show you the results only from that chapter</p>
+<p>En cliquant sur le titre d'un chapitre, vous obtiendrez les résultats de ce chapitre uniquement.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/chapters-filter-v4.png" alt="capture d'écran du filtre de chapitre de l’outil de codage" title="Filtre de chapitre de L’outil de codage" /></p>
+<p>En cliquant sur le bouton « Afficher les résultats de l'ensemble par défaut », vous réinitialiserez les filtres de chapitre que vous avez définis et vous obtiendrez les résultats de tous les chapitres, à l'exception des « Codes d'extension » et de la « Médecine traditionnelle »</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/chapters-default-v4.png" alt="capture d'écran du jeu de chapitres par défaut de l’outil de codage" title="Jeu de chapitres par défaut de l’outil de codage" /></p>
+</li>
+</ol>
+<h3 id="navigateur-integre">Navigateur intégré <a name="integrated-browser"></a></h3>
+<p>Lorsque les détails de l'entité sont affichés, un clic sur l'icône de maximisation (le petit carré indiqué dans la capture d'écran ci-dessous) ouvre le navigateur CIM-11 dans l'outil de codage.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-link-v4.png" alt="capture d'écran du lien du navigateur de L’outil de codage" title="Lien du navigateur de l’Outil de codage" /></p>
+<p>Le navigateur intégré CIM-11 est affiché dans la page comme une fenêtre de premier plan.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-v4.png" alt="capture d'écran du navigateur intégré de l’Outil de codage" title="Navigateur intégré de L’outil de codage" /></p>
+<p>Les données de l'entité affichées sur le côté droit du navigateur sont (si elles sont présentes) :</p>
+<ul>
+<li>Nom entièrement précisé</li>
+<li>Description</li>
+<li>Informations supplémentaires</li>
+<li>Inclusions</li>
+<li>Exclusions</li>
+<li>Exclusions des niveaux ci-dessus</li>
+<li>Codé ailleurs</li>
+<li>Catégories connexes dans le chapitre maternité</li>
+<li>Catégories connexes dans le chapitre périnatal</li>
+<li>Note de codage</li>
+<li>Note de codage des niveaux supérieurs</li>
+<li>Postcoordination</li>
+</ul>
+<p>Lorsque vous naviguez dans la CIM-11, vous verrez la hiérarchie de classification sur le côté gauche de l'écran. En cliquant sur une entité, les détails de cette entité s'affichent dans la partie droite de l'écran.</p>
+<p>Initialement, le système n'ouvre que la hiérarchie du code sélectionné. Cependant, vous pouvez rendre visibles les enfants de chaque entité en cliquant sur les petits triangles situés à gauche des entités.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-triangle-v4.png" alt="Capture d'écran du navigateur intégré L’outil de codage enfants ouverts" title="Navigateur intégré de l’Outil de codage enfants ouverts" /></p>
+<h3 id="postcoordination">Postcoordination <a name="postcoordination"></a></h3>
+<p>Le système de postcoordination permet d'ajouter plus de détails à l'entité choisie. Différents types d'informations peuvent être ajoutés à différents éléments. Par exemple, des informations supplémentaires sur l' « Histopathologie » peuvent être ajoutées à la plupart des catégories de Tumeurs, mais elles ne peuvent pas être ajoutées aux autres catégories de la classification.</p>
+<p>Lorsque vous avez ouvert le détail d'une entité dans la liste des résultats, le lien de postcoordination n'est affiché que si la postcoordination est applicable à cette entité (voir la capture d'écran ci-dessous).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-available-postcoord-v4.png" alt="capture d'écran du lien de l'outil de codage pour la postcoordination disponible" title="Lien de l'outil de codage pour la postcoordination disponible" /></p>
+<p>Lorsque vous vous trouvez sur une entité dans le navigateur intégré CIM-11, la zone de postcoordination n'affichera que les axes de postcoordination possibles qui sont applicables à cette entité</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-v4.png" alt="capture d'écran de l'exemple de postcoordination de l'outil de codage" title="Exemple de postcoordination de l'outil de codage" /></p>
+<p>Certaines catégories contiennent des informations qui sont incomplètes pour les multiples objectifs de la CIM. Dans ces cas, le lien est marqué par l’icône « Postcoordination obligatoire ».</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-mandatory-postcoord-v4.png" alt="capture d'écran du lien de l'outil de codage pour la postcoordination obligatoire" title="Lien de l'outil de codage pour la postcoordination obligatoire" /></p>
+<p>Si la postcoordination est obligatoire, la note « (coder aussi) » dans la zone de postcoordination du navigateur indique que des informations doivent être ajoutées pour cet axe.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-mandatory-v4.png" alt="capture d'écran de l'outil de codage exemple de postcoordination obligatoire" title="Outil de codage exemple de postcoordination obligatoire" /></p>
+<p>Pour ouvrir la postcoordination correspondant à un terme spécifique, vous devez cliquer sur l'une des icônes de postcoordination situées à droite du contenu des détails de l'entité.<br />
+L'icône « Postcoordination possible » est disponible :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-pa-v4.png" alt="icône Postcoordination est disponible" title="icône Postcoordination est disponible" /></p>
+<p>Ou l’icône « ¨Postcoordination obligatoire » est affiché :</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-pr-v4.png" alt="icône La postcoordination est obligatoire" title="icône La postcoordination est obligatoire" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-selected-term-v4.png" alt="capture d'écran de l'outil de codage postcoordination terme sélectionné" title="Outil de codage postcoordination terme sélectionné" /></p>
+<p>Dans le navigateur intégré CIM-11, le terme correspondant est affiché comme « Terme sélectionné ». L’outil de codage affichera également l'URI de base du terme sélectionné s'il est différent de l'URI de base de l'entité actuelle (voir la capture d'écran ci-dessous).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-selected-term-in-browser-v4.png" alt="capture d'écran du terme sélectionné dans le navigateur de L’outil de codage postcoordination" title="Terme sélectionné dans le navigateur de l’outil de c odagepostcoordination" /></p>
+<h4 id="affichage-recherche-de-jeux-de-valeurs">Affichage / Recherche de jeux de valeurs <a name="displaying-searching-value-sets"></a></h4>
+<p>Certains axes de postcoordination peuvent contenir des valeurs à partir d'un plus petit ensemble de valeurs possibles, comme la Latéralité, tandis que d'autres axes peuvent contenir des valeurs à partir d'un plus grand ensemble de valeurs, comme l'Histopathologie.</p>
+<ul>
+<li><p>Si la valeur définie est petite, le navigateur affichera toutes les valeurs possibles avec leurs codes.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-small-v4.png" alt="capture d'écran de l'exemple de postcoordination du jeu de petites valeurs de l'outil de codage" title="Exemple de postcoordination du jeu de petites valeurs de l'outil de codage" /></p>
+</li>
+<li><p>Si le jeu de valeurs est important, vous parcourez l'arborescence de l'axe de postcoordination. Sinon, vous pouvez rechercher les ensembles de valeurs en tapant dans le champ de recherche. Le navigateur ne recherchera que les valeurs pour cet axe.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-big-v4.png" alt="capture d'écran de l'exemple de postcoordination de l'ensemble des valeurs de l'outil de codage" title="Exemple de postcoordination de l'ensemble des valeurs de l'outil de codage" /></p>
+</li>
+<li><p>Parfois, même si l'ensemble des valeurs réelles d'un axe est important, toutes les valeurs de l'ensemble de valeurs ne sont pas applicables à une entité. Dans ce cas, le navigateur n'affichera/recherchera que la partie pertinente. Si le nombre de valeurs pouvant être appliquées est inférieur à 12, le navigateur les énumérera toutes. Si le résultat est supérieur à 12, le navigateur permettra la recherche et la navigation dans l'axe.</p>
+<p>Par exemple, le « Kyste osseux anévrysmal » peut être postcoordonné avec le « Détail anatomique spécifique » mais toutes les valeurs ne sont pas applicables. Dans ce cas, le navigateur n'affiche/recherche que les valeurs pertinentes. Dans l'exemple ci-dessous, lorsque l'utilisateur recherche « Tête », le système ne montre que les résultats qui se trouvent dans la branche « Os » de l'axe « Détail anatomique spécifique ».</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-search-v4.png" alt="capture d'écran de l'exemple de postcoordination de recherche de l'outil de codage" title="Exemple de postcoordination de recherche de l'outil de codage" /></p>
+</li>
+</ul>
+<h4 id="construire-une-chaine-de-code">Construire une chaîne de code <a name="building-a-code-string"></a></h4>
+<p>Pour construire un code, vous devez cliquer sur les valeurs qui sont affichées dans les résultats de la recherche, dans la hiérarchie ou dans les listes plus courtes.</p>
+<p>L'exemple ci-dessous montre comment coder « Néoplasme malin du sein détaillé avec latéralité et anatomie spécifique ».<br />
+Les sélections de postcoordination sont indiquées en haut de la section de postcoordination et la chaîne de code générée est indiquée au-dessus de la section de postcoordination.<br />
+En cliquant sur le bouton « Sélectionner », la chaîne de code générée est copiée dans le presse-papiers.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-build-v4.png" alt="capture d'écran de l'outil de codage construisant une chaîne de code" title="L'outil de codage construisant une chaîne de code" /></p>
+<h4 id="postcoordination-utilisant-plusieurs-valeurs-du-meme-axe">Postcoordination utilisant plusieurs valeurs du même axe <a name="postcoordination-using-multiple-values-from-the-same-axis"></a></h4>
+<p>Le système autorise une valeur par axe pour la plupart des axes de postcoordination.<br />
+Par exemple, lors de la postcoordination avec la « gravité », vous ne pouvez pas choisir les valeurs « légère » et « modérée » en même temps. Cependant, pour certains axes, le système permet de fournir plusieurs valeurs. Les axes qui autorisent des valeurs multiples sont les suivants :</p>
+<ul>
+<li>Associé à</li>
+<li>Affection causale</li>
+<li>A pour manifestation</li>
+<li>Anatomie spécifique</li>
+<li>Agents infectieux</li>
+<li>Agents chimiques</li>
+<li>Médicaments</li>
+</ul>
+<p>Pour ces axes, vous pouvez fournir plus d'une valeur. Par exemple, lorsque la postcoordination avec une anatomie spécifique est autorisée, vous pouvez sélectionner plus d'un site.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-multiple-v4.png" alt="screenshot of Coding Tool postcoordination multiple values from the same axis" title="Coding Tool postcoordination multiple values from the same axis" /></p>
+<p>Et pour certains axes de causes externes, nous autorisons plusieurs valeurs uniquement lorsqu'elles proviennent de blocs différents.</p>
+<p>Par exemple, lors de la postcoordination d'un « Evénement de transport terrestre involontaire blessant un cycliste à pédale » en utilisant l'axe Descriptif de l'événement de transport, nous pouvons utiliser une valeur du bloc « RÔLE DE L'UTILISATEUR DU VÉHICULE D'UNE PERSONNE BLESSÉE LORS D'UN ÉVÉNEMENT DE TRANSPORT » et une autre du bloc « PARTIE PRENANTE DANS UN ACCIDENT DE TRANSPORT TERRESTRE » mais nous ne pouvons pas utiliser deux valeurs du même bloc.</p>
+<p>Lorsque plusieurs valeurs pour un axe ne sont pas autorisées et que l'utilisateur clique sur la deuxième, le système remplace la valeur existante. Par exemple, lorsque vous effectuez une postcoordination avec la gravité et que vous avez déjà choisi la valeur « léger », le fait de cliquer sur « modéré » remplacera la valeur « léger » par la valeur « modéré ».</p>
+<h4 id="postcoordination-nichee">Postcoordination nichée <a name="nested-postcoordination"></a></h4>
+<p>Dans certains cas, le système peut fournir une spécification supplémentaire des valeurs de postcoordination. Si le détail spécifique est connu, sélectionnez l'entité la plus précise. Sinon, sélectionnez l'entité la moins précise.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/postcoord-nested-v4.png" alt="capture d'écran de la postcoordination imbriquée de l'outil de codage" title="Postcoordination imbriquée de l'outil de codage" /></p>
+<h3 id="note-de-codage">Note de codage <a name="coding-note"></a></h3>
+<p>Lorsque vous avez ouvert le détail d'une entité dans la liste des résultats, la section « Note de codage » s'affiche si elle est disponible pour cette entité (voir la capture d'écran ci-dessous).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-available-codingnote-v4.png" alt="capture d'écran du lien de l'outil de codage pour la note de codage disponible" title="Lien de l'outil de codage pour la note de codage disponible" /></p>
+<p>Lorsque vous êtes sur une entité dans le navigateur intégré CIM-11, la section « Note de codage » s'affiche comme ci-dessous</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/codingnote-v4.png" alt="capture d'écran de l'exemple de note de codage de l’outil de codage" title="Exemple de note de codage de l’outil de codage" /></p>
+<h3 id="categories-connexes-dans-le-chapitre-maternite">Catégories connexes dans le chapitre maternité <a name="related-categories-in-maternal-chapter"></a></h3>
+<p>Lors du codage de la mortalité maternelle, la cause sous-jacente est généralement codée au chapitre 18. Pour simplifier cela et pouvoir garder le détail provenant du reste de la classification, l’outil de codage de la CIM-11 vous fournit des codes alternatifs du chapitre maternité.</p>
+<p>Si le résultat de la recherche comporte une alternative au code maternité, vous verrez apparaître l'icône J.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-ml-v4.png" alt="icône catégories liées dans le chapitre maternité" title="Catégories liées dans le chapitre maternité" /></p>
+<p>Lorsque vous ouvrez les détails de l'entité dans la liste des résultats, la section « Catégories connexes dans le chapitre maternité » s'affiche pour cette entité.</p>
+<p>Par exemple, l'entité « Tuberculose de l'œil » (1B12.1) a comme catégorie connexe dans le chapitre maternité l'entité « Tuberculose compliquant la grossesse, l'accouchement ou la puerpéralité » (JB63.0).<br />
+Ce code est combiné avec le code de la « Tuberculose de l'œil » (1B12.1) et le code résultant devient JB63.0/1B12.1.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-available-maternal-v4.png" alt="capture d'écran du lien de l'outil de codage pour les catégories connexes dans le chapitre maternité" title="Lien de l'outil de codage pour les catégories connexes dans le chapitre maternité" /></p>
+<p>Lorsque vous êtes sur une entité dans le navigateur intégré de la CIM-11, la section « Catégories connexes dans le chapitre maternité » s'affiche comme suit</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-available-maternal-integrated-v4.png" alt="capture d'écran des catégories liées à l'outil de codage dans l'exemple de chapitre maternité" title="Catégories liées à l'outil de codage dans l'exemple de chapitre maternité" /></p>
+<p>Cliquer sur le lien dans la section « Catégories connexes dans le chapitre maternité », dans cet exemple JB63.0/1B12.1 (ci-dessous souligné en rouge dans la capture d'écran des détails de l'entité et également dans la capture d'écran du navigateur intégré).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-available-maternal-link-v4.png" alt="capture d'écran du lien de l'outil de codage pour les catégories connexes dans le lien du chapitre maternité" title="Lien de l'outil de codage pour les catégories connexes dans le lien du chapitre maternité" /></p>
+<p>Le navigateur intégré ouvre directement l'entité correspondante dans le chapitre maternité (dans l'exemple ci-dessous : « JB63.0 Tuberculose compliquant la grossesse, l'accouchement ou la puerpéralité ») postcoordonnée avec l'entité sélectionnée (dans l'exemple ci-dessous : « 1B12.1 Tuberculose de l'œil ») sans aucune intervention de l'utilisateur.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/maternal-v4.png" alt="capture d'écran de l'outil de codage des catégories connexes dans l'exemple de chapitre maternité" title="Outil de codage des catégories connexes dans l'exemple de chapitre maternité" /></p>
+<h3 id="categories-connexes-dans-le-chapitre-perinatal">Catégories connexes dans le chapitre périnatal <a name="related-categories-in-perinatal-chapter"></a></h3>
+<p>Lors du codage de la mortalité périnatale, la cause sous-jacente est généralement codée au chapitre 19. Pour simplifier cela et pouvoir garder le détail provenant du reste de la classification, l’outil de codage de la CIM-11 vous fournit des codes alternatifs du chapitre périnatal.</p>
+<p>Si le résultat de la recherche comporte une alternative de code périnatal, vous verrez apparaître l'icône K.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/icon-pl-v4.png" alt="icône catégories connexes dans le chapitre périnatal" title="Catégories connexes dans le chapitre périnatal" /></p>
+<p>Lorsque vous ouvrez les détails de l'entité dans la liste des résultats, la section « Catégories connexes dans le chapitre périnatal » s'affiche pour cette entité.</p>
+<p>Par exemple, l'entité « Tuberculose de l'œil » (1B12.1) a comme catégorie connexe dans le chapitre périnatal l'entité « Tuberculose congénitale » (KA61.0).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-available-perinatal-v4.png" alt="capture d'écran du lien de l'outil de codage pour les catégories connexes dans le chapitre périnatal" title="Lien de l'outil de codage pour les catégories connexes dans le chapitre périnatal" /></p>
+<p>Lorsque vous vous trouvez sur une entité dans le navigateur intégré de la CIM-11, la section « Catégories connexes dans le chapitre périnatal » s'affiche comme suit</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-available-perinatal-integrated-v4.png" alt="capture d'écran des catégories liées à l'outil de codage dans l'exemple de chapitre périnatal" title="Catégories liées à l'outil de codage dans l'exemple de chapitre périnatal" /></p>
+<p>En cliquant sur le lien dans la section « Catégories connexes dans le chapitre périnatal », dans cet exemple KA61.0 (ci-dessous souligné en rouge dans la capture d'écran des détails de l'entité et également dans la capture d'écran du navigateur intégré).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/browser-available-perinatal-link-v4.png" alt="capture d'écran du lien de l'outil de codage pour les catégories connexes dans le lien du chapitre périnatal" title="Lien de l'outil de codage pour les catégories connexes dans le lien du chapitre périnatal" /></p>
+<p>Le navigateur intégré ouvre directement l'entité correspondante dans le chapitre périnatal (dans l'exemple ci-dessous : « KA61.0 Tuberculose congénitale ») sans aucune intervention de l'utilisateur.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/fr/img/perinatal-v4.png" alt="capture d'écran de l'outil de codage des catégories connexes dans l'exemple de chapitre périnatal" title="Outil de codage des catégories connexes dans l'exemple de chapitre périnatal" /></p>
+
+
+</body>
+</html>
+        </div>
+      
+    </div>
+</div>
+    </div>
+</body>
+</html>

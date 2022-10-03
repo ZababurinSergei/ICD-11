@@ -1,0 +1,559 @@
+
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta name="fragment" content="!" />
+    <meta name="google-site-verification" content="INKtg_4AcvauV4s-ZBZ5SidBwCFkxK2XfoiOE3iYM-g" />
+    <meta name="msvalidate.01" content="9BB0063D535B2050751F8A6D728E83F7" />
+    <meta name="buildDate" content='2022 Jul 07 - 08:30' />
+    <meta name="icd11Date" content='2022 Feb 07' />
+
+    
+
+    <title>CIM-11 pour les statistiques de mortalit&#233; et de morbidit&#233;-Liste sp&#233;cifique des agents infectieux </title>
+
+            
+<link href="../Styles/misc%3Fv=dfAVCc9GiqiW7HOGofUpKJc10Ni2nMC4BeTU_bMAoak1.css" rel="stylesheet"/>
+
+<link href="../Styles/project%3Fv=u74R43iV1Rol_6He5PFQAA125GEACTpsk6uhG9aDHbk1.css" rel="stylesheet"/>
+
+
+<script src="../Scripts/library%3Fv=e0v_ja_3_9uo8yD7NwA5JgReh3Y4IXd2XojAeT5ODXg1"></script>
+
+<script src="../Scripts/common%3Fv=z495DuYbCMDEIrp7znqqprhzZF00RizJIvZ9IAUvnno1"></script>
+
+
+
+
+     
+     
+     
+
+
+    <script src="../Scripts/jquery.layout-latest.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
+    
+    
+
+    <script src="../Scripts/projectscript%3Fv=fQNbgut12T7PaxqkfCAaBYOoTdmmAozmamBbTY-Btyo1"></script>
+
+
+        <meta name="description" content="ICD-11 Browser contains the ICD-11 (International Classification of Diseases 11th Revision) " />
+
+
+
+    
+    <link rel="icon" href="../Content/ICD11.RELEASE.png" />
+
+    
+  <script type="text/javascript">
+
+       var oInfo = new OntologyBasicInfo();
+       oInfo.ontologyKey = "l-m_st_infections";
+       oInfo.ontologyId = "ICD11_MMS_st_infections";
+       oInfo.theLanguage = "fr";
+       oInfo.isLinearization =  false;
+       oInfo.baseURL = location.protocol + "//" + location.hostname + ":" + location.port + '/browse11/';
+        //oInfo.ontologyLabel = "CIM-11 - CIM-11 pour les statistiques de mortalit&#233; et de morbidit&#233; Liste sp&#233;cifique des agents infectieux";
+       oInfo.ontologyLabel = "CIM-11 pour les statistiques de mortalit&#233; et de morbidit&#233;-Liste sp&#233;cifique des agents infectieux";
+       oInfo.usesElastic = true;
+
+       
+
+       var appState = new ApplicationStateInformation();
+       appState.userLoggedIn =  false;
+       appState.appMode = "ICD11.RELEASE";
+       appState.scrollToEntity = false;
+       appState.defaultShowGrayNodes = true;
+       $(document).ready(function(){
+           OBrowserNavigation.getInstance().navigationMode=NavigationMode.Browser;
+           OBrowserNavigation.getInstance().initialize(oInfo,appState);
+           OBrowserContributions.getInstance().initialize(oInfo.baseURL,OBrowserNavigation.getInstance());
+       });
+
+                </script>
+            
+
+
+</head>
+<body>
+
+
+
+    <div id="showinpopudiv" style="display:none"></div>
+       
+<script type="text/javascript">
+    function checkAllSearchFields() {
+        $("form input:checkbox").prop('checked', true);
+    }
+
+    function uncheckAllSearchFields() {
+        $("form input:checkbox").prop('checked', false);
+    }
+    
+</script>
+<div id="advancedSearchBox" class="advancedsearch ">
+
+
+        <form id ="advancedSearchForm" method="post" >
+
+        Rechercher dans le texte :
+                   <span style="float:right;margin-right:-12px;margin-bottom:2px">
+            
+
+        <span id="imagebutton_e548837a-5587-49a9-b4d0-6efcf88c9852advancedsearch" title="Aide" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('e548837a-5587-49a9-b4d0-6efcf88c9852advancedsearch','Aide')"  >
+                &nbsp;
+            </span>
+    <div id="content_e548837a-5587-49a9-b4d0-6efcf88c9852advancedsearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+<h2>Aide à la recherche avancée</h2>
+
+<p>
+    <img class="dropshadow" alt="Advanced search help image"  src="../Content/helpfiles.ICD11_fr/images/advancedsearch1.png" /></p>
+<p>
+    La recherche avancée vous permet de rechercher des propriétés sélectionnées de la classification. Vous pouvez rechercher dans l’ensemble des propriétés ou seulement au sein d’un sous-ensemble sélectionné.
+</p>
+<p>
+    Veuillez fournir des mots-clés dans le champ <strong>Texte de recherche</strong> et cocher les propriétés que vous souhaitez inclure dans la recherche.
+</p>
+<p>
+    Le système recherchera les mots-clés dans les propriétés que vous avez sélectionnées.
+</p>
+
+
+<p>
+    Les résultats sont triés en fonction de la correspondance entre le texte saisi et la phrase dans la CIM. Ils sont également regroupés en utilisant la hiérarchie de la CIM, de sorte que si le texte recherché correspond à une catégorie parente et à plusieurs enfants, ils apparaîtront d'une manière qui permet visuellement de facilement identifier cette relation. La liste ne montre que les titres ou la meilleure correspondance parmi les termes correspondants si le titre n'est pas une correspondance.
+    Cependant, le bouton <span class="detailsicon">&#9636;</span> rendra visibles plus de résultats de correspondance sous l'entité.
+</p>
+
+<p>Si la requête de sélection renvoie plus de 200 résultats, seuls les 200 premiers seront affichés.</p>
+<p>
+
+    Si vous fournissez plus d'un mot-clé, le système recherchera les éléments qui contiennent tous les mots-clés.
+</p>
+
+<p>
+
+    <strong>Caractères génériques:</strong>
+
+    Vous pouvez également utiliser le caractère générique *
+</p>
+<p>
+    Par exemple, la recherche de <strong>Diabèt*</strong> permet de trouver toutes les entités dont le mot commence par "Diabèt"
+</p>
+
+<h4>Résultats de la recherche</h4>
+<p>
+    <img  class="dropshadow" alt="Advanced search help image"  src="../Content/helpfiles.ICD11_fr/images/advancedsearch2.png" /></p>
+<p>
+<p>Après la recherche, les résultats sont affichés dans la partie inférieure droite de l'écran. Cliquez sur un résultat pour charger cette entité.</p>
+<p>Vous pouvez fermer la fenêtre de <strong>recherche avancée</strong> ou le volet des <strong>résultats de la recherche</strong> en cliquant sur le X dans le coin supérieur gauche de la fenêtre. </p>
+
+        
+        </div>
+    </div>
+ 
+                </span>
+            <input autocomplete="off" class="advancedSearchTextBox" id="SearchText" name="SearchText" type="text" value="" />
+
+     
+        <br />
+        
+            <span style="font-style:italic">
+                Veuillez s&#233;lectionner les propri&#233;t&#233;s &#224; inclure dans la recherche
+            </span>
+        <div style="float: right">
+            <span class="buttonLike" onclick="checkAllSearchFields(); " >
+                [ 
+                S&#233;lectionner tout  
+                ]
+            </span> 
+            &nbsp;&nbsp;&nbsp;
+            <span class="buttonLike" onclick="uncheckAllSearchFields(); " >
+                [ 
+                D&#233;s&#233;lectionner tout
+                ]
+            </span>   
+        </div>
+        <br />
+            <div class="advsearchpropertiesdiv">
+                <div class="advsearchpropertiesdivLeft">
+
+<input checked="checked" id="Search_Title" name="Search_Title" type="checkbox" value="true" /><input name="Search_Title" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Title')">
+                            Titre
+                        </span>
+                        <br />
+<input id="Search_Synonym" name="Search_Synonym" type="checkbox" value="true" /><input name="Search_Synonym" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Synonym')">
+                            Synonyme
+                        </span>
+                        <br />
+<input id="Search_Definition" name="Search_Definition" type="checkbox" value="true" /><input name="Search_Definition" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Definition')">
+                            Description
+                        </span>
+                        <br />
+<input id="Search_Inclusion" name="Search_Inclusion" type="checkbox" value="true" /><input name="Search_Inclusion" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Inclusion')">
+                            Termes d’inclusion
+                        </span>
+                        <br />
+<input id="Search_Exclusion" name="Search_Exclusion" type="checkbox" value="true" /><input name="Search_Exclusion" type="hidden" value="false" />                        <span class="advsearchptext" onclick="OBrowserNavigation.getInstance().theSearcher.onTextClick('Search_Exclusion')">
+                            Termes d’exclusion
+                        </span>
+                        <br />
+
+                </div>
+                <div class="advsearchpropertiesdivRight">
+
+
+                </div>
+                </div>
+
+                
+
+
+</form>
+
+</div>
+
+
+
+    <div class='outer-north header-ltr headerICD11RELEASE'>
+
+        <div id="headerleft" style="height: 100%">
+            
+                <h1>CIM-11 pour les statistiques de mortalit&#233; et de morbidit&#233;-Liste sp&#233;cifique des agents infectieux</h1>
+
+            
+            
+                <div id="searchcontainer">
+                    
+Rechercher 
+<input class="search" id="searchbox" data-searchType="full"  type="text" />
+<img class="searchwait" src="../Content/load.gif"/>
+
+
+        <span id="imagebutton_68222986-aca2-45eb-bc5e-3486438e58ecquicksearch" title="Aide" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('68222986-aca2-45eb-bc5e-3486438e58ecquicksearch','Aide')"  >
+                &nbsp;
+            </span>
+    <div id="content_68222986-aca2-45eb-bc5e-3486438e58ecquicksearch" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+<h2>Aide à la recherche rapide</h2>
+
+<p>
+    <img class="dropshadow" alt="quicksearch image" src="../Content/helpfiles.ICD11_fr/images/quicksearch.png" /></p>
+<p>
+    La recherche rapide vous permet de naviguer rapidement vers une catégorie particulière. Elle recherche les titres, les inclusions, les synonymes et les termes proches. Elle fonctionne en commençant à chercher au fur et à mesure que vous tapez et vous propose des options dans une liste déroulante dynamique.
+</p>
+<p>En cliquant sur l'une des entités qui apparaissent dans la liste, vous la chargerez.</p>
+
+<p>
+    Les résultats sont triés en fonction de la correspondance entre le texte saisi et la phrase dans la CIM.
+    Ils sont également regroupés en utilisant la hiérarchie de la CIM, de sorte que si le texte recherché correspond à une catégorie parente et à plusieurs enfants,
+    ils apparaîtront d'une manière qui permet d'identifier facilement cette relation visuellement.
+    La liste ne montre que les titres ou la meilleure correspondance parmi les termes correspondants si le titre n'est pas une correspondance.
+    Cependant, le bouton <span class="detailsicon">&#9636;</span> rendra visibles un plus grand nombre de résultats correspondants sous l'entité..
+</p>
+
+<p>
+    Vous pouvez également utiliser des caractères génériques pour trouver des mots similaires ou simplement afin d'éviter de d’écrire le mot complet. 
+    Par exemple, <strong>transp* accident</strong> trouvera des entités avec transport et accident.
+</p>
+
+
+        
+        </div>
+    </div>
+ 
+
+
+                    <a class="buttonLike" id="advancedSearchButton">
+                        [
+                        Recherche avanc&#233;e
+                        ]
+                    </a>
+                </div>
+            
+            
+        </div>
+        <div class="toplogbuttons">
+            
+    
+        </div>
+        <div id="messageArea"></div>
+        <div style="display:none" id="notificationdomainsarea"></div>
+    </div>
+
+
+<div id="menu" class="menu-ltr">
+    <ul class="tabs">
+
+                    <li>
+                        <a id="mainmenu-Naviguer" href="../l-m/fr.html" title="CIM-11 - CIM-11 pour les statistiques de mortalit&#233; et de morbidit&#233;"
+                           >
+                            Naviguer
+                        </a>
+
+                    </li>
+                <li class="hasmore" id="pmenu_Info">
+                    <a title=""><span>Info</span></a>
+                    <ul class="dropdown">
+                                    <li>
+                                        <a id="submenu-Guide_d&#39;utilisation"
+                                           href="../Help/fr.html"
+                                           title="Guide d&#39;utilisation du navigateur de la CIM-11"
+                                                                                      >
+                                            Guide d&#39;utilisation
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Fichier_du_tableur"
+                                           href="../Downloads/Download%3FfileName=simpletabulation_fr.zip"
+                                           title="Tabulation simple"
+                                                                                        target="_blank"
+>
+                                            Fichier du tableur
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Tables_de_mapping_CIM-10_CIM-11"
+                                           href="../Downloads/Download%3FfileName=mapping.zip"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            Tables de mapping CIM-10/CIM-11
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Maintenance_de_la_CIM-11,_Contributions,_Propositions"
+                                           href="../../dev11.html"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            Maintenance de la CIM-11, Contributions, Propositions
+                                        </a>
+
+
+        <span id="imagebutton_923f929d-42b8-4ebd-9109-472335d73035livebrowser" title="Aide" class="helpbutton helpbuttonICD11RELEASE" 
+                onclick="Helper.popupContent('923f929d-42b8-4ebd-9109-472335d73035livebrowser','Aide')"  >
+                &nbsp;
+            </span>
+    <div id="content_923f929d-42b8-4ebd-9109-472335d73035livebrowser" class="hiddenhelp">
+        <div class="help" autofocus="true">
+            
+            
+
+
+<h3>Plateforme de maintenance de la CIM-11</h3>
+
+<p>
+    Le processus de maintenance de la CIM permet l'adaptation continue de la CIM en fonction de l'évolution de la compréhension des maladies, des traitements et de la prévention. 
+    Un mécanisme de proposition et de révision sur une plateforme en ligne rend le processus transparent. 
+    Cette plateforme permet aux utilisateurs de visualiser les propositions de mise à jour, de faire des propositions de modification ou des suggestions de correction. 
+    En outre, nous fournissons un mécanisme de contribution aux traductions de la CIM-11.
+
+</p>
+
+<p>
+    Le navigateur de la plateforme de maintenance (avec le fond orange) est principalement destiné aux contributeurs au développement de la classification et il présente les différences suivantes :
+    <ul>
+        <li>
+            Il montre le travail en cours. C'est-à-dire qu'il peut contenir du contenu qui n'est pas publié et qui peut changer avant la publication. Il ne doit donc pas être utilisé pour le codage.
+        </li>
+        <li>Il présente la fondation de la CIM-11 ainsi que les différentes linéarisations, y compris la CIM-11 pour les statistiques de mortalité et de morbidité (SMM).</li>
+        <li>Il possède des fonctionnalités pour faciliter la contribution, comme les commentaires et le mécanisme de proposition.</li>
+        <li>Il contient un outil de traduction pour faciliter les traductions.</li>
+    </ul>
+
+</p>
+        
+        </div>
+    </div>
+                                    </li>
+                                    <li>
+                                        <a id="submenu-Page_d&#39;accueil_de_la_CIM"
+                                           href="../../index.html"
+                                           title=""
+                                                                                        target="_blank"
+>
+                                            Page d&#39;accueil de la CIM
+                                        </a>
+                                    </li>
+                    </ul>
+                </li>
+    </ul>
+
+</div>
+
+
+
+    <div id="langarea" class="langarea-ltr">
+        <div id="langbutton">
+            <img id="mlimg" alt="language change icon" src="../Content/globe.svg" />
+            FR
+        </div>
+        <ul id="languagelist">
+                <li>
+                        <a href="../../browse11.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            English
+                        </a>
+                </li>
+                <li>
+                        <a href="../l-m/ar.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Arabic
+                        </a>
+                </li>
+                <li>
+                        <a href="../l-m/es.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Spanish
+                        </a>
+                </li>
+                <li>
+                        <span class="languageselected">
+                            <span class="selstatus">&#x2713</span>
+                            French
+                        </span>
+                </li>
+                <li>
+                        <a href="../l-m/zh.html" class="languageswitch">
+                            <span class="selstatus"></span>
+                            Chinese
+                        </a>
+                </li>
+            <hr class="secondlanguageinmenu"></hr>
+                <li>
+                    <a title="Ouvrir comme seconde langue" onclick="OBrowserNavigation.getInstance().setSecondLanguage('en')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ English
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Ouvrir comme seconde langue" onclick="OBrowserNavigation.getInstance().setSecondLanguage('ar')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Arabic
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Ouvrir comme seconde langue" onclick="OBrowserNavigation.getInstance().setSecondLanguage('es')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Spanish
+                    </a>
+
+                </li>
+                <li>
+                    <a title="Ouvrir comme seconde langue" onclick="OBrowserNavigation.getInstance().setSecondLanguage('zh')" class="languageswitch">
+                        <span class="selstatus"></span>
+                        ➢ Chinese
+                    </a>
+
+                </li>
+
+        </ul>
+
+    </div>
+    <div class="outer-center" id="xx" style="padding: 0 !important; border: 0 !important;">
+        <div class="inner-center">
+            <div class="inner2-center details" id="firstright">
+                <img id="conceptdetailswaitimg" alt="waiting" style="display: none; float: right" src='../Content/wait.gif' />
+                <div class="initialpageRight">
+                    
+                
+
+<h3 class="page_heading1">
+    CIM-11 pour les statistiques de mortalité et de morbidité (CIM-11 SMM) <br />
+</h3>
+
+
+            
+                </div>
+            </div>
+            <div class="inner2-east details" id="secondright">
+                
+                <div class="slclose">
+                    <span onclick="OBrowserNavigation.getInstance().removeSecondLanguage()" title="close">&times;</span>
+                </div>
+                <div id="secondlanguage"></div>
+                
+            
+            </div>
+            <div class="inner2-south" id="searchResultPane" style="overflow:hidden!important;display:none">
+                
+
+<div class="tableWrapper ui-widget ui-widget-header  ui-dialog-title" style="font-size:0.75em;">
+ 
+    <table style="width:100%; table-layout:fixed">
+        <tr><td>
+     <span class="ui-dialog-title">
+         R&#233;sultats de la recherche </span>
+         <span class="ui-icon close" 
+               style ="background-position: -96px -128px; float:right;cursor:pointer" 
+               
+               title="Close search results. (It will reopen when you make another advanced search)">close</span>
+          </td></tr>
+
+        </table>
+     </div>
+    
+<img class="searchresultwaitimg" alt="waiting"  src='../Content/waitbig.gif'  />
+
+<div class="searchResultDiv data tableWrapper" style="position:relative;height:100%;">
+    <div class="innerWrapper">
+        <table style="width:100%; table-layout:fixed">
+
+        </table>
+    </div>
+</div>
+
+ 
+            </div>
+        </div>
+        <div class="inner-west details">
+            
+
+
+            
+        </div>
+    </div>
+
+    <div class="outer-west details ltr">
+        
+                
+<div id ="mainhiearchydiv" >
+<div class='topicons2'>    
+    <div class="fx">
+        
+
+        <img class="sidebutton" alt='r&#233;duire tous les nœuds' title='r&#233;duire tous les nœuds'
+             src="../Content/collapse.png"
+             onclick="OBrowserNavigation.getInstance().theHierarchy.collapseTree()" />
+
+    </div>
+
+</div>
+    <div  id="hierarchy"  class="ygtv-highlight " >
+    </div>
+
+</div>
+
+
+            
+    </div>
+
+    
+</body>
+</html>
+
+

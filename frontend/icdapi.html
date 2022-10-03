@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page ICD API </title>
+
+    
+    
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/css/bootstrap.min.css" />
+<meta name="x-stylesheet-fallback-test" content="" class="sr-only" /><script>!function(a,b,c,d){var e,f=document,g=f.getElementsByTagName("SCRIPT"),h=g[g.length-1].previousElementSibling,i=f.defaultView&&f.defaultView.getComputedStyle?f.defaultView.getComputedStyle(h):h.currentStyle;if(i&&i[a]!==b)for(e=0;e<c.length;e++)f.write('<link href="https://icd.who.int/'+c[e]+'" '+d+"/>")}("position","absolute",["\/icdapi\/lib\/bootstrap\/dist\/css\/bootstrap.min.css"], "rel=\u0022stylesheet\u0022 ");</script>
+        <link rel="stylesheet" href="icdapi/css/site.min.css%3Fv=utrxcICNqCf5Yc4iTLXWQCHS7EqqQB75Q8tqrgWigxM.css" />
+    
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="icdapi.html">Home</a></li>
+                    <li><a href="icdapi/Home/About.html">About</a></li>
+                </ul>
+
+                
+
+    <ul class="nav navbar-nav navbar-right">
+        <li><a href="icdapi/Account/Register.html">Register</a></li>
+        <li><a href="icdapi/Account/Login.html">Log in</a></li>
+    </ul>
+
+            </div>
+        </div>
+    </div>
+    
+
+    <nav id="cookieConsent" class="navbar navbar-default navbar-fixed-bottom" role="alert">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#cookieConsent .navbar-collapse">
+                    <span class="sr-only">Toggle cookie consent banner</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span></span>
+            </div>
+            <div class="collapse navbar-collapse">
+                <p class="navbar-text">
+                    <a href="http://www.who.int/about/privacy/en/">Read Privacy Legal Notice for WHO web sites </a>
+                </p>
+                <div class="navbar-right">
+                    <button type="button" class="btn btn-default navbar-btn" data-cookie-string=".AspNet.Consent=yes; expires=Sat, 30 Sep 2023 10:15:29 GMT; path=/; secure; samesite=lax">Accept</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        (function () {
+            document.querySelector("#cookieConsent button[data-cookie-string]").addEventListener("click", function (el) {
+                document.cookie = el.target.dataset.cookieString;
+                document.querySelector("#cookieConsent").classList.add("hidden");
+            }, false);
+        })();
+    </script>
+
+    <div class="container body-content">
+        
+
+
+<div class="banner">
+    <h1>ICD API</h1>
+    <img class="backimg" src="icdapi/images/background.png" />
+
+</div>
+
+
+
+<div class="exp row">
+    <p>
+        ICD API allows programmatic access to the International Classification of Diseases (ICD).
+        It is an HTTP based REST API.
+        You may use this site to access up to date documentation on using the API as well as
+        managing the keys needed for using the API.
+    </p>
+    <p>
+        <a href="icdapi/docs2/SupportedClassifications.html">The list of available classification versions</a>
+        <span class="new">update</span><span class="update">updated with the 2022 release and additional languages</span>
+    </p>
+    <p>
+           <a href="icdapi/docs2/ReleaseNotes-Version2.2/index.html">ICD-API Version 2.2 released</a>  <span class="new">update</span>
+    </p>
+
+</div>
+<br/>
+<div class="row">
+
+    <div class="col-md-4">
+        <h2>How to Use the API</h2>
+        <ul class="homepagelist">
+                    <li>
+                        <a href="icdapi/docs2/APIDoc-Version2.html">API Documentation</a>
+
+                    </li>
+                    <li>
+                        <a href="https://id.who.int/swagger/index.html">
+                            API-Reference (swagger)
+                        </a>
+                    </li>
+            
+                    <li><a href="https://github.com/icd-api" target="_blank">ICD API Samples GitHub repository</a></li>
+
+                    <li><a href="icdapi/docs/ContentModelGuide.pdf">Content Model Reference Guide</a><span class="beta">draft</span> 
+                        provides information on the structure and architecture</li>
+        </ul>
+    </div>
+
+    <div class="col-md-4">
+
+        <h2>API Access</h2>
+        <ul class="homepagelist">
+            <li>View API access key(s) <i>(please login first)</i></li>
+
+            <li>If you haven't registered already please <a href="icdapi/Account/Register.html">Register</a> to get access to the API </li>
+
+
+        </ul>
+
+
+    </div>
+    <div class="col-md-4">
+        <h2>Embedded Classification Tool (ECT)</h2>
+        <ul class="homepagelist">
+            <li>
+                You can easily integrate ICD-11 into your applications.
+            </li>
+            <li>
+                <span class="update">ECT version v1.5 released</span><span class="new">new version</span>               
+            </li>
+            <li>
+                <a href="icdapi/docs2/icd11ect-1.5/index.html">Learn more</a>
+            </li>
+
+            <li>Embedded Classification Tool is powered by the ICD-API </li>
+        </ul>
+    </div>
+</div>
+<div class="row">
+  
+    <div class="col-md-4" >
+        <h2>Deploying the ICD-API Locally <span class="new">new versions</span>
+        </h2>
+        <p> There are several ways of installing the ICD-API in your systems.  
+            <a href="icdapi/docs2/ICDAPI-LocalDeployment.html">Learn more</a>
+        </p>
+        <p>
+            New versions of local deployment options including 2022 version of ICD-11 are available
+        </p>
+        <ul class="homepagelist">
+            <li>
+               <img class="side" width="50" height="50" src="icdapi/images/docker.png" alt="docker icon" /> 
+               <div class="nearimg">
+                   as a <b>Docker container</b> 
+               </div>
+            </li>
+            <li>
+                <img class="side" width="50" height="50" src="icdapi/images/windows.png" alt="docker icon" />
+                <div  class="nearimg">
+                    as a <b>Windows service</b> in Windows 
+                </div>
+            </li>
+            <li>
+                <img class="side" width="50" height="50" src="icdapi/images/linux.png" alt="docker icon" /> 
+                <div class="nearimg">
+                    as a <b>systemd service in Linux</b>
+                </div>
+            </li>
+
+            <li>
+               
+            </li>
+
+        </ul>
+    </div>
+    <div class="col-md-4">
+        <h2>Announcements</h2>
+
+        <p class="update"><a href="icdapi/docs2/icd11ect-1.5/index.html">ECT version v1.5 released</a>   <span class="new">new version</span></p>
+        
+        <p class="update"><a href="icdapi/docs2/ReleaseNotes-Version2.2/index.html">ICD-API Version 2.2 released</a>  <span class="new">update</span> </p>
+
+        <p class="update">
+        ICD-11 License is now more open<a href="icdapi/docs2/license.html">(more information) </a>        
+        </p>
+
+        <p class="update">  Version 1 of the ICD-API will be deprecated effective 31 December 2022 <a href="icdapi/docs2/OldVersionDeprecation/index.html">(more information)</a><p>
+
+        <p class="update">RDF/XML endpoints of the ICD-API (all versions) will be deprecated effective 31 December 2022 
+         <a href="icdapi/docs2/OldVersionDeprecation/index.html">(more information)</a></p>
+
+        
+    </div>
+</div>
+
+        <hr />
+
+    </div>
+
+    
+    
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js">
+        </script>
+<script>(window.jQuery||document.write("\u003Cscript src=\u0022\/icdapi\/lib\/jquery\/dist\/jquery.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.6/bootstrap.min.js">
+        </script>
+<script>(window.jQuery && window.jQuery.fn && window.jQuery.fn.modal||document.write("\u003Cscript src=\u0022\/icdapi\/lib\/bootstrap\/dist\/js\/bootstrap.min.js\u0022\u003E\u003C\/script\u003E"));</script>
+        <script src="icdapi/js/site.min.js%3Fv=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU"></script>
+    
+
+    
+</body>
+</html>

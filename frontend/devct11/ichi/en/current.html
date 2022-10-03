@@ -1,0 +1,93 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ICHI Coding Tool International Classification of Health Interventions</title>
+    
+    
+        <link rel="stylesheet" href="../../css/sitemerged.min.css%3Fv131020.css" />
+    
+
+    
+        <link rel="stylesheet" href="../../css/main.321b1de3.css" />
+
+
+
+</head>
+<body style="overflow: hidden; padding: 0 !important;">
+    <div class="navbar navbar-default navbar-default-current navbar-fixed-top ">
+        <div class="container">
+            <div class="navbar-header">
+                <h1 class="cttitle">ICHI Coding Tool </h1>
+                <div class="sidetitle">
+                    International Classification of Health Interventions<br />
+                    Working Draft with daily updates<br />
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+            </div>
+        </div>
+    </div>
+    <div class="body-content">
+        
+
+
+
+
+<div class="container ">
+
+        <div id="ct-releaseDate" class="updatedate" title='Classification build date'></div>
+
+    <a class="helpbutton  helpbutton-current" href="../../Help%3Fstate=Current&amp;lang=en.html" title="Help">Help</a>
+
+    <div>
+        <div class="placeholder"></div>
+        <div class="col-md-12 jumbotron searchdiv">            
+            <span class="working hide" id="loading-gif">
+                <img src="../../img/loading.gif">
+            </span>
+            <input id="searchbox"
+                    type="text"
+                    placeholder="Type for starting the search"
+                    autocomplete="off"
+                    class="form-control ctw-input"
+                    data-ctw-ino="1"
+                    disabled> 
+            <span class="clear" onclick="ECT.Handler.clear('1');">❌ </span>
+        </div>
+    </div>
+    <div class="ctw-window" data-ctw-ino="1"></div>
+
+</div>
+
+<script>
+    const settings = {
+        apiServerUrl: "https://icdapilive.azurewebsites.net",
+        apiSecured: false,        
+        icdMinorVersion: "beta",
+        icdLinearization: "ichi",
+        language: "en",                         
+        sourceApp: "ICHI Coding Tool",       
+        height: "calc(100vh - 210px)"
+    }
+</script>
+
+
+    <script>
+        settings.subtreesFilter = "http://id.who.int/icd/entity/289140506";
+        settings.chaptersAvailable = false;
+    </script>
+
+
+
+        <script type="text/javascript" src="../../scripts/main.2da28693.js"></script>
+
+<script type="text/javascript" src="../../scripts/ts/utils.js"></script>
+
+
+    </div>
+</body>
+</html>

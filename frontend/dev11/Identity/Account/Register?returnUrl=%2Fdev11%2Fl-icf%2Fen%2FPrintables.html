@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+
+    <link rel="icon" href="../../Content/ICD11.png" />
+            
+    <link href="../../bundles/misc.min.css%3Fv=x8NyQojcZkRskNBlHn-qwinI-orNIOM1UIN0p9iYm1c.css" rel="stylesheet" />
+
+    <link href="../../Styles/fancydropdown/fancydropdownICD11.css" rel="stylesheet">
+
+
+    <link href="../../bundles/project.min.css%3Fv=LolbQCvs3yDx6Z6UQpzCrOzQ_fuoniBZZSAwMxmSWsE.css" rel="stylesheet" />
+
+
+
+
+    <script src="../../bundles/library.min.js%3Fv=hCJchYXq1Zo7fyoIEUCY-TW3Z0BBzUlBOVVGJ92usuw" type="text/javascript"></script>
+
+
+
+    <script src="../../Scripts/ts/obrowser_helper.js"></script>
+
+
+
+
+    
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js" crossorigin="anonymous" integrity="sha384-rZfj/ogBloos6wzLGpPkkOr/gpkBNLZ6b6yLy4o+ok+t/SAKlL5mvXLr0OXNi1Hp">
+    </script>
+<script>(window.jQuery && window.jQuery.validator||document.write("\u003Cscript src=\u0022/dev11/Identity/lib/jquery-validation/dist/jquery.validate.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-rZfj/ogBloos6wzLGpPkkOr/gpkBNLZ6b6yLy4o\u002Bok\u002Bt/SAKlL5mvXLr0OXNi1Hp\u0022\u003E\u003C/script\u003E"));</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js" crossorigin="anonymous" integrity="sha384-R3vNCHsZ+A2Lo3d5A6XNP7fdQkeswQWTIPfiYwSpEP3YV079R+93YzTeZRah7f/F">
+    </script>
+<script>(window.jQuery && window.jQuery.validator && window.jQuery.validator.unobtrusive||document.write("\u003Cscript src=\u0022/dev11/Identity/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js\u0022 crossorigin=\u0022anonymous\u0022 integrity=\u0022sha384-R3vNCHsZ\u002BA2Lo3d5A6XNP7fdQkeswQWTIPfiYwSpEP3YV079R\u002B93YzTeZRah7f/F\u0022\u003E\u003C/script\u003E"));</script>
+
+
+
+    <script type="text/javascript">
+           var Host = location.protocol + "//" + location.hostname + ":" + location.port;
+           var BaseURL = Host + '/dev11';
+
+    </script>
+
+    
+
+</head>
+
+<body>
+    <div class="masterheader headerICD11">
+        <div id="headerleftWOSearch" class="" style="height: 100%">
+            
+    <h1>Register</h1>
+
+
+        </div>
+        <div class="toplogbuttons">
+            
+    <a class="nav-link text-dark btn btn-link log-btn-link " href="Register.html">Register</a>
+ | 
+    <a class="nav-link text-dark btn btn-link log-btn-link " href="Login.html">Login</a>
+
+        </div>
+    </div>
+    
+      
+
+
+<div id="menu" class="menu-ltr">
+    <ul class="tabs">
+
+                    <li>
+                        <a id="keepAnchor-mainmenu-Home" href="../../../dev11.html" title="Home Page"
+                           >
+                            Home
+                        </a>
+
+                    </li>
+    </ul>
+
+</div>
+
+
+
+
+    
+
+
+
+<div class="row" style="margin-left:10px">
+    <div class="col-md-4 " >
+        <form id="registerForm" method="post" action="Register%3FreturnUrl=%252Fdev11%252Fl-icf%252Fen%252FPrintables.html">
+            <h2>Create a new account.</h2>
+            <hr />
+            
+            <div class="form-floating">
+                <input class="form-control" autocomplete="username" aria-required="true" type="email" data-val="true" data-val-email="The Email field is not a valid e-mail address." data-val-required="The Email field is required." id="Input_Email" name="Input.Email" value="" />
+                <label>Email (will be your UserId. Needs to be a valid email account)</label>
+                <span class="text-danger field-validation-valid" data-valmsg-for="Input.Email" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-floating">
+                <input class="form-control" autocomplete="new-password" aria-required="true" type="password" data-val="true" data-val-length="The Password must be at least 6 and at max 100 characters long." data-val-length-max="100" data-val-length-min="6" data-val-required="The Password field is required." id="Input_Password" maxlength="100" name="Input.Password" />
+                <label for="Input_Password">Password</label>
+                <span class="text-danger field-validation-valid" data-valmsg-for="Input.Password" data-valmsg-replace="true"></span>
+            </div>
+            <div class="form-floating">
+                <input class="form-control" autocomplete="new-password" aria-required="true" type="password" data-val="true" data-val-equalto="The password and confirmation password do not match." data-val-equalto-other="*.Password" id="Input_ConfirmPassword" name="Input.ConfirmPassword" />
+                <label for="Input_ConfirmPassword">Confirm password</label>
+                <span class="text-danger field-validation-valid" data-valmsg-for="Input.ConfirmPassword" data-valmsg-replace="true"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Register</button>
+        <input name="__RequestVerificationToken" type="hidden" value="CfDJ8LJieFWdV9xNiQd0mPFZulF1gv2J3gfaJjCiLu5EYL0rd4yFKeJB-lC87l81P7ioT13jr0YzvJdrQT_g4DJxhKdz76HMT81l2Ykxw16oOVWLHSQwBYh7xzBwOX2G5AJnGsj90fS2ot6SO9VHT4DjYPs" /></form>
+    </div>
+</div>
+
+
+</body>
+</html>

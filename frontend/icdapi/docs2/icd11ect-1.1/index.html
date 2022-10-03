@@ -1,0 +1,545 @@
+﻿<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Embedded Coding Tool (version 1.1) - ICD-API Homepage</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700" />
+
+  <link rel="stylesheet" href="../css/theme.css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css" />
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Embedded Coding Tool (version 1.1)";
+    var mkdocs_page_input_path = "icd11ect-1.1.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+        <!-- <a href=".." class="icon icon-home"> ICD-API Homepage</a> -->
+        <a href="../../index.html"> ICD-API Homepage</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="https://icd.who.int/icdapi/docs2/search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <p class="caption custom-caption"><span class="caption-text">ICD-API Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ReleaseNotes/index.html">Release Notes</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version2.html">API Documentation (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-reference">API Reference (version 2.x)</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../API-Authentication.html">ICD API Authentication</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../SupportedClassifications.html">Supported Classification Versions</a>
+                    </li>
+                    <li class="toctree-l1"><a class="" href="../APIDoc-Version2.html#icd-api-github-repository">Samples Github Repository</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Embedded Classification Tool</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5/index.html">Embedded Classification Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedCodingTool/index.html">Embedded Coding Tool</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-EmbeddedBrowser/index.html">Embedded Browser</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../icd11ect-1.5-AdvancedSettings/index.html">Advanced settings</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">Installing the ICD-API locally</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-LocalDeployment.html">General Information on Installing the API locally</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-DockerContainer.html">Installing ICD-API as a Docker container</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-WindowsService.html">Installing ICD-API as a Windows Service</a>
+                    </li>
+                    <li class="toctree-l1"><a class="reference internal" href="../ICDAPI-SystemdService.html">Installing ICD-API as a systemd Service in Linux</a>
+                    </li>
+                </ul>
+                <p class="caption custom-caption"><span class="caption-text">OLD Version Documentation</span></p>
+                <ul>
+                    <li class="toctree-l1"><a class="reference internal" href="../APIDoc-Version1/index.html">API Documentation (version 1)</a>
+                    </li>
+                </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">ICD-API Homepage</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <!-- <li><a href="..">ICD-API</a> &raquo;</li> -->
+    <li><a href="../../index.html">ICD-API Homepage</a> &raquo;</li>
+    
+      
+    
+    <li>Embedded Coding Tool (version 1.1)</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="embedded-coding-tool-version-11">Embedded Coding Tool (version 1.1)</h1>
+<p><small>This document refers to the <strong>ECT version 1.1</strong>. Please check the documentation for the <strong><a href="../icd11ect/index.html">latest version</a></strong></small></p>
+<p><br/></p>
+<h2 id="overview">Overview</h2>
+<p><a href="../../../ct11.html">ICD-11 Coding Tool</a> is a web based software that helps users search and find ICD-11 categories that they are looking for. </p>
+<p>The Embedded Coding Tool (ECT) allows integration of a complete ICD-11 Coding Tool in to any web application. </p>
+<p>Under the hood, it is powered by the <a href="../../../icdapi.html">ICD-API</a></p>
+<p>The Embedded Coding Tool is written in Javascript for the complete compatibility with any web application and provides an easy way to give all the ICD-11 Coding Tool functionalities to your web applications.</p>
+<p>Integrating the Embedded Coding Tool is very easy. All you need to do is adding references to the provided javascript and css files and making minor modifications on your web page. </p>
+<p>You'll find further details below in this document</p>
+<p><br/></p>
+<h2 id="getting-started">Getting started</h2>
+<p>Include the stylesheet file and the Javascript file within your web page that will contain the embedded Coding Tool. The files are provided by a CDN or but if you prefer, you could download and include it with your software: </p>
+<p>Include the stylesheet file <a href="https://icdcdn.azureedge.net/embeddedct/icd11ect-1.1.css"><code>icd11ect-1.1.css</code></a> in the <code>&lt;head&gt;</code> section of your page. </p>
+<pre><code class="html">&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://icdcdn.azureedge.net/embeddedct/icd11ect-1.1.css&quot;&gt;
+&lt;/head&gt;
+</code></pre>
+
+<p>Include the JavaScript file <a href="https://icdcdn.azureedge.net/embeddedct/icd11ect-1.1.js"><code>icd11ect-1.1.js</code></a> before the closing <code>&lt;/body&gt;</code> tag.  </p>
+<pre><code class="html">&lt;script src=&quot;https://icdcdn.azureedge.net/embeddedct/icd11ect-1.1.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+
+<p><br/></p>
+<h2 id="html-settings">HTML settings</h2>
+<p>To integrate the Embedded Coding Tool in your HTML web page, steps are:</p>
+<h3 id="step-1">Step 1</h3>
+<p>The Embedded Coding Tool uses an input (type text) tag that you have in your page and becomes activated when the end user starts typing on that input field. The following additional attributes are needed at this input field.</p>
+<p>Insert or modify an existing  <code>&lt;input&gt;</code> element with the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>Set it to <code>ctw-input</code></td>
+</tr>
+<tr>
+<td>autocomplete</td>
+<td>Set it to <code>off</code></td>
+</tr>
+<tr>
+<td>data-ctw-ino</td>
+<td>You could have more than one Coding Tools in your page and this is the “identifier” of the Embedded Coding Tool. Use a number like 1,2,...</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="html">&lt;input type=&quot;text&quot; class=&quot;ctw-input&quot; autocomplete=&quot;off&quot; data-ctw-ino=&quot;1&quot; &gt; 
+</code></pre>
+
+<h3 id="step-2">Step 2</h3>
+<p>Insert in your HTML page a  <code>&lt;div&gt;</code> element with the following attributes:</p>
+<table>
+<thead>
+<tr>
+<th>Attribute name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>class</td>
+<td>Set it to <code>ctw-window</code></td>
+</tr>
+<tr>
+<td>data-ctw-ino</td>
+<td>Set the same “identifier value of the <code>&lt;input&gt;</code> element (previously set at step 2)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="html">&lt;div class=&quot;ctw-window&quot; data-ctw-ino=&quot;1&quot;&gt;&lt;/div&gt;  
+</code></pre>
+
+<p>This is the div where the actual coding tool appears. </p>
+<p><br/></p>
+<h2 id="javascript-settings">Javascript settings</h2>
+<p>The Embedded Coding Tool supplies a Handler <code>ECT.Handler</code> that provides customizable <a href="index.html#settings">Settings</a>, customizable <a href="index.html#callbacks">Callbacks</a> and <a href="index.html#functions">Functions</a> for maximizing the integration in your webapp</p>
+<pre><code class="javascript">ECT.Handler.configure(mySettings, myCallbacks);
+</code></pre>
+
+<p>This <code>configure</code> function gets 2 argument:</p>
+<ul>
+<li><code>mySettings</code> is an object which defines your custom settings</li>
+<li><code>myCallbacks</code> is an object which contains your callbacks implementation. This argument is <strong>optional</strong>, you can call the configure function with only the first argument: <code>ECT.Handler.configure(mySettings);</code></li>
+</ul>
+<h3 id="settings">Settings</h3>
+<p>The <code>mySettings</code> object has these properties:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Required</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>apiServerUrl</td>
+<td><em>required</em></td>
+<td><code>string</code></td>
+<td></td>
+<td>Used to set the API server URL</td>
+</tr>
+<tr>
+<td>apiSecured</td>
+<td><em>optional</em></td>
+<td><code>boolean</code></td>
+<td><code>false</code></td>
+<td>Set to “true” for using the API with OAUTH 2.0 Authentication</td>
+</tr>
+<tr>
+<td>icdMinorVersion</td>
+<td><em>optional</em></td>
+<td><code>string</code></td>
+<td></td>
+<td>Used to set the ICD minor version. Leave empty for always using the last minor version released</td>
+</tr>
+<tr>
+<td>icdLinearization</td>
+<td><em>optional</em></td>
+<td><code>string</code></td>
+<td><code>"mms"</code></td>
+<td>Used to set the ICD linearization</td>
+</tr>
+<tr>
+<td>language</td>
+<td><em>optional</em></td>
+<td><code>string</code></td>
+<td><code>"en"</code></td>
+<td>Used to set the API language code</td>
+</tr>
+<tr>
+<td>sourceApp</td>
+<td><em>optional</em></td>
+<td><code>string</code></td>
+<td></td>
+<td>Set your application name (used for analytics)</td>
+</tr>
+<tr>
+<td>wordsAvailable</td>
+<td><em>optional</em></td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>Set to “true” for showing the related words on the left of the search results</td>
+</tr>
+<tr>
+<td>chaptersAvailable</td>
+<td><em>optional</em></td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>Set to “true” for making available the chapters distribution and filters</td>
+</tr>
+<tr>
+<td>flexisearchAvailable</td>
+<td><em>optional</em></td>
+<td><code>boolean</code></td>
+<td><code>true</code></td>
+<td>Set to “true” for making available the flexible search (used when the regular search do not return any results)</td>
+</tr>
+<tr>
+<td>height</td>
+<td><em>optional</em></td>
+<td><code>string</code></td>
+<td></td>
+<td>This is for setting the maximum height of the Embedded Coding Tool in your page (accepts CSS px unit or CSS vh unit). Leave empty to do not set a default height</td>
+</tr>
+</tbody>
+</table>
+<h4 id="example-using-a-containerized-version-of-the-api-without-oauth-authentication">Example using a containerized version of the API (without OAUTH Authentication):</h4>
+<p>For using the Embedded Coding Tool with a containerized version of the API without Authentication, you have to set these 2 properties: </p>
+<ul>
+<li><code>apiServerUrl</code>  with your container URL (for example, if the API container is running on your host <code>http://mycontainerhost.com</code> just set this URL)   </li>
+<li><code>apiSecured</code>  to <code>false</code> </li>
+</ul>
+<p>For more details about how to run an ICD API container please refer to the <a href="https://icd.who.int/icdapi/docs2/ICDAPI-Container-Readme">ICD-API Container Docs</a>  </p>
+<pre><code class="javascript">const mySettings = {
+    apiServerUrl: &quot;http://mycontainerhost.com&quot;,   
+    apiSecured: false,
+    icdMinorVersion: &quot;2019-04&quot; ,
+    icdLinearization: &quot;mms&quot;,
+    language: &quot;en&quot;,
+    sourceApp: &quot;Test App&quot;,
+    wordsAvailable: true,
+    chaptersAvailable: true,
+    flexisearchAvailable: true,
+    height: &quot;500px&quot;
+};
+</code></pre>
+
+<h4 id="example-using-the-live-version-of-the-api-with-oauth-authentication">Example using the live version of the API (with OAUTH Authentication)</h4>
+<p>For using the Embedded Coding Tool with the live version of the API (Authentication is mandatory) you have to set these 2 properties: </p>
+<ul>
+<li><code>apiServerUrl</code>  to <code>https://id.who.int</code>    </li>
+<li><code>apiSecured</code>  to <code>true</code> </li>
+</ul>
+<pre><code class="javascript">const mySettings = {
+    apiServerUrl: &quot;https://id.who.int&quot;,   
+    apiSecured: true,
+    icdMinorVersion: &quot;2019-04&quot; ,
+    icdLinearization: &quot;mms&quot;,
+    language: &quot;en&quot;,
+    sourceApp: &quot;Test App&quot;,
+    wordsAvailable: true,
+    chaptersAvailable: true,
+    flexisearchAvailable: true,
+    height: &quot;500px&quot;
+};
+</code></pre>
+
+<p>In order to be able to use the live version of the API, you need to provide an OAUTH 2.0 token.  <br />
+Of course, it is not a good idea putting your Client Id and Client Secret directly in a javaScript source code, so the best practice is using the <code>getNewTokenFunction()</code> callback function for calling your custom server-side script that returns back the token. <br />
+The next paragraph <a href="index.html#callbacks">Callbacks</a> explains how to implement this function.</p>
+<p>For more details about ICD API Authentication please refer to <a href="../API-Authentication.html">ICD API Authentication Docs</a></p>
+<h4 id="tips">Tips</h4>
+<p>It is not necessary to implement all the <code>mySettings</code> properties, you can only use the ones you need to set. For example:</p>
+<pre><code class="javascript">const mySettings = {
+    apiServerUrl: &quot;http://mycontainerhost.com&quot;,   
+    wordsAvailable: false,
+    height: &quot;50vh&quot;
+};
+</code></pre>
+
+<p>This configuration sets the container url, disables the words list and sets the height of your Embedded Coding Tool.</p>
+<h3 id="callbacks">Callbacks</h3>
+<p>The <code>myCallbacks</code> object provides 4 callbacks. Please see the ode example below:</p>
+<pre><code class="javascript">const myCallbacks = {
+    searchStartedFunction: () =&gt; {
+        //this callback is called when searching is started.
+        console.log(&quot;Search started!&quot;);
+    },
+    searchEndedFunction: () =&gt; {
+        //this callback is called when search ends.
+        console.log(&quot;Search ended!&quot;);
+    },
+    selectedEntityFunction: (selectedEntity) =&gt; {
+    //This callback is called when the user makes a selection
+    //This is the best way to get what the user has chosen and use it in 
+    //your application
+        console.log('selected uri: '+ selectedEntity.uri);
+        console.log('selected code: '+ selectedEntity.code);
+        console.log('selected bestMatchText: '+ selectedEntity.bestMatchText);
+    },
+    getNewTokenFunction: async () =&gt; {
+        // if the embedded coding tool is working with the live ICD-API, you need to set apiSecured=true
+        // In this case embedded coding tool calls this function when it needs a new token.
+        // In this case you backend web application should provide updated tokens 
+
+        const url = 'http://myhost.com/mybackendscript' // we assume this backend script returns a JSON {'token': '...'} 
+        try {
+            const response = await fetch(url);
+            const result = await response.json();
+            const token = result.token;
+            return token; // the function return is required 
+        } catch (e) {
+            console.log(&quot;Error during the request&quot;);
+        }
+    }
+};
+</code></pre>
+
+<h4 id="1-before-search">1. Before search</h4>
+<p>The callback function <code>searchStartedFunction()</code> is fired before the search was performed. This could be used to show a wait cursor or something like that.</p>
+<h4 id="2-after-search">2. After search</h4>
+<p>The callback function <code>searchEndedFunction()</code> is fired after the search was performed. Similarly this could be used to hide the wait cursor.</p>
+<h4 id="3-when-selecting">3. When selecting</h4>
+<p>The callback function <code>selectedEntityFunction(selectedEntity)</code> is fired when an ICD-11 entity is selected by mouse click or by press enter.    In other words, this callback function is called when the user makes a code selection from the Coding Tool interface.</p>
+<p>The function <code>selectedEntityFunction(selectedEntity)</code> has as parameter the <code>selectedEntity</code> object that is represented using JSON dataformat. 
+This object contains the information about the selected entity. The structure of this object is the follow:</p>
+<pre><code class="javascript">selectedEntity {
+    iNo: 'the “identifier” of the Embedded Coding Tool (set in data-ctw-ino)',
+    uri: 'the entity URI',
+    code: 'the entity Code',
+    title: 'the Title of the stemcode',
+    bestMatchText: 'the BestMatchText',
+    searchQuery: 'the SearchQuery'
+}
+</code></pre>
+
+<h4 id="4-for-getting-the-token">4. For getting the token</h4>
+<p>The callback function <code>getNewTokenFunction()</code> is a required callback to provide the OAUTH 2.0 token (used only with the live version of the API as explained <a href="index.html#example-using-the-live-version-of-the-api-with-oauth-authentication">here</a>). The <code>getNewTokenFunction()</code> has to return the token string.</p>
+<h4 id="tips_1">Tips</h4>
+<p>It is not necessary to implement all the <code>myCallbacks</code> functions, you can only use the ones you need. For example:</p>
+<pre><code class="javascript">const myCallbacks = {
+    selectedEntityFunction: (selectedEntity) =&gt; { // I only need the selectedEntityFunction callback
+        console.log('selected uri: '+ selectedEntity.uri);
+        console.log('selected code: '+ selectedEntity.code);
+        console.log('selected bestMatchText: '+ selectedEntity.bestMatchText);
+    }
+};
+</code></pre>
+
+<p><br/></p>
+<h3 id="functions">Functions</h3>
+<p>We provide several functions to control/automate the behavior of the embedded coding tool.</p>
+<h4 id="1-search">1. Search</h4>
+<p>Normally, the embedded coding tool automatically starts searching when the user starts typing on the configured input element. </p>
+<p>However, you could use this function to perform searching programmatically with the Coding Tool, using external javascript</p>
+<pre><code class="javascript">ECT.Handler.search(iNo, q);
+</code></pre>
+
+<p>Arguments:</p>
+<ul>
+<li><code>iNo</code> (string): the “identifier” of the Embedded Coding Tool (set in <code>data-ctw-ino</code>)</li>
+<li><code>q</code> (string): the query string </li>
+</ul>
+<p>Example:</p>
+<pre><code class="javascript">ECT.Handler.search(&quot;1&quot;, &quot;tuberculosis&quot;);
+</code></pre>
+
+<h4 id="2-clear">2. Clear</h4>
+<p>This function can be used to clear the searchbox and delete the search results </p>
+<pre><code class="javascript">ECT.Handler.clear(iNo);
+</code></pre>
+
+<p>Argument:</p>
+<ul>
+<li><code>iNo</code> (string): the “identifier” of the Embedded Coding Tool (set in <code>data-ctw-ino</code>)</li>
+</ul>
+<p>Example:</p>
+<pre><code class="javascript">ECT.Handler.clear(&quot;1&quot;);
+</code></pre>
+
+<p><br/><br/></p>
+<h2 id="full-example-of-the-embedded-coding-tool">Full Example of the Embedded Coding Tool</h2>
+<p>Below a complete example of the Embedded Coding Tool integration that uses a containerized version of the API (without Authentication). 
+This example uses the callback function <code>selectedEntityFunction</code> to paste the selected code into an extra <code>input</code> 
+element and to automatically clean the search results</p>
+<pre><code class="html">&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://icdcdn.azureedge.net/embeddedct/icd11ect-1.1.css&quot;&gt;
+    &lt;title&gt;ECT v1.1&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;!-- input element used for typing the search  --&gt;
+    &lt;input type=&quot;text&quot; class=&quot;ctw-input&quot; autocomplete=&quot;off&quot; data-ctw-ino=&quot;1&quot;&gt; 
+
+    &lt;!-- div element used for showing the search results --&gt;
+    &lt;div class=&quot;ctw-window&quot; data-ctw-ino=&quot;1&quot;&gt;&lt;/div&gt;
+
+
+    &lt;!-- example of an extra input element for testing the Embedded Coding Tool select entity function --&gt;
+    Selected code: &lt;input type=&quot;text&quot; id=&quot;paste-selectedEntity&quot; value=&quot;&quot;&gt; 
+
+    &lt;script src=&quot;https://icdcdn.azureedge.net/embeddedct/icd11ect-1.1.js&quot;&gt;&lt;/script&gt;
+    &lt;script&gt;
+        // Embedded Coding Tool settings object
+        // please note that only the property &quot;apiServerUrl&quot; is required
+        // the other properties are optional
+        const mySettings = {
+            apiServerUrl: &quot;http://mycontainerhost.com&quot;   
+        };
+
+        // example of an Embedded Coding Tool using the callback selectedEntityFunction 
+        // for copying the code selected in an &lt;input&gt; element and clear the search results
+        const myCallbacks = {
+            selectedEntityFunction: (selectedEntity) =&gt; { 
+                // paste the code into the &lt;input&gt;
+                document.getElementById('paste-selectedEntity').value = selectedEntity.code;        
+                // clear the searchbox and delete the search results
+                ECT.Handler.clear(&quot;1&quot;)    
+            }
+        };
+
+        // configure the ECT Handler with mySettings and myCallbacks
+        ECT.Handler.configure(mySettings, myCallbacks);
+    &lt;/script&gt;    
+
+&lt;/body&gt;
+</code></pre>
+              
+            </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="versions">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+    <script type="text/javascript" defer>
+        window.onload = function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        };
+    </script>
+
+</body>
+</html>

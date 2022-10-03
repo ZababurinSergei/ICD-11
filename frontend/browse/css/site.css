@@ -1,0 +1,359 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {    
+    overflow: hidden;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.42857143;
+}
+
+.navbar,
+.placeholder {
+    height: 82px !important;
+}
+
+.navbar {
+    position:fixed;
+    top: 0;
+    background-color: #03038d;
+    color: #EEEEEE;
+    border: none;
+    width: 100%;
+}
+
+.navbar h1 {
+    font-size: 24px !important;
+    display: inline;
+}
+
+.navbar .navbar-header {
+    font-family: "Helvetica Neue", "Lucida Grande", "Segoe UI", Arial, Helvetica, Verdana, sans-serif;
+    margin-top: 10px !important;
+    margin-left: 20px;
+}
+
+.navbar .navbar-title {
+    line-height: 1.1;
+    font-weight: 600;
+}
+
+.navbar .navbar-sidetitle {
+    vertical-align: baseline;
+    margin-left: 10px;
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.navbar-rtl .navbar-header {
+    text-align: right;
+    margin-right: 20px;
+    direction: rtl;
+}
+
+main {
+    padding: 0px !important;
+}
+
+
+/* ECT overwritten CSS*/
+
+.embeddedBrowserSearch {
+    z-index: 10000;
+    position: fixed;
+    /*width: 50%;*/
+    top: 42px;
+    font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+    line-height: 20px !important;
+}
+
+.browser-rtl .embeddedBrowserSearch {
+    right: 20px;
+}
+
+.browser-rtl .popupMode .popupModeResults {
+    right: 0px !important;
+}
+
+.embeddedBrowserSearchbox {
+    /*width: 50% !important;*/
+    width: 25vw !important;
+    box-sizing: border-box;
+    font-family: "Ubuntu", Tahoma, "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+    font-size: 14px !important;
+    font-weight: 400 !important;
+    height: 30px !important;
+    line-height: 20px !important;
+    margin-bottom: 0px !important;
+    margin-left: 20px !important;
+    margin-right: 0px !important;
+    margin-top: 0px !important;
+}
+
+.browserBodyLeft {
+    padding-top: 15px !important;
+}
+
+.browserBodyRight {
+    padding-top: 15px !important;
+}
+
+.postcoordSticky {
+    z-index: initial !important;
+}
+
+.topul {
+    margin-top: 0 !important;
+}
+
+
+/* language dropdown */
+
+#langarea {
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    z-index: 10000;
+}
+
+#mlimg {
+    width: 1.1em;
+    height: 1.1em;
+}
+
+#langarea img {
+    vertical-align: middle;
+}
+
+.languageselected {
+    height: 22px;
+    display: block;
+    text-decoration: none;
+    color: #03038d;
+    font-weight: bold;
+    padding-left: 10px;
+}
+
+#langarea .selstatus {
+    display: inline-block;
+    width: 10px;
+    font-weight: bold;
+}
+
+.languageswitch {
+    height: 22px;
+    display: block;
+    text-decoration: none;
+    color: #03038d;
+    padding-left: 10px;
+}
+
+.languageswitch:hover {
+    background-color: #bbbbe4;
+    text-decoration: none;
+    color: #03038d;
+}
+
+#langarea ul {
+    list-style: none;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#languagelist {
+    background-color: #cecee8;
+    color: #03038d;
+    text-align: left;
+    padding: 0;
+    display: none;
+    top: 10px;
+    width: 100px;
+    direction: ltr;
+    z-index: 10000;
+}
+
+#langarea #langbutton:hover > ul {
+    display: inherit;
+}
+
+#langbutton {
+    width: 80px;
+    cursor: pointer;
+}
+
+#langarea ul ul li {
+    float: none;
+    display: list-item;
+    position: relative;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+#hoverbutton {
+    text-align: right;
+    padding: 2px 6px 5px 6px;
+    border: 1px solid #03038d;
+}
+
+#hoverbutton:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid #cecee8;
+}
+
+.navbar-rtl #hoverbutton {
+    text-align: left;
+}
+
+.navbar-rtl #langarea {
+    right: initial;
+    left: -20px;
+}
+
+
+/* Releases */
+
+.showAllReleases {
+    padding-top: 10px;
+    margin-bottom: 20px;
+}
+
+.openReleaseList {
+    text-decoration: none;
+    color: #333;
+}
+
+hr {
+    border-color: #eee;
+}
+
+.releaseList {
+    /*margin-top: 20px;*/
+    margin-left: 20px;
+    font-family: "Helvetica Neue","Lucida Grande","Segoe UI",Arial,Helvetica,Verdana,sans-serif;
+}
+
+.releaseList h3 {
+    margin-bottom: 0px;
+}
+
+.releaseList .info {
+    font-style: italic;
+}
+
+.releaseList ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.releaseList li {
+    margin-bottom: 4px;
+}
+
+.releaseList a.releaseId {
+    background-color: #03038d;
+    color: #fff;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.releaseList a.changes-made {
+    text-decoration: none;
+    color: blue;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-container .column {
+    width: 15vw
+}
+
+
+/* Menu */
+
+#menu {
+    position: fixed;
+    left: 30vw;
+    top: 27px;
+}
+
+#menu.menu-ltr {
+    left: 0;
+    right: 30vw;
+}
+
+#menu ul.tabs {
+    display: flex;
+    padding: 0;
+    list-style: none;
+}
+
+#menu.menu-ltr ul.tabs {
+    flex-direction: row-reverse;
+}
+
+#menu ul.tabs li.first-level {
+    margin: 0;
+    list-style: none;
+    position: relative;
+    padding: 10px 10px 10px 10px;
+    background-color: #cecee8;
+    border-right: 1px solid #06038D;
+    border-left: 1px solid #06038D;
+}
+
+#menu ul.tabs li.hasmore {
+    background: url(../img/cornerBLUE.png) no-repeat right 27px;
+    margin: 0;
+    list-style: none;
+    position: relative;
+    padding: 10px;
+    background-color: #cecee8;
+    border-right: 1px solid #06038D;
+    border-left: 1px solid #06038D;
+}
+
+#menu ul.tabs li a {
+    text-decoration: none;
+    font: 14px/21px Georgia, serif;
+    color: #06038D;
+    cursor: pointer;
+}
+
+
+#menu ul.dropdown {
+    display: none;
+    position: absolute;
+    width: 200px;
+    left: 0px;
+    top: 41px;
+    padding: 10px 0px 10px 0px;
+    background-color: #cecee8;
+}
+
+#menu ul.dropdown li.second-level {
+    margin: 0;
+    list-style: none;
+    padding: 0px 10px 0px 10px;    
+}
+
+#menu ul.dropdown li.second-level a {
+    display: block;
+    padding: 10px;
+}
+
+#menu ul.dropdown li.second-level a:hover {
+    background-color: #bbbbe4;
+}
+
+
+     

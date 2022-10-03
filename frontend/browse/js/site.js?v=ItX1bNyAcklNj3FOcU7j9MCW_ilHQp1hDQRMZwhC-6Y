@@ -1,0 +1,26 @@
+﻿
+function openLanguageList() {
+
+    document.getElementById("languagelist").style.display = "inherit";
+}
+
+function openInfoMenu() {
+
+    document.getElementById("info-menu").style.display = "block";
+
+    var stickyElements = document.getElementsByClassName("postcoordSticky");
+    if (stickyElements.length > 0) {
+        stickyElements[0].style.position = "initial";
+    }
+
+}
+
+function closeInfoMenu() {
+
+    document.getElementById("info-menu").style.display = "none";
+
+    var stickyElements = document.getElementsByClassName("postcoordSticky");
+    if (stickyElements.length > 0) {
+        stickyElements[0].style.position = "sticky";
+    }
+}

@@ -1,0 +1,122 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Demo Multiple ECT v1.3</title>
+
+    <link rel="stylesheet" href="https://icdcdn.azureedge.net/embeddedct/icd11ect-1.3.css">
+    <style>
+        body { font-family: "Ubuntu",Tahoma,"Helvetica Neue",Helvetica,Arial,sans-serif; margin: 10px 20px 20px 20px; padding: 0; font-size: 0.9rem; line-height: 1rem; color: #333; background-color: #FFF; }
+        #demo-link-docs { float: right; }
+        #demo-title { margin-top: 50px; margin-bottom: 50px; text-align: center; }       
+        #demo-selected-1, #demo-selected-2, #demo-selected-3 { float: right; display: none; }
+        #demo-paste-selected-1, #demo-paste-selected-2, #demo-paste-selected-3 { background-color: #FF9; padding: 5px; }
+        .demo-instance { border: 1px solid #CCC; margin-bottom: 40px; padding: 10px; background-color: #EEE; border-radius: .25rem; }
+        .demo {margin-top: 20px; }
+        .demo::after { clear: both; content: ""; display: block; }
+        .demo-search { float: left; margin-bottom: 20px; }
+        .demo input { width: 400px; height: 1.2rem; font-size: 0.9rem; padding-left: 4px;}
+        .demo-clear { cursor: pointer; padding: 2px; }
+        .demo-subtitle { font-size: 0.75rem; font-weight: normal; margin-left: 6px; }
+        .ctw-window { background-color: #FFF; }
+    </style>
+</head>
+
+<body>
+    <a id="demo-link-docs" href="../docs2/icd11ect-1.3/index.html">🢥 Go to Documentation</a>
+    <h2 id="demo-title">DEMO of Multiple Embedded Coding Tool <small>v1.3</small></h2>
+
+    <!-- ECT 1 -->
+    <div class="demo-instance">
+        <div class="demo">
+            <h3>Embedded Coding Tool #1 <span class="demo-subtitle">This ECT is configured for searching only in chapters 18 and 19, and for don't display the related words on the left of the search results</span></h3>
+            <div class="demo-search">
+                <!-- input element used for typing the search  -->
+                Type for starting search: <input type="text" class="ctw-input" autocomplete="off" data-ctw-ino="1"> <button class="demo-clear" onclick="ECT.Handler.clear('1');" title="Clear search and results">❌</button>
+            </div>    
+            <div id="demo-selected-1">
+                <!-- example of an extra input element for testing the Embedded Coding Tool select entity function -->
+                Your selection is: <span id="demo-paste-selected-1"></span>
+            </div>
+        </div>
+
+        <!-- div element used for showing the search results -->
+        <div class="ctw-window" data-ctw-ino="1"></div>    
+    </div>
+
+
+    <!-- ECT 2 -->
+    <div class="demo-instance">
+        <div class="demo">
+            <h3>Embedded Coding Tool #2 <span class="demo-subtitle">This ECT is configured for searching only in chapter 23 External causes</span></h3>
+            <div class="demo-search">
+                <!-- input element used for typing the search  -->
+                Type for starting search: <input type="text" class="ctw-input" autocomplete="off" data-ctw-ino="2"> <button class="demo-clear" onclick="ECT.Handler.clear('2');" title="Clear search and results">❌</button>
+            </div>    
+            <div id="demo-selected-2">
+                <!-- example of an extra input element for testing the Embedded Coding Tool select entity function -->
+                Your selection is: <span id="demo-paste-selected-2"></span>
+            </div>
+        </div>
+
+        <!-- div element used for showing the search results -->
+        <div class="ctw-window" data-ctw-ino="2"></div>    
+    </div>
+
+
+    <!-- ECT 3 -->
+    <div class="demo-instance">
+        <div class="demo">
+            <h3>Embedded Coding Tool #3 <span class="demo-subtitle">This ECT is configured for searching only in chapter 26 Traditional Medicine</span></h3>
+            <div class="demo-search">
+                <!-- input element used for typing the search  -->
+                Type for starting search: <input type="text" class="ctw-input" autocomplete="off" data-ctw-ino="3"> <button class="demo-clear" onclick="ECT.Handler.clear('3');" title="Clear search and results">❌</button>
+            </div>    
+            <div id="demo-selected-3">
+                <!-- example of an extra input element for testing the Embedded Coding Tool select entity function -->
+                Your selection is: <span id="demo-paste-selected-3"></span>
+            </div>
+        </div>
+
+        <!-- div element used for showing the search results -->
+        <div class="ctw-window" data-ctw-ino="3"></div> 
+    </div>   
+
+
+    <script src="https://icdcdn.azureedge.net/embeddedct/icd11ect-1.3.js"></script>
+    <script>
+        // Embedded Coding Tool settings object
+        // please note that only the property "apiServerUrl" is required
+        // the other properties are optional
+        const mySettings = {
+            // The API located at the URL below should be used only for software
+            // development and testing. ICD content at this location might not
+            //  be up to date or complete. For production, use the API located at
+            // id.who.int with proper OAUTH authentication
+            apiServerUrl: "https://icd11restapi-developer-test.azurewebsites.net",
+            height: "30vh"
+        };
+
+        // example of an Embedded Coding Tool using the callback selectedEntityFunction for copying the code selected in an html element
+        const myCallbacks = {
+            selectedEntityFunction: (selectedEntity) => { 
+                document.getElementById('demo-paste-selected-' + selectedEntity.iNo).innerHTML = selectedEntity.code + ' - ' + selectedEntity.bestMatchText;    
+                document.getElementById('demo-selected-' + selectedEntity.iNo).style.display = 'inline';
+            }
+        };
+        
+        // configure all the Embedded Coding Tool
+        ECT.Handler.configure(mySettings, myCallbacks);
+
+        // overwrite configuration only for the Embedded Coding Tool 1
+        ECT.Handler.overwriteConfiguration("1", { chaptersFilter: '18;19', wordsAvailable: false });
+
+        // overwrite configuration only for the Embedded Coding Tool 2
+        ECT.Handler.overwriteConfiguration("2", { chaptersFilter: '23' });
+
+        // overwrite configuration only for the Embedded Coding Tool 3
+        ECT.Handler.overwriteConfiguration("3", { chaptersFilter: '26' });
+    </script>    
+
+</body>
+</html>

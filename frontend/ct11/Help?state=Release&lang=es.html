@@ -1,0 +1,301 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Herramienta de codificaci&#xF3;n de la CIE-11 Ayuda </title>
+    
+    
+        <link rel="stylesheet" href="css/sitemerged.min.css%3Fv131020.css" />
+    
+
+    
+        <link rel="stylesheet" href="css/main.c012c4fb.chunk.css" />
+
+
+
+</head>
+<body style="overflow: hidden; padding: 0 !important;">
+    <div class="navbar navbar-default navbar-default-release navbar-fixed-top ">
+        <div class="container">
+            <div class="navbar-header">
+                <h1 class="cttitle">Herramienta de codificaci&#xF3;n de la CIE-11 Ayuda </h1>
+                <div class="sidetitle">
+                    <br />
+                    <br />
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+            </div>
+        </div>
+    </div>
+    <div class="body-content">
+        
+
+
+
+<a class="ctbutton  helpbutton-release" href="icd11_mms/es/index.html" title='Regresar a la herramienta de codificaci&#xF3;n'>Herramienta de codificaci&#xF3;n</a>
+
+
+<div class="container-fluid " id="help-container">
+    <div class="row ">
+        <div class="col-sm-2 col-md-2 col-lg-2">
+            <div id="sidenav">
+    <ul>
+        <li>
+            <a href="Help%3Fstate=Release&amp;lang=es.html#searching">Búsqueda</a>
+            <ul>
+                <li><a href="Help%3Fstate=Release&amp;lang=es.html#word-list">Lista de palabras</a></li>
+                <li>
+                    <a href="Help%3Fstate=Release&amp;lang=es.html#destination-entities">Entidades destinatarias</a>
+                    <ul>
+                        <li><a href="Help%3Fstate=Release&amp;lang=es.html#incomplete-results">Resultados incompletos</a></li>
+                        <li><a href="Help%3Fstate=Release&amp;lang=es.html#flexible-search">Búsqueda flexible</a></li>
+                        <li><a href="Help%3Fstate=Release&amp;lang=es.html#quick-copying">Copiado rápido</a></li>
+                        <li><a href="Help%3Fstate=Release&amp;lang=es.html#entity-details">Detalles de la entidad</a></li>
+                    </ul>
+                </li>
+                <li><a href="Help%3Fstate=Release&amp;lang=es.html#chapter-distribution-filter">Distribución por capítulos y filtro</a></li>
+
+            </ul>
+        </li>
+        <li><a href="Help%3Fstate=Release&amp;lang=es.html#integrated-browser">Navegador integrado</a></li>
+        <li>
+            <a href="Help%3Fstate=Release&amp;lang=es.html#postcoordination">Poscoordinación</a>
+            <ul>
+                <li><a href="Help%3Fstate=Release&amp;lang=es.html#displaying-searching-value-sets">Mostrar o buscar grupos de valores</a></li>
+                <li><a href="Help%3Fstate=Release&amp;lang=es.html#building-a-code-string">Creación de una cadena de códigos</a></li>
+                <li><a href="Help%3Fstate=Release&amp;lang=es.html#postcoordination-using-multiple-values-from-the-same-axis">Poscoordinación usando varios valores del mismo eje</a></li>
+                <li><a href="Help%3Fstate=Release&amp;lang=es.html#nested-postcoordination">Poscoordinación anidada</a></li>
+            </ul>
+        </li>
+        <li><a href="Help%3Fstate=Release&amp;lang=es.html#coding-note">Nota sobre la codificación</a></li>
+        <li><a href="Help%3Fstate=Release&amp;lang=es.html#related-categories-in-maternal-chapter">Categorías relacionadas en el capítulo sobre causas maternas</a></li>
+        <li><a href="Help%3Fstate=Release&amp;lang=es.html#related-categories-in-perinatal-chapter">Categorías relacionadas en el capítulo de afecciones perinatales</a></li>
+    </ul>
+</div>
+        </div>
+        <div class="col-sm-10 col-md-10 col-lg-8" id="help-md">
+            <!DOCTYPE html>
+<html>
+<head>
+    <title>Búsqueda </title>
+</head>
+<body>
+
+    <h3 id="busqueda">Búsqueda <a name="searching"></a></h3>
+<p>La herramienta de codificación permite hacer búsquedas a medida que el usuario escribe en el cuadro de búsqueda:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/search-start-v3.png" alt="screenshot of Coding Tool search start" title="Búsqueda inicial en la herramienta de codificación" /></p>
+<p>A medida que se introduce la búsqueda, la herramienta de codificación genera (y actualiza de manera dinámica) dos resultados diferentes:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/search-result-columns-v3.png" alt="screenshot of Coding Tool search results" title="Búsqueda inicial en la herramienta de codificación" /></p>
+<ol>
+<li><h4 id="lista-de-palabras">Lista de palabras <a name="word-list"></a></h4>
+<p>Del lado izquierdo aparece una lista de palabras.</p>
+<p>Si el usuario ha escrito la mitad de una palabra, el sistema tratará de adivinar lo que está escribiendo.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/wordlist-guessing.png" alt="screenshot of Coding Tool tries to guess the word" title="La herramienta de codificación intenta adivinar una palabra" /></p>
+<p>Si el usuario ha terminado de escribir una palabra (es decir, si <strong>escribe un espacio</strong> al final de una palabra, o si <strong>selecciona una palabra</strong> directamente de la lista de palabras) el sistema mostrará palabras clave relacionadas.<br />
+El grado de relación se calcula usando el número de veces que las palabras aparecen juntas en la CIE junto con otros criterios similares.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/wordlist-related.png" alt="screenshot of Coding Tool related words" title="Palabras relacionadas en la herramienta de codificación" /></p>
+<p>Esta lista puede ordenarse por relación/repetición (criterio predeterminado) u orden alfabético.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/wordlist-sort.png" alt="screenshot of Coding Tool word list sort options" title="Opciones para ordenar la lista de palabras" /></p>
+<p>Se puede hacer clic en estas palabras en lugar de seguir escribiendo.</p>
+</li>
+<li><h4 id="entidades-destinatarias">Entidades destinatarias <a name="destination-entities"></a></h4>
+<p>En el medio de la interfaz de la herramienta de codificación aparecen las entidades que coinciden con la búsqueda.</p>
+<p>Los resultados se ordenan según el grado de coincidencia que haya entre el texto escrito y la CIE. En esta lista de resultados, las palabras buscadas aparecerán marcadas para que se destaquen (por ejemplo, la palabra &quot;tuberculosis&quot; en la captura de pantalla que se presenta más abajo).<br />
+La entidad seleccionada con el mouse o el teclado (el usuario puede desplazarse por la lista usando las flechas hacia arriba y hacia abajo del teclado) aparece marcada con una flecha roja del lado izquierdo y un fondo de color gris claro.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entities-list-v3.png" alt="screenshot of Coding Tool entities list result" title="Lista de entidades resultante de la búsqueda" /></p>
+<p>Del lado derecho de la lista de entidades encontradas en la búsqueda, la herramienta de codificación muestra unos íconos que dan información específica sobre las entidades, como se ve en la siguiente captura de pantalla:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entities-list-icons-v3.png" alt="screenshot of Coding Tool entities list icon" title="Íconos de la lista de entidades encontradas en la búsqueda" /></p>
+<p>Cada ícono tiene un significado diferente:</p>
+<ul>
+<li>Poscoordinación disponible para esta entidad: <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-pa-v4.png" alt="icon Postcoordination is available" title="Ícono de poscoordinación disponible" /></li>
+<li>Poscoordinación obligatoria para esta entidad: <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-pr-v4.png" alt="icon Postcoordination is mandatory" title="Ícono de poscoordinación obligatoria" /></li>
+<li>Nota de codificación disponible para esta entidad: <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-cn-v4.png" alt="icon Coding note is available" title="Ícono de nota de codificación disponible" /></li>
+<li>Hay una o más categorías relacionadas con esta entidad en el capítulo sobre causas maternas: <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-ml-v4.png" alt="icon Coding note is available" title="Categorías relacionadas en el capítulo sobre causas maternas" /></li>
+<li>Hay una o más categorías relacionadas en el capítulo perinatal para esta entidad: <img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-pl-v4.png" alt="icon related categories in perinatal chapter" title="Categorías relacionadas en el capítulo perinatal" /></li>
+</ul>
+<p>Si entre los resultados de la búsqueda hay una &quot;coincidencia perfecta&quot;, esta aparecerá destacada con un fondo azul (como en la captura de pantalla que se presenta a continuación).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entities-list-blu-match-v2.png" alt="screenshot of Coding Tool entities list result perfect match" title="Coincidencia perfecta en los resultados de la búsqueda" /></p>
+<p>Los resultados también se agrupan usando la jerarquía de la CIE, de manera que si el texto de la búsqueda coincide con una categoría padre y varias entidades hijas, aparecerán de manera que resulte fácil visualizar esta relación.
+Los códigos de las categorías que no son terminales (es decir, las categorías que tienen entidades hijas) se presentan con un fondo gris. Véase, por ejemplo, en la siguiente captura de pantalla cómo aparece el código CA23 al buscar &quot;asma&quot;:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entities-hierachy-group-v3.png" alt="screenshot of Coding Tool entities grouped by hierarchy" title="Entidades agrupadas por jerarquía" /></p>
+<p>El usuario puede cambiar el orden utilizando el menú desplegable que se encuentra en la parte superior de la lista, donde podrá ver dos opciones:</p>
+<ul>
+<li>por coincidencia en la búsqueda (criterio predeterminado)</li>
+<li>por orden en la clasificación</li>
+</ul>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entities-list-sort.png" alt="screenshot of Coding Tool entities list sort options" title="Criterios para establecer el orden en la lista de entidades" /></p>
+<p>En la lista solo aparecen los códigos y los títulos, salvo que el término buscado no aparezca en el título. Véase un ejemplo en la siguiente captura de pantalla, donde se resalta el término que coincidió con la búsqueda:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entity-matching-terms.png" alt="screenshot of Coding Tool entity matching term" title="Término que coincidió con la entidad" /></p>
+<h4 id="resultados-incompletos">Resultados incompletos <a name="incomplete-results"></a></h4>
+<p>Si la palabra o palabras escritas en el cuadro de búsqueda no son lo suficientemente precisas y el sistema encuentra más resultados de los que puede mostrar, aparecerán las advertencias que se muestran en la captura de pantalla abajo.</p>
+<p>Si encuentra resultados en más de 100 entidades, mostrará los 100 mejores y aparecerá el siguiente mensaje: <em>Los resultados que se muestran están incompletos</em></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/search-result-incomplete-v3.png" alt="screenshot of Coding Tool when the results shown are incomplete" title="Herramienta de codificación cuando los resultados que se muestran están incompletos" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/wordlist-result-incomplete-v3.png" alt="screenshot of Coding Tool when the word list result shown is incomplete" title="Herramienta de codificación cuando la lista de palabras que se muestra está incompleta" /></p>
+<p>En estos casos, se recomienda introducir más información en el cuadro de búsqueda.</p>
+<h4 id="busqueda-flexible">Búsqueda flexible <a name="flexible-search"></a></h4>
+<p>Si el usuario hace una búsqueda normal en la herramienta de codificación y no obtiene resultados, puede hacer una búsqueda flexible.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/flexisearch-v2.png" alt="screenshot of Coding Tool when the flexible search is available" title="Herramienta de codificación cuando la búsqueda flexible está disponible" /></p>
+<p>En el modo de búsqueda flexible, las búsquedas son diferentes:</p>
+<ol>
+<li><p>En el modo de búsqueda normal, la herramienta de codificación solo dará resultados que tengan <em>todas</em> las palabras que se han usado en la búsqueda. Acepta diferentes variantes de las palabras y sinónimos, pero básicamente busca resultados que tengan todos los elementos que se introdujeron. En la búsqueda flexible, los resultados no necesariamente tienen todas las palabras que escribe el usuario. El sistema procurará encontrar las frases que coincidan mejor, pero puede haber resultados en los que no aparezcan algunas de las palabras introducidas en la búsqueda.</p>
+<ul>
+<li>Por ejemplo, digamos que el usuario busca <em>esteatorrea primaria</em>. Como en el índice de la CIE-11 no hay ninguna frase que tenga esas dos palabras juntas, al hacer una búsqueda normal en la herramienta de codificación no se obtendrán resultados, pero al hacer una búsqueda flexible se obtendrán resultados que tengan una de las palabras. En este caso, el primer resultado será &quot;esteatorrea&quot;, que es un término del índice en la entidad &quot;Otros síntomas especificados relacionados a la parte baja del aparato gastrointestinal o el abdomen&quot;.</li>
+</ul>
+</li>
+</ol>
+ <br/>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/flexisearch-results-v3.png" alt="screenshot of Coding Tool flexible search results" title="Resultados de la búsqueda flexible" /></p>
+<ol start="2">
+<li>Otra flexibilidad se encuentra al hacer búsquedas con variantes más amplias de los términos. Por ejemplo, si el usuario escribe <em>adenocarcinoma de pulmón</em>, tendrá como resultado <em>Neoplasias malignas del bronquio o el pulmón, sin especificación</em>. Esto se logra usando la frase &quot;neoplasia maligna&quot; en lugar de &quot;adenocarcinoma&quot;.</li>
+</ol>
+<h4 id="copiado-rapido">Copiado rápido <a name="quick-copying"></a></h4>
+<p>Al hacer clic en el código (o en el título correspondiente), o al presionar la tecla &quot;Entrar&quot; en el teclado, se copia el código seleccionado en el portapapeles. El código que se copiará en el portapapeles aparece en todo momento en la parte superior derecha de la página:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entity-clipboard-v3.png" alt="screenshot of Coding Tool entity code copied in the clipboard" title="Código de la entidad copiado en el portapapeles" /></p>
+<h4 id="detalles-de-la-entidad">Detalles de la entidad <a name="entity-details"></a></h4>
+<p>Al hacer clic en el vínculo &quot;detalles&quot; que se encuentra a la derecha de cada resultado (o en uno de los pequeños íconos que están a un lado), se abre el contenido detallado de la entidad:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entity-details-link-v3.png" alt="screenshot of Coding Tool entity details link" title="Enlace a los detalles de la entidad" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entity-details-open-v4.png" alt="screenshot of Coding Tool entity details" title="Detalles de la entidad" /></p>
+<p>En la parte superior del contenido de los detalles de la entidad, mediante el enlace &quot;mostrar todo&quot;, la herramienta de codificación muestra todos los términos que coinciden para la entidad.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entity-details-matching-terms-v4.png" alt="screenshot of Coding Tool entity details matching terms" title="Términos que coinciden con los detalles de la entidad en la Herramienta de codificación" /></p>
+<p>Al hacer clic en el enlace &quot;Ocultar&quot;, se esconderán todos los términos coincidentes excepto los primeros cinco.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entity-details-matching-terms-all-v4.png" alt="screenshot of Coding Tool entity details show all matching terms" title="Los detalles de la entidad en la herramienta de codificación muestran todos los términos que coinciden" /></p>
+</li>
+<li><h4 id="distribucion-por-capitulos-y-filtro">Distribución por capítulos y filtro <a name="chapter-distribution-filter"></a></h4>
+<p>El usuario de la herramienta de codificación encontrará arriba, a la derecha, un botón de alternancia, el cual permite mostrar la distribución por capítulos y crear filtros para las búsquedas.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entities-list-filter-off-v3.png" alt="screenshot of Coding Tool chapter filter closed" title="Filtro de capítulos desactivado" /></p>
+<p>La distribución por capítulos muestra el número de coincidencias encontradas en cada capítulo de la CIE</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/entities-list-filter-on-v3.png" alt="screenshot of Coding Tool chapter filter opened" title="Filtro de capítulos activado" /></p>
+<p>De manera predeterminada, el sistema hace la búsqueda en todos los capítulos excepto el de <em>Códigos de extensión</em> y el de <em>Medicina tradicional</em>.</p>
+<p>El usuario puede cambiar el filtro haciendo clic en las casillas que se encuentran al lado de los nombres de los capítulos. Si no aparece ninguna marca, no se mostrarán los resultados de ese capítulo.</p>
+<p>Al hacer clic en el título de un capítulo se podrán ver los resultados de ese capítulo.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/chapters-filter.png" alt="screenshot of Coding Tool chapter filter" title="Filtro de capítulos de la herramienta de codificación" /></p>
+<p>Al hacer clic en <em>Mostrar resultados de selección predeterminada</em> se restablecerán los filtros definidos y se obtendrán resultados de todos los capítulos excepto el de <em>Códigos de extensión</em> y el de <em>Medicina tradicional</em>.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/chapters-default.png" alt="screenshot of Coding Tool chapter default set" title="Selección predeterminada en la herramienta de codificación" /></p>
+</li>
+</ol>
+<h3 id="navegador-integrado">Navegador integrado <a name="integrated-browser"></a></h3>
+<p>Al abrir los detalles de la entidad y luego hacer clic en el ícono de maximizar (el cuadro pequeño que se observa en la captura de pantalla de abajo), se abre el navegador de la CIE-11 dentro de la herramienta de codificación.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-link-v4.png" alt="screenshot of Coding Tool browser link" title="Enlace al navegador" /></p>
+<p>Este navegador integrado aparece como una ventana de primer plano.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-v4.png" alt="screenshot of Coding Tool integrated browser" title="Navegador integrado" /></p>
+<p>En el lado derecho del navegador aparece la siguiente información de la entidad (si está disponible):</p>
+<ul>
+<li>Nombre completo especificado</li>
+<li>Descripción</li>
+<li>Información adicional</li>
+<li>Inclusiones</li>
+<li>Exclusiones</li>
+<li>Exclusiones de niveles anteriores</li>
+<li>Codificado en otra parte</li>
+<li>Categorías relacionadas en el capítulo sobre causas maternas</li>
+<li>Related categories in perinatal chapter</li>
+<li>Nota sobre la codificación</li>
+<li>Poscoordinación</li>
+</ul>
+<p>Al navegar en la CIE-11, el usuario verá la jerarquía de la clasificación en la parte izquierda de la ventana. Si hace clic en cualquier entidad, podrá ver los detalles de esa entidad en la parte derecha de la ventana.</p>
+<p>Inicialmente, el sistema solo abre la jerarquía del código seleccionado. Sin embargo, el usuario puede visualizar las entidades hijas de cualquier entidad haciendo clic en los triángulos que se encuentran a la izquierda de las entidades.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-triangle.png" alt="screenshot of Coding Tool integrated browser open children" title="Cómo abrir entidades hijas en el navegador integrado" /></p>
+<h3 id="poscoordinacion">Poscoordinación <a name="postcoordination"></a></h3>
+<p>El sistema de poscoordinación permite agregar más detalles a la entidad seleccionada. Pueden agregarse distintos tipos de información a diferentes elementos. Por ejemplo, puede agregarse información adicional sobre &quot;histopatología&quot; a la mayoría de las categorías de neoplasia pero no a otras categorías de la clasificación.</p>
+<p>Cuando el usuario abre los detalles de una entidad que aparece en la lista de resultados, el enlace de poscoordinación solo aparece si puede aplicarse poscoordinación a esa entidad.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-available-postcoord-v4.png" alt="screenshot of Coding Tool link for available postcoordination" title="Enlace para poscoordinación disponible" /></p>
+<p>Cuando el usuario está viendo una entidad en el navegador de la CIE-11 integrado a la herramienta de codificación, el área de poscoordinación solo mostrará los ejes de poscoordinación que pueden aplicarse a esa entidad.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-v4.png" alt="screenshot of Coding Tool postcoordination example" title="Ejemplo de poscoordinación en la herramienta de codificación" /></p>
+<p>Algunas categorías tienen información que, para los múltiples propósitos de la CIE, está incompleta. En estos casos, el vínculo dice &quot;poscoordinación obligatoria&quot;.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-mandatory-postcoord-v4.png" alt="screenshot of Coding Tool link for mandatory postcoordination" title="Enlace para poscoordinación obligatoria" /></p>
+<p>Si la poscoordinación es obligatoria, la nota &quot;<em>(codifique también)</em>&quot; en el área de poscoordinación del navegador indica que debe agregarse la información correspondiente a este eje.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-mandatory-v4.png" alt="screenshot of Coding Tool mandatory postcoordination example" title="Ejemplo de poscoordinación obligatoria" /></p>
+<p>Para abrir la poscoordinación correspondiente a un término coincidente específico, debe hacer clic en uno de los íconos de poscoordinación en el lado derecho del contenido &quot;detalles&quot; de la entidad
+El ícono puede ser La poscoordinación está disponible:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-pa-v4.png" alt="icon Postcoordination is available" title="ícono La poscoordinación está disponible" /></p>
+<p>O La Postcoordinación es obligatoria:</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-pr-v4.png" alt="icon Postcoordination is mandatory" title="ícono La Postcoordinación es obligatoria" /></p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-selected-term-v4.png" alt="screenshot of Coding Tool postcoordination selected term" title="Término seleccionado de poscoordinación en la herramienta de codificación" /></p>
+<p>En el navegador integrado de la CIE-11, el término coincidente correspondiente se muestra como &quot;Término seleccionado&quot;. La Herramienta de codificación también mostrará el URI de la Fundación del término seleccionado si es diferente del URI de la Fundación de la entidad actual (ver la captura de pantalla a continuación).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-selected-term-in-browser-v4.png" alt="screenshot of Coding Tool postcoordination selected term in browser" title="Término seleccionado de poscoordinación en el navegador de la herramienta de codificación" /></p>
+<h4 id="mostrar-o-buscar-grupos-de-valores">Mostrar o buscar grupos de valores <a name="displaying-searching-value-sets"></a></h4>
+<p>Usando algunos de los ejes de poscoordinación pueden obtenerse valores de un grupo más pequeño de valores posibles (&quot;lateralidad&quot;, por ejemplo), mientras que en algunos ejes pueden obtenerse valores de un grupo bastante grande (como &quot;histopatología&quot;).</p>
+<ul>
+<li><p>Si el conjunto de valores es pequeño, el navegador mostrará todos los valores posibles con sus códigos.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-small.png" alt="screenshot of Coding Tool small value set postcoordination example" title="Ejemplo de poscoordinación con un grupo de valores pequeño" /></p>
+</li>
+<li><p>Si el conjunto de valores es grande, el usuario puede buscar en la jerarquía del eje de poscoordinación. De no ser posible, puede buscar los grupos de valores escribiéndolos en el cuadro de búsqueda. El navegador solo buscará los valores de ese eje.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-big.png" alt="screenshot of Coding Tool big value set postcoordination example" title="Ejemplo de poscoordinación con un grupo de valores grande" /></p>
+</li>
+<li><p>A veces, aunque el conjunto de valores para un eje sea grande, no todos los valores del grupo son aplicables a una entidad. En tales casos, el navegador buscará y mostrará solo la parte pertinente. Si el número de valores que pueden aplicarse es menor de 12, el navegador los mostrará todos. Si hay más resultados, el navegador permitirá hacer búsquedas en el eje y navegarlo.</p>
+<p>Por ejemplo, en el caso de &quot;quiste aneurismático de hueso&quot; puede hacerse la poscoordinación con &quot;detalle anatómico específico&quot; pero no todos valores son aplicables, por lo que el navegador buscará y mostrará solo los pertinentes. En el ejemplo de abajo, cuando el usuario busca &quot;cabeza&quot;, el sistema solo muestra los resultados que se encuentran en la ramificación &quot;huesos&quot; del eje &quot;detalle anatómico específico&quot;.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-search-v2.png" alt="screenshot of Coding Tool search postcoordination example" title="Ejemplo de búsqueda en la poscoordinación" /></p>
+</li>
+</ul>
+<h4 id="creacion-de-una-cadena-de-codigos">Creación de una cadena de códigos <a name="building-a-code-string"></a></h4>
+<p>Para crear un código, hay que hacer clic en los valores que se muestran en los resultados de la búsqueda, en la jerarquía o en las listas más cortas.</p>
+<p>En el ejemplo de abajo se muestra el código de &quot;neoplasia maligna de mama con información sobre lateralidad y detalle anatómico específico&quot;.<br />
+Lo seleccionado en la poscoordinación aparece en la parte superior del área de poscoordinación y la cadena de códigos generada aparece encima de la sección de poscoordinación.<br />
+Al hacer clic en el botón &quot;Seleccionar&quot; la cadena de códigos seleccionada se copia en el portapapeles.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-build.png" alt="screenshot of Coding Tool building a code string" title="Crear una cadena de códigos" /></p>
+<h4 id="poscoordinacion-usando-varios-valores-del-mismo-eje">Poscoordinación usando varios valores del mismo eje <a name="postcoordination-using-multiple-values-from-the-same-axis"></a></h4>
+<p>En la mayoría de los ejes de poscoordinación, el sistema permite un valor por eje.<br />
+Por ejemplo, al hacer la poscoordinación de &quot;gravedad&quot; no se pueden seleccionar los valores &quot;leve&quot; y &quot;moderado&quot; al mismo tiempo. Sin embargo, en ciertos ejes, el sistema permite asignar varios valores. Los ejes que permiten más de un valor son los siguientes:</p>
+<ul>
+<li>Asociado con</li>
+<li>Afección casual</li>
+<li>Tiene manifestación clínica</li>
+<li>Detalle anatómico específico</li>
+<li>Agentes infecciosos</li>
+<li>Agentes químicos</li>
+<li>Medicación</li>
+</ul>
+<p>En estos ejes, el usuario puede suministrar más de un valor. Por ejemplo, cuando se permite hacer la poscoordinación con detalle anatómico específico, puede seleccionar más de una localización.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-multiple.png" alt="screenshot of Coding Tool postcoordination multiple values from the same axis" title="Poscoordinación con varios valores de un mismo eje" /></p>
+<p>En algunos de los ejes de causas externas, se permiten varios valores solo cuando vienen de diferentes bloques.</p>
+<p>Por ejemplo, al hacer la poscoordinación de &quot;Evento no intencional en transporte terrestre en el tránsito que causa traumatismo a ciclista&quot; usando el eje &quot;descriptor del evento de transporte&quot;, podemos usar un valor del bloque &quot;Papel como usuario del vehículo de la persona lesionada en un evento de transporte&quot; y otro del bloque &quot;Contraparte en una colisión de transporte terrestre&quot;, pero no podemos usar dos valores del mismo bloque.</p>
+<p>Cuando no se permite usar varios valores para un eje y el usuario hace clic en un segundo valor, el sistema reemplazará el valor existente. Por ejemplo, si hace la poscoordinación de gravedad y ya ha seleccionado &quot;leve&quot; como valor, al hacer clic en &quot;moderado&quot; se reemplazará el valor &quot;leve&quot; con el valor &quot;moderado&quot;.</p>
+<h4 id="poscoordinacion-anidada">Poscoordinación anidada <a name="nested-postcoordination"></a></h4>
+<p>En algunos casos, el sistema puede suministrar una mayor especificación de los valores de poscoordinación. Si el usuario conoce el detalle específico, debe seleccionar la entidad más precisa; de lo contrario, debe seleccionar la menos específica.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/postcoord-nested.png" alt="screenshot of Coding Tool nested postcoordination" title="Poscoordinación anidada en la herramienta de codificación" /></p>
+<h3 id="nota-sobre-la-codificacion">Nota sobre la codificación <a name="coding-note"></a></h3>
+<p>Cuando el usuario abre los detalles de una entidad que aparece en la lista de resultados, si la entidad tiene alguna nota sobre la codificación, el usuario podrá visualizarla en el navegador integrado a la herramienta de codificación (véase un ejemplo en la captura de pantalla).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-available-codingnote-v4.png" alt="screenshot of Coding Tool link for available coding note" title="Enlace a nota sobre la codificación" /></p>
+<p>Cuando el usuario abre una entidad en el navegador integrado a la herramienta de codificación, la sección correspondiente a las notas sobre la codificación aparece como se muestra a continuación.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/codingnote-v3.png" alt="screenshot of Coding Tool coding note example" title="Ejemplo de nota de codificación" /></p>
+<h3 id="categorias-relacionadas-en-el-capitulo-sobre-causas-maternas">Categorías relacionadas en el capítulo sobre causas maternas <a name="related-categories-in-maternal-chapter"></a></h3>
+<p>Cuando se codifica la mortalidad materna, en la mayor parte de los casos el código de la causa subyacente se encuentra en el capítulo 18. Para simplificar la codificación y para evitar que aparezcan detalles del resto de la clasificación, la herramienta de codificación de la CIE-11 suministra códigos alternativos al capítulo de causas maternas.</p>
+<p>Si en los resultados de la búsqueda aparece un código alternativo relacionado con causas maternas, el usuario verá el ícono J.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-ml-v4.png" alt="icon related categories in maternal chapter" title="Categorías relacionadas en el capítulo sobre causas maternas" /></p>
+<p>Cuando abra los detalles de la entidad en la lista de resultados, verá una sección sobre categorías relacionadas con el capítulo de causas maternas.</p>
+<p>Por ejemplo, la entidad &quot;Tuberculosis del ojo&quot; (1B12.1) tiene como categoría relacionada en el capítulo de causas maternas la entidad &quot;Tuberculosis que complica el embarazo, el parto o el puerperio&quot; (JB63.0). Este código se combina con el código de tuberculosis del ojo (1B12.1) y el código resultante pasa a ser JB63.0/1B12.1.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-available-maternal-v4.png" alt="screenshot of Coding Tool link for related categories in maternal chapter" title="Enlace para categorías relacionadas en el capítulo sobre causas maternas" /></p>
+<p>Cuando el usuario abre una entidad en el navegador integrado, la sección sobre categorías relacionadas en el capítulo sobre causas maternas aparece como se ve en la siguiente captura de pantalla.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-available-maternal-integrated-v4.png" alt="screenshot of Coding Tool related categories in maternal chapter example" title="Ejemplo de categorías relacionadas en el capítulo sobre causas maternas" /></p>
+<p>Se puede hacer clic en el enlace de la sección de categorías relacionadas en el capítulo sobre causas maternas, que en este ejemplo es el código JB63.0/1B12.1 (subrayado en rojo abajo en las capturas de pantalla de los detalles de la entidad y el navegador integrado).</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-available-maternal-link-v4.png" alt="screenshot of Coding Tool link for related categories in maternal chapter link" title="Enlace de las categorías relacionadas en el capítulo sobre causas maternas" /></p>
+<p>El navegador integrado abre directamente la entidad relacionada en el capítulo sobre causas maternas (en el ejemplo de abajo: &quot;JB63.0 Tuberculosis que complica el embarazo, el parto o el puerperio&quot;) con la poscoordinación con la entidad seleccionada (en el ejemplo de abajo: &quot;1B12.1 Tuberculosis del ojo&quot;) sin intervención del usuario.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/maternal-v4.png" alt="screenshot of Coding Tool for related categories in maternal chapter example" title="Ejemplo de categorías relacionadas en el capítulo de causas maternas" /></p>
+<h3 id="categorias-relacionadas-en-el-capitulo-de-afecciones-perinatales">Categorías relacionadas en el capítulo de afecciones perinatales <a name="related-categories-in-perinatal-chapter"></a></h3>
+<p>Al codificar la mortalidad perinatal, la mayoría de los casos se codifican en el Capítulo 19. Para simplificar esto y también para poder mantener los detalles provenientes del resto de la clasificación, la herramienta de codificación de la CIE-11 le proporciona códigos alternativos del capítulo perinatal.</p>
+<p>Si el resultado de la búsqueda tiene una alternativa de código perinatal, usted verá el ícono K.</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/icon-pl-v4.png" alt="icon related categories in perinatal chapter" title="Categorías relacionadas en capítulo perinatal" /></p>
+<p>Cuando usted abre &quot;detalles&quot; de la entidad en la lista de resultados, se despliega la sección &quot;Categorías relacionadas en el capítulo perinatal&quot; para esa entidad.</p>
+<p>Por ejemplo, la entidad &quot;Tuberculosis del ojo&quot; (1B12.1) tiene como categoría relacionada en el capítulo perinatal a la entidad &quot;Tuberculosis congénita&quot; (KA61.0)</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-available-perinatal-v4.png" alt="screenshot of Coding Tool link for related categories in perinatal chapter" title="Enlace de la herramienta de codificación para categorías relacionadas en el capítulo perinatal" /></p>
+<p>Cuando usted está en una entidad en el navegador integrado de la CIE-11, la sección &quot;Categorías relacionadas en el capítulo perinatal&quot; se muestra como a continuación</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-available-perinatal-integrated-v4.png" alt="screenshot of Coding Tool related categories in perinatal chapter example" title="Categorías relacionadas en la herramienta de codificación en el ejemplo del capítulo perinatal" /></p>
+<p>Haciendo clic en el enlace dentro de la sección &quot;Categorías relacionadas en el capítulo perinatal&quot;, en este ejemplo KA61.0 (abajo subrayado en rojo en la captura de pantalla de detalles de la entidad y también en la captura de pantalla del navegador integrado)</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/browser-available-perinatal-link-v4.png" alt="screenshot of Coding Tool link for related categories in perinatal chapter link" title="Enlace de la herramienta de codificación para categorías relacionadas en el enlace del capítulo perinatal" /></p>
+<p>El navegador integrado abre directamente la entidad relacionada en el capítulo perinatal (en el ejemplo siguiente: &quot;KA61.0 Tuberculosis congénita&quot;) sin intervención del usuario</p>
+<p><img loading="lazy" src="https://icdcdn.who.int/static/ct/help/es/img/perinatal-v4.png" alt="screenshot of Coding Tool for related categories in perinatal chapter example" title="Herramienta de codificación para categorías relacionadas en el ejemplo del capítulo perinatal" /></p>
+
+
+</body>
+</html>
+        </div>
+      
+    </div>
+</div>
+    </div>
+</body>
+</html>
