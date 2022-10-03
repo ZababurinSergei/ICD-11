@@ -1081,6 +1081,10 @@ var OBrowserNavigation = function () {
     }, n
 }(), PostcoordinationCodeSet = function () {
     function n(n) {
+			console.log('🧨[(PostcoordinationCodeSet)]', {
+				n
+		})
+        debugger
         this.stemId = n
     }
 
@@ -1097,10 +1101,18 @@ var OBrowserNavigation = function () {
         var r = new n(i);
         return this.axisToValueIds[t].push(r), !0
     }, n.prototype.addPCValueIfFirst = function (n, t, i) {
+			console.log('🧨[(addPCValueIfFirst)]', {
+				n, t, i
+		})
+        debugger
         var r = this.getPostcoordinationCodeSet(OntologyBasicInfo.convertToFoundationId(n));
         return r != null ? r.addPCValueOnThisIfFirst(t, OntologyBasicInfo.convertToFoundationId(i)) : !1
     }, n.prototype.getPostcoordinationCodeSet = function (n) {
-        var u, t, i, f, r;
+			console.log('🧨[(getPostcoordinationCodeSet)]', {
+				n
+		})
+        debugger
+				var u, t, i, f, r;
         if (this.stemId == n) return this;
         for (u in this.axisToValueIds) for (t = 0, i = this.axisToValueIds[u]; t < i.length; t++) if (f = i[t], r = f.getPostcoordinationCodeSet(n), r != null) return r;
         return null
@@ -1133,6 +1145,10 @@ var OBrowserNavigation = function () {
     }
 
     return n.prototype.addPCValue = function (n, t, i) {
+			console.log('🧨[(addPCValue)]', {
+				n, t, i
+		})
+        debugger
         var r = this, u;
         if (n = OntologyBasicInfo.convertToFoundationId(n), i = OntologyBasicInfo.convertToFoundationId(i), this.postcoordinationCodeSet.addPCValueIfFirst(n, t, i)) {
             OBrowserNavigation.getInstance().updatePCDataInTheUrl();
