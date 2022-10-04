@@ -372,6 +372,8 @@ var YAHOO, foolproof, providers, openid, providers_large, providers_small;
             u = u || o
         }
         if (u) return u !== r[0] && r.unshift(u), i[u]
+
+        console.log('$$$$$$$$$$$$$$$$$$$$$$$$$')
     }
 
     function yo(n, t, i, r) {
@@ -2552,6 +2554,10 @@ var YAHOO, foolproof, providers, openid, providers_large, providers_small;
         ajax: function (n, t) {
             function w(n, t, s, h) {
                 var v, it, nt, y, w, c = t;
+                console.log('[(ajax w)]', {
+                    s: s.text
+                })
+                debugger
                 e !== 2 && (e = 2, k && clearTimeout(k), l = undefined, b = h || "", u.readyState = n > 0 ? 4 : 0, v = n >= 200 && n < 300 || n === 304, s && (y = vo(r, u, s)), y = yo(r, y, u, v), v ? (r.ifModified && (w = u.getResponseHeader("Last-Modified"), w && (i.lastModified[f] = w), w = u.getResponseHeader("etag"), w && (i.etag[f] = w)), n === 204 || r.type === "HEAD" ? c = "nocontent" : n === 304 ? c = "notmodified" : (c = y.state, it = y.data, nt = y.error, v = !nt)) : (nt = c, (n || !c) && (c = "error", n < 0 && (n = 0))), u.status = n, u.statusText = (t || c) + "", v ? g.resolveWith(o, [it, c, u]) : g.rejectWith(o, [u, c, nt]), u.statusCode(p), p = undefined, a && d.trigger(v ? "ajaxSuccess" : "ajaxError", [u, r, v ? it : nt]), tt.fireWith(o, [u, c]), a && (d.trigger("ajaxComplete", [u, r]), --i.active || i.event.trigger("ajaxStop")))
             }
 
@@ -2718,6 +2724,7 @@ var YAHOO, foolproof, providers, openid, providers_large, providers_small;
             var t;
             return {
                 send: function (r, u) {
+                    console.log('🌽[(SEND)a]')
                     var e, f = n.xhr(), o = ++go;
                     if (f.open(n.type, n.url, n.async, n.username, n.password), n.xhrFields) for (e in n.xhrFields) f[e] = n.xhrFields[e];
                     n.mimeType && f.overrideMimeType && f.overrideMimeType(n.mimeType);
@@ -2737,6 +2744,9 @@ var YAHOO, foolproof, providers, openid, providers_large, providers_small;
                             }
                             s || !n.isLocal || n.crossDomain ? s === 1223 && (s = 204) : s = h.text ? 200 : 404
                         }
+                        console.log('[(POST) RESPONSE]', {
+                            s, c, h
+                        })
                         h && u(s, c, h, f.getAllResponseHeaders())
                     };
                     n.async ? f.readyState === 4 ? setTimeout(t) : f.onreadystatechange = gt[o] = t : t()

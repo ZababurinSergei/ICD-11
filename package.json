@@ -9,7 +9,7 @@
   "scripts": {
     "frontend:start": "node index.mjs",
     "frontend:dev": "nodemon index.mjs",
-    "backend:dev": "yarn --cwd backend dev"
+    "backend:dev": "cd backend && nodemon --inspect index.mjs"
   },
   "author": "Zababurin Sergei",
   "license": "MIT",

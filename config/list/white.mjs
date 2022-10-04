@@ -17,5 +17,7 @@ export default [
   'https://authorization-facebook.now.sh',
   'https://facebook.com',
   'https://facebook.com/dialog/oauth',
-  'https://facebook.com/dialog'
+  'https://facebook.com/dialog',
+  'http://localhost:3913',
+  'http://localhost:4552'
 ]

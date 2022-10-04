@@ -40,36 +40,36 @@ var __extends = this && this.__extends || function () {
         console.log('🍊[(getFoundationBasicInfo) new n]', {
             t: t
         })
-        debugger
+
         return t.ontologyKey = "f", t.theLanguage = this.theLanguage, t.isLinearization = !1, t.baseURL = this.baseURL, t.ontologyLabel = "ICD-11 Foundation", t.ontologyId = "ICD-11Beta", t._foundationBasicInfo = null, this._foundationBasicInfo = t, this._foundationBasicInfo
     }, n.prototype.getRootURL = function () {
-        debugger
+
         return this.baseURL + this.ontologyKey.toLowerCase() + "/" + this.theLanguage
     }, n.prototype.getRootURLOtheLanguage = function (n) {
-        debugger
+
         return this.baseURL + this.ontologyKey.toLowerCase() + "/" + n
     }, n.prototype.getLinearizationId = function () {
-        debugger
+
         return this.isLinearization ? this.ontologyId.substr(this.getFoundationBasicInfo().ontologyId.length, this.ontologyId.length - this.getFoundationBasicInfo().ontologyId.length) : undefined
     }, n.prototype.rightLoadURL = function (n, t) {
-        debugger
+
         return this.getDetailsURL(n, t)
     }, n.prototype.getDetailsURL = function (n, t) {
         var i = this.getRootURL() + "/GetConcept?ConceptId=" + n;
        console.log('🍊[(getDetailsURL)]', {
            n, t, i
        })
-        debugger
+
         return t != undefined && t != null ? i + "&data=" + encodeURIComponent(JSON.stringify(t)) : i
     }, n.prototype.getDetailsURLOtherLanguage = function (n, t, i) {
         var r = this.getRootURLOtheLanguage(t) + "/GetConcept?ConceptId=" + n;
-        debugger
+
         return i != undefined && i != null ? r + "&data=" + encodeURIComponent(JSON.stringify(i)) : r
     }, n.prototype.getRootConceptsURL = function () {
-        debugger
+
         return this.getRootURL() + "/JsonGetRootConcepts?useHtml=false"
     }, n.prototype.getChildrenConceptsURL = function (n) {
-        debugger
+
         return this.getRootURL() + "/JsonGetChildrenConcepts?ConceptId=" + n + "&useHtml=false"
     }, n.prototype.getParentConceptsURL = function (n) {
         return this.getRootURL() + "/JsonGetParentConcepts?ConceptId=" + n + "&useHtml=false"
@@ -78,7 +78,7 @@ var __extends = this && this.__extends || function () {
     }, n.prototype.getRootConceptsURLForTreeRendering = function () {
         return this.getRootURL() + "/JsonGetRootConcepts?useHtml=true"
     }, n.prototype.getChildrenConceptsURLForTreeRendering = function (n, t) {
-        debugger
+
         return this.getRootURL() + "/JsonGetChildrenConcepts?ConceptId=" + n + "&useHtml=true&showAdoptedChildren=" + t
     }, n.prototype.getParentConceptIDsToRootURL = function (n) {
         return this.getRootURL() + "/JsonGetParentConceptIDsToRoot?ConceptId=" + n
@@ -112,7 +112,7 @@ var __extends = this && this.__extends || function () {
     }, t.prototype.getRootConceptsURLForTreeRendering = function () {
         return this.baseURL + "translate/" + this.ontologyKey.toLowerCase() + "/" + this.classification + "/" + this.theLanguage + "/" + this.translationLanguage + "/JsonGetRootConcepts"
     }, t.prototype.getChildrenConceptsURLForTreeRendering = function (n) {
-        debugger
+
         return this.baseURL + "translate/" + this.ontologyKey.toLowerCase() + "/" + this.classification + "/" + this.theLanguage + "/" + this.translationLanguage + "/JsonGetChildrenConcepts?ConceptId=" + n
     }, t.prototype.relatedTranslationsURL = function (n) {
         return this.baseURL + "relatedtranslations/" + this.ontologyKey + "/en/" + this.translationLanguage + "?text=" + n
@@ -137,7 +137,7 @@ var __extends = this && this.__extends || function () {
     }, t.prototype.getRootConceptsURLForTreeRendering = function () {
         return this.getRootURL() + "/JsonGetRootConcepts"
     }, t.prototype.getChildrenConceptsURLForTreeRendering = function (n) {
-        debugger
+
         return this.getRootURL() + "/JsonGetChildrenConcepts?ConceptId=" + n
     }, t.prototype.getDetailsUrlForProposals = function (n) {
         var t = $.address.parameter("action"), r = $.address.parameter("stableProposalGroupId"),
@@ -170,7 +170,7 @@ var __extends = this && this.__extends || function () {
     }, t.prototype.getRootConceptsURLForTreeRendering = function () {
         return this.getProposalRootUrl() + "/JsonGetRootConcepts"
     }, t.prototype.getChildrenConceptsURLForTreeRendering = function (n) {
-        debugger
+
         return this.getProposalRootUrl() + "/JsonGetChildrenConcepts?ConceptId=" + n
     }, t.prototype.getDetailsUrlForReviews = function (n) {
         return this.getRootURL() + "/EntityReviews?ConceptId=" + n
@@ -322,13 +322,13 @@ var __extends = this && this.__extends || function () {
             $("#messageArea").html(n).dialog("open")
         })
     }, n.prototype.inviteForContribution = function (n) {
-        debugger
+
         var t = this.baseURL + "contributions/invitationmail?url=" + n;
         $.get(t, function (n) {
             window.location.href = "mailto:?subject=" + n.subject + "&body=" + n.body
         })
     }, n.prototype.userOpinions = function (n) {
-        debugger;
+        ;
         var t = this.baseURL + "contributions/GetAllOpinions?contributionId=" + n;
         $.get(t, function (n) {
             $(n).dialog({
@@ -479,6 +479,10 @@ var __extends = this && this.__extends || function () {
         var n = this, t, i;
         this.tree = new YAHOO.widget.TreeView(this.treeLocationDivId);
         this.tree.setDynamicLoad(function (t, i) {
+            console.log('💥[(setDynamicLoad * )loadNodeData]', {
+                t, i
+            })
+
             n.loadNodeData(t, i)
         });
         this.tree.subscribe("expandComplete", function () {
@@ -524,7 +528,7 @@ var __extends = this && this.__extends || function () {
         n != null && (n.data.ID == this.oInfo.ontologyKey ? (i = this.oInfo.getRootConceptsURLForTreeRendering(), this.isLinearizationInclusionIconVisible() && (i = Helper.updateQueryStringParameter(i, "showLinearizationInclusionIcon", "true"))) : (i = this.oInfo.getChildrenConceptsURLForTreeRendering(n.data.ID, this.showAdoptedChildren()), (this.oInfo.isLinearization == !0 || this.pseudoLinearizationMode == !0) && (i = i + "&isAdoptedChild=" + n.data.isAdoptedChild), this.isLinearizationInclusionIconVisible() && (i = i + "&showLinearizationInclusionIcon=true"), this.pseudoLinearizationMode && (i = i + "&pseudoLinearizationMode=true")), u = {
             success: function (oResponse) {
                 console.log('🌶[(loadNodeData)success]', JSON.parse(oResponse.responseText))
-                debugger
+
                 for (var oResults = eval("(" + oResponse.responseText + ")"), treeNode, tempNode, i = 0; i < oResults.length; i++) treeNode = r.tree.getNodeByProperty("ID", oResults[i].ID), (treeNode == null || treeNode.parent.data.ID != n.data.ID) && (tempNode = new YAHOO.widget.HTMLNode(oResults[i], n, oResults[i].isLeaf, !0), tempNode.multiExpand = !0);
                 oResponse.argument.fnLoadComplete()
             }, failure: function (t) {
@@ -551,6 +555,8 @@ var __extends = this && this.__extends || function () {
                 console.log('😼[(getParentConceptIDsToRootURL*)doIt]', {
                     i: i
                 })
+                console.log('#@@@@@@@@@@@@@@')
+
                 t.doIt(n, i, -1)
             }
         })
@@ -939,15 +945,19 @@ var OBrowserNavigation = function () {
         this.isVisualizationVisible() ? (this.theLayout.innerLayout.show("west"), this.theVisualizer.visualizationSync(n)) : this.theLayout.innerLayout.hide("west");
         this.isHierarchyVisible() ? (this.theLayout.outerLayout.show("west"), this.theHierarchy.treeSync(n)) : this.theLayout.outerLayout.hide("west");
         this.isSecondLanguageVisible() ? this.theLayout.inner2Layout.show("east") : this.theLayout.inner2Layout.hide("east")
-        console.log('🏕[(arrangeViews)isVisualizationVisible, isHierarchyVisible, isSecondLanguageVisible]')
-        debugger
+        console.log('🏕[(arrangeViews)isVisualizationVisible, isHierarchyVisible, isSecondLanguageVisible]', {
+            isVisualizationVisible : this.isVisualizationVisible(),
+            isHierarchyVisible : this.isHierarchyVisible(),
+            isSecondLanguageVisible : this.isSecondLanguageVisible()
+        })
+
     }, n.prototype.loadNode = function (n, t, i) {
         var u = this.isSecondLanguageVisible(), r;
         n == "" && this.isSecondLanguageVisible() ? (r = this.oInfo.baseURL + "/Help/HelpContent/initialpage/" + this.theSecondLangauge(), $("#secondlanguage").load(r)) : this.loadContent(n, t, i);
         console.log('🏕[(loadNode)]', {
             n, t, i
         })
-        debugger
+
         this.arrangeViews(n)
     }, n.prototype.reloadContent = function (n, t) {
         var i = this.getIdFromAddressBar();
@@ -969,7 +979,7 @@ var OBrowserNavigation = function () {
                 var i = jQuery.Event("contentLoaded", {entityId: n});
                 jQuery("body").trigger(i)
             }), this.isSecondLanguageVisible() && this.theSecondLangauge() != "" && (o = this.oInfo.getDetailsURLOtherLanguage(n, this.theSecondLangauge(), i), $("#secondlanguage").load(o)))
-            debugger
+
         }
     }, n.prototype.closeAllDialogs = function () {
         $(".tobedestroyed").remove();
@@ -1014,7 +1024,7 @@ var OBrowserNavigation = function () {
             height: "300",
             buttons: {
                 Add: function () {
-                    debugger
+
                     var i = {};
                     i.entityid = t;
                     r.dialog("close");
@@ -1022,7 +1032,7 @@ var OBrowserNavigation = function () {
                         $("#notificationdomainsarea").html(n).dialog("open")
                     })
                 }, "Show/Manage my notification domains": function () {
-                    debugger
+
                     r.dialog("close");
                     $.get(u.oInfo.baseURL + "user/notificationdomains/" + u.oInfo.ontologyKey.toLowerCase() + "/" + n, function (n) {
                         $("#notificationdomainsarea").html(n).dialog("open")
@@ -1084,7 +1094,7 @@ var OBrowserNavigation = function () {
 			console.log('🧨[(PostcoordinationCodeSet)]', {
 				n
 		})
-        debugger
+
         this.stemId = n
     }
 
@@ -1104,14 +1114,14 @@ var OBrowserNavigation = function () {
 			console.log('🧨[(addPCValueIfFirst)]', {
 				n, t, i
 		})
-        debugger
+
         var r = this.getPostcoordinationCodeSet(OntologyBasicInfo.convertToFoundationId(n));
         return r != null ? r.addPCValueOnThisIfFirst(t, OntologyBasicInfo.convertToFoundationId(i)) : !1
     }, n.prototype.getPostcoordinationCodeSet = function (n) {
 			console.log('🧨[(getPostcoordinationCodeSet)]', {
 				n
 		})
-        debugger
+
 				var u, t, i, f, r;
         if (this.stemId == n) return this;
         for (u in this.axisToValueIds) for (t = 0, i = this.axisToValueIds[u]; t < i.length; t++) if (f = i[t], r = f.getPostcoordinationCodeSet(n), r != null) return r;
@@ -1145,9 +1155,6 @@ var OBrowserNavigation = function () {
     }
 
     return n.prototype.addPCValue = function (n, t, i) {
-			console.log('🧨[(addPCValue)]', {
-				n, t, i
-		})
         debugger
         var r = this, u;
         if (n = OntologyBasicInfo.convertToFoundationId(n), i = OntologyBasicInfo.convertToFoundationId(i), this.postcoordinationCodeSet.addPCValueIfFirst(n, t, i)) {
@@ -1156,6 +1163,10 @@ var OBrowserNavigation = function () {
             return
         }
         u = OBrowserNavigation.getInstance().oInfo.getDetailsURL(OBrowserNavigation.getInstance().getIdFromAddressBar(), this).replace("GetConcept", "GetUpdatedPostCoordinationData") + "&stemId=" + n + "&newValueAxis=" + t + "&newValueId=" + i;
+        console.log('🧨[(addPCValue*)POST]', {
+            u
+        })
+        debugger
         $.post(u, function (n) {
             r.postcoordinationCodeSet.axisToValueIds = JSON.parse(n).postcoordinationCodeSet.axisToValueIds;
             r.postcoordinationCodeSet.addMethodsToSerializedObjects();
@@ -1205,7 +1216,7 @@ var OBrowserNavigation = function () {
         l = this.pcHierarchy.oInfo.getRootURL();
         c === !0 && (l = l.replace("/f", "/l-m"));
         this.pcHierarchy.oInfo.getChildrenConceptsURLForTreeRendering = function (n, t) {
-            debugger
+
             return l + "/JsonGetChildrenConcepts?ConceptId=" + n + "&useHtml=true&showAdoptedChildren=" + t + "&itemViewName=" + s
         };
         this.pcHierarchy.oInfo.getRootConceptsURLForTreeRendering = function () {
@@ -1385,7 +1396,7 @@ var OBrowserNavigation = function () {
         r = $("#" + this.quickSearchInputId).attr("data-searchtype");
         $("#" + this.quickSearchInputId).autocomplete({
             source: function (t, u) {
-                debugger
+
                 var f = i + "?q=" + encodeURIComponent(t.term) + "&searchtype=" + r, e;
                 n.lastSearchedText = t.term;
                 e = $.get(f, function (n) {
@@ -1428,7 +1439,7 @@ var OBrowserNavigation = function () {
         });
         $("#" + this.quickSearchInputId).autocomplete({
             source: function (i) {
-                debugger;
+                ;
                 var o = u + "?q=" + encodeURIComponent(i.term), r, e;
                 t.lastSearchedText = i.term;
                 r = {};
@@ -1534,7 +1545,7 @@ var OBrowserNavigation = function () {
                 autoOpen: !1
             }), r.autocomplete({
                 appendTo: u, source: function (n) {
-                    debugger;
+                    ;
                     var r = f, t = {};
                     t.q = n.term;
                     t.scaleEntities = f;
@@ -1558,7 +1569,7 @@ var OBrowserNavigation = function () {
     }, n.showPropertyValues = function (n) {
         $(".pvsdetails_" + n).toggle()
     }, n.prototype.submitAdvancedSearch = function () {
-        debugger;
+        ;
         var n = this, t, i;
         $(".ui-dialog-buttonpane button:contains('Search')").button("disable");
         $(".searchresultwaitimg").show();
@@ -1575,7 +1586,7 @@ var OBrowserNavigation = function () {
         });
         this.showAdvancedSearchResults()
     }, n.prototype.submitAdvancedSearch2 = function () {
-        debugger;
+        ;
         var t = this, i, r, n;
         $(".ui-dialog-buttonpane button:contains('Search')").button("disable");
         $(".searchresultwaitimg").show();

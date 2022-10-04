@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Control Center</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<fieldset id="GetConcept">
+    <legend>GET: /browse11/l-m/en/GetConcept</legend>
+    <div class="GetConcept"></div>
+</fieldset>
+
+<fieldset id="GetParentConcept">
+    <legend>GET: /browse11/l-m/en/JsonGetParentConceptIDsToRoot</legend>
+    <pre class="GetParentConcept"></pre>
+</fieldset>
+
+<fieldset id="GetRootConcepts">
+    <legend>GET: /browse11/l-m/en/JsonGetRootConcepts</legend>
+    <div class="GetRootConcepts__views_wrap">
+        <section class="GetRootConcepts"></section>
+    </div>
+    <div class="GetRootConcepts__views_wrap">
+        <ul class="GetRootConcepts__views"></ul>
+    </div>
+</fieldset>
+
+
+<fieldset id="GetChildrenConcepts">
+    <legend>GET: /browse11/l-m/en/JsonGetChildrenConcepts</legend>
+    <div class="GetChildrenConcepts__views_wrap">
+        <section class="GetChildrenConcepts"></section>
+        <div class="GetChildrenConcepts__views"></div>
+    </div>
+</fieldset>
+
+
+<fieldset id="UpdatedPostCoordinationData">
+    <legend>POST: /browse11/l-m/en/GetUpdatedPostCoordinationData</legend>
+    <div class="UpdatedPostCoordinationData"></div>
+</fieldset>
+
+
+<fieldset id="GetPostCoordination">
+    <legend>GET: /browse11/l-m/en/GetPostCoordination</legend>
+    <div class="GetPostCoordination"></div>
+</fieldset>
+
+
+<style>
+    #GetConcept {
+        width: 50%;
+    }
+
+    #GetRootConcepts {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #GetRootConcepts div {
+        width: 50%;
+        word-wrap: break-word;
+    }
+
+    .GetRootConcepts__views_wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .GetRootConcepts__views {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+
+    .GetRootConcepts__views_wrap section{
+        white-space: break-spaces;
+    }
+
+
+    #GetChildrenConcepts {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .GetChildrenConcepts__views {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 41%;
+    }
+
+    .GetChildrenConcepts__views_wrap {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .GetChildrenConcepts__views_wrap section{
+        white-space: break-spaces;
+    }
+
+</style>
+<script type="module">
+    const evtSource = new EventSource("http://localhost:4552/stream");
+    let color = ['red', 'green', 'yellow', 'blue']
+    let count = 0
+    evtSource.addEventListener("message", (event) => {
+        let data = JSON.parse(event.data)
+        switch (data.type) {
+            case 'GetConcept':
+                let content = document.querySelector(`.${data.type}`)
+                content.insertAdjacentHTML('beforeend', `<div>${data.msg}</div>`)
+                let help = document.querySelector('.help')
+                help.style.display = 'none'
+                break
+            case'GetParentConcept':
+                let GetParentConcept = document.querySelector(`.${data.type}`)
+                // GetParentConcept.textContent = ''
+                GetParentConcept.textContent = GetParentConcept.textContent + JSON.stringify(data.msg, null, 4)
+                break
+            case'GetRootConcepts':
+                let GetRootConcepts = document.querySelector(`.${data.type}`)
+                let GetRootConcepts__views = document.querySelector(`.${data.type}__views`)
+                for(let item of data.msg) {
+                    // GetRootConcepts__views.textContent = ''
+                    console.log('!!!!!!!!!!!!2222!!!!!!!!!', item.html)
+                    GetRootConcepts__views.insertAdjacentHTML('beforeend', item.html)
+                }
+                // GetRootConcepts.textContent = ''
+                GetRootConcepts.textContent = GetRootConcepts.textContent + JSON.stringify(data.msg, null, 4)
+                break
+            case'GetChildrenConcepts':
+                let GetChildrenConcepts = document.querySelector(`.${data.type}`)
+                let GetChildrenConcepts__views = document.querySelector(`.${data.type}__views`)
+                for(let item of data.msg) {
+                    // GetChildrenConcepts__views.textContent = ''
+
+                    console.log('wwwwwww item.html wwwwwwww', item.html)
+                    GetChildrenConcepts__views.insertAdjacentHTML('beforeend', item.html)
+
+                }
+                console.log('GetChildrenConcepts', data.msg)
+                // GetChildrenConcepts.textContent = ''
+                GetChildrenConcepts.textContent = GetChildrenConcepts.textContent + JSON.stringify(data.msg, null, 4)
+                break
+            case 'UpdatedPostCoordinationData':
+                let UpdatedPostCoordinationData = document.querySelector(`.${data.type}`)
+                // UpdatedPostCoordinationData.textContent = ''
+                UpdatedPostCoordinationData.textContent = UpdatedPostCoordinationData.textContent +  JSON.stringify(data.msg, null, 4)
+                break
+            case 'GetPostCoordination':
+                let GetPostCoordination = document.querySelector(`.${data.type}`)
+                GetPostCoordination.insertAdjacentHTML('beforeend', data.msg)
+                break
+            default:
+                break
+        }
+    });
+</script>
+</body>
+</html>
