@@ -19,7 +19,7 @@ const queue = new Enqueue({
 app.use(queue.getMiddleware());
 
 app.use(express.static('frontend'))
-
+app.use(express.static('modules'))
 app.use(queue.getErrorMiddleware())
 
 export default app

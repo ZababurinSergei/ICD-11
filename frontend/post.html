@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Control Center</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<fieldset id="ConceptId">
+    <legend>GET: ConceptId</legend>
+    <div class="ConceptId"></div>
+</fieldset>
+
+<fieldset id="stemId">
+    <legend>GET: stemId</legend>
+    <div class="stemId"></div>
+</fieldset>
+
+<fieldset id="axisToValue">
+    <legend>GET: axisToValue</legend>
+    <div class="axisToValue"></div>
+</fieldset>
+
+<fieldset id="GetPostCoordination">
+    <legend>GET: /browse11/l-m/en/GetPostCoordination</legend>
+    <div class="GetPostCoordination"></div>
+</fieldset>
+
+<fieldset id="GetPostCoordination">
+    <legend>GET: /browse11/l-m/en/GetPostCoordination</legend>
+    <div class="GetPostCoordination">
+
+
+
+        <div class="codearea">
+            <span class="code">Code:&nbsp;</span>
+            <span id="icdcodewpc" onclick="selectText()" title="Clicking copies the code to the clipboard">
+    CA40.00&amp;XN27H</span>
+        </div>
+        <input type="hidden" id="pccsdata" data-data="{&quot;dataType&quot;:&quot;pc&quot;,&quot;postcoordinationCodeSet&quot;:{&quot;stemId&quot;:&quot;http://id.who.int/icd/entity/1323682030&quot;,&quot;axisToValueIds&quot;:{&quot;infectiousAgent&quot;:[{&quot;stemId&quot;:&quot;http://id.who.int/icd/entity/1878765214&quot;,&quot;axisToValueIds&quot;:{}},{&quot;stemId&quot;:&quot;http://id.who.int/icd/entity/1065383727&quot;,&quot;axisToValueIds&quot;:{}}]}},&quot;underShorlineId&quot;:null}">
+        <div class="pctitle">
+            CA40.0 Bacterial pneumonia
+        </div>
+
+
+        <ul class="pccodeset">
+            <li class="last">
+                <div class="axis">
+                    Infectious agent
+                </div>
+                <div class="values">
+                    <div class="pctitle">
+                        XN9EE  Chlamydia pneumoniae
+                        <img title="remove postcoordination value" class="removepcvaluebtn" src="/browse11/Content/remove.png" onclick="OBrowserNavigation.getInstance().requestPCData.removePCValue('http://id.who.int/icd/entity/1323682030','infectiousAgent', 'http://id.who.int/icd/entity/1878765214')">
+                    </div>
+
+
+
+
+
+                    <div class="pctitle">
+                        XN27H  Chlamydia
+                        <img title="remove postcoordination value" class="removepcvaluebtn" src="/browse11/Content/remove.png" onclick="OBrowserNavigation.getInstance().requestPCData.removePCValue('http://id.who.int/icd/entity/1323682030','infectiousAgent', 'http://id.who.int/icd/entity/1065383727')">
+                    </div>
+
+
+
+
+
+                </div>
+
+            </li>
+        </ul>
+
+    </div>
+</fieldset>
+
+<style>
+    #ConceptId, #stemId, #axisToValue {
+        display: flex;
+        width: 50%;
+    }
+</style>
+<script type="module">
+    import Axios from '/axios/axios.mjs'
+    const axios = Axios.default
+
+    const evtSource = new EventSource("http://localhost:4552/stream");
+    let color = ['red', 'green', 'yellow', 'blue']
+    let count = 0
+    const token = 'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYmYiOjE2NjQ5MjY0NDYsImV4cCI6MTY2NDkzMDA0NiwiaXNzIjoiaHR0cHM6Ly9pY2RhY2Nlc3NtYW5hZ2VtZW50Lndoby5pbnQiLCJhdWQiOlsiaHR0cHM6Ly9pY2RhY2Nlc3NtYW5hZ2VtZW50Lndoby5pbnQvcmVzb3VyY2VzIiwiaWNkYXBpIl0sImNsaWVudF9pZCI6ImViMWUyZWFmLTZmYmYtNDc0Yy05ZjY0LTA0ZDk4YWIzYWMyMl8wNmI0MzlmMi1jNDJhLTQ4ZjEtYjJiZC1hMzZhNzNmMTA3ZTgiLCJzY29wZSI6WyJpY2RhcGlfYWNjZXNzIl19.mAnVuuSDpjnfjx83Sbpym1pHJMq99wCeSKXKGJsl3D-B4tjk1GS1PxKGLNMMYzmf1znk6GQg7VhDKHV9xmdJ5-D7fAOBlTjdySvxlYLe-8-kc3NDcONki-LUnQcUrW4lbpR0MEEiX_7egA1y82emlmyWwEF3FL6Kao7NgWPwLMJMCWiLnbjjfORHdO_4TIr81CmQaXTa4OMshJwgoEMUk7ygOV-FIZWvOLNSatuVJF8-CjwZHfgQ73z-K-uTy_AX7klhre4Gm4nAYJqRUrC6sxwRDW7meM9wAJbUxVihDgTf49Iz7r-4IG45hIeGSoKjFemXzSKiIZE-4GyUFANXuw'
+
+    const config = {
+        headers: {
+            "accept": "application/json",
+            "API-Version": "v2",
+            "Accept-Language": "en",
+            "Authorization": `Bearer ${token}`
+        }
+    };
+
+    const getEntity = (entity) => {
+        // https://id.who.int/icd/release/11/2022-02/mms/
+        const url = new URL(entity)
+        const linearization = `${url.origin}/icd/release/11/2022-02/mms/${url.pathname.split('/')[3]}?include=ancestor%2C%20descendant%2C%20diagnosticCriteria`
+        return axios.get(linearization, config)
+            .then((response) => {
+
+                console.log('@@@@@@@@@@@@@💚@@@💚@@@@@@@@@@@@@[(REQuEST)',entity, ']', response.data)
+                return response.data
+            })
+            .catch(e => {
+                console.log('ERROR', e)
+                return {
+                    error: e,
+                    status: false
+                }
+            })
+    }
+
+    const global = {
+        active: 0,
+        ConceptId: {},
+        stemId: {},
+        axisToValue: {}
+    }
+
+    let api = new Proxy(global, {
+        get: (obj, prop) => {
+            return obj[prop];
+        },
+        set: (obj, prop, value) => {
+            console.log('prop', prop)
+
+            if( prop === 'ConceptId' || prop ===  'stemId' || prop ===  'axisToValue') {
+                api.active++
+                if(api.active === 3) {
+                    onReady()
+                }
+            }
+
+            if(!!obj[prop]) {
+                obj[prop] = {}
+            }
+            obj[prop] = value;
+            return true
+        }
+    })
+
+    evtSource.addEventListener("message", (event) => {
+        let data = JSON.parse(event.data)
+
+        switch (data.type) {
+            case 'ConceptId':
+                api.ConceptId = data.msg
+                let ConceptId = document.querySelector(`.${data.type}`)
+                ConceptId.textContent = ''
+                ConceptId.textContent =  JSON.stringify(data.msg, null, 4)
+                console.log('ConceptId', data.msg)
+                break
+            case 'stemId':
+                api.stemId = data.msg
+                let stemId = document.querySelector(`.${data.type}`)
+                stemId.textContent = ''
+                stemId.textContent =  JSON.stringify(data.msg, null, 4)
+                console.log('stemId', data.msg)
+                break
+            case 'axisToValue':
+                api.axisToValue = data.msg
+                let axisToValue = document.querySelector(`.${data.type}`)
+                axisToValue.textContent = ''
+                axisToValue.textContent =  JSON.stringify(data.msg, null, 4)
+                console.log('axisToValue', data.msg)
+                break
+            case 'GetPostCoordination':
+                let GetPostCoordination = document.querySelector(`.${data.type}`)
+                GetPostCoordination.insertAdjacentHTML('beforeend', data.msg)
+                break
+            default:
+                break
+        }
+    });
+
+    ////////////////////////////////////////
+
+    const GetPostCoordination = (request) => {
+        return new Promise(async (resolve, reject) => {
+            const temp = {
+                ConceptId: request.ConceptId,
+                data: JSON.parse(request.data)
+            }
+
+            const ConceptId = await getEntity(temp.ConceptId)
+            api.ConceptId = ConceptId
+
+            // const stemId = await getEntity(temp.data.postcoordinationCodeSet.stemId)
+            // api.stemId = stemId
+
+            let axis = []
+            for(let type in temp.data.postcoordinationCodeSet.axisToValueIds) {
+                for(let key in temp.data.postcoordinationCodeSet.axisToValueIds[type]) {
+                    let axisToValue = await getEntity(temp.data.postcoordinationCodeSet.axisToValueIds[type][key].stemId)
+                    axis.push(axisToValue)
+                }
+            }
+
+            api.axisToValue = axis
+            resolve()
+        })
+    }
+
+
+    // const request = {
+    //     ConceptId: "http://id.who.int/icd/entity/1323682030",
+    //     data: '{"dataType":"pc","postcoordinationCodeSet":{"stemId":"http://id.who.int/icd/entity/1323682030","axisToValueIds":{"infectiousAgent":[{"stemId":"http://id.who.int/icd/entity/1878765214"}]}}}'
+    // }
+
+    const request = {
+        ConceptId: "http://id.who.int/icd/entity/1323682030",
+        data: '{"dataType":"pc","postcoordinationCodeSet":{"stemId":"http://id.who.int/icd/entity/1323682030","axisToValueIds":{"infectiousAgent":[{"stemId":"http://id.who.int/icd/entity/1878765214","axisToValueIds":{}},{"stemId":"http://id.who.int/icd/entity/1065383727","axisToValueIds":{}}]}}}'
+    }
+
+    GetPostCoordination(request)
+
+    //////////////////////////////////////
+    const onReady = async () => {
+        let title = api
+        console.log('@@@@@@@@@@@@@@', api)
+    }
+</script>
+</body>
+</html>
