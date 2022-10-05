@@ -183,6 +183,26 @@ app.get('/browse11/l-m/en/GetConcept', async (req, res) => {
         })
 })
 
+app.options('/browse11/l-m/en/JsonGetRootConcepts', cors(corsOptions))
+app.get('/browse11/l-m/en/JsonGetRootConcepts', async (req, res) => {
+    console.log('🥎[(GET)RootConcepts]', req.query)
+    axios.get(`https://icd.who.int${req.originalUrl}`, config)
+        .then((response) => {
+            console.log('🥎🥎[(GET)RootConcepts]', response.data)
+
+            Stream.emit("push", "message", {
+                type: 'GetRootConcepts',
+                msg: response.data
+            });
+
+            res.send(response.data)
+        })
+        .catch(e => {
+            console.log('ERROR', e)
+            res.end()
+        })
+})
+
 app.options('/browse11/l-m/en/JsonGetParentConceptIDsToRoot', cors(corsOptions))
 app.get('/browse11/l-m/en/JsonGetParentConceptIDsToRoot', async (req, res) => {
     console.log('🥎[(GET)ParentConcept]', req.query)
@@ -201,26 +221,6 @@ app.get('/browse11/l-m/en/JsonGetParentConceptIDsToRoot', async (req, res) => {
             res.end()
         })
 })
-
-app.options('/browse11/l-m/en/JsonGetRootConcepts', cors(corsOptions))
-app.get('/browse11/l-m/en/JsonGetRootConcepts', async (req, res) => {
-    console.log('🥎[(GET)RootConcepts]', req.query)
-    axios.get(`https://icd.who.int${req.originalUrl}`, config)
-        .then((response) => {
-            // console.log('🥎🥎[(GET)RootConcepts]', response.data)
-            Stream.emit("push", "message", {
-                type: 'GetRootConcepts',
-                msg: response.data
-            });
-
-            res.send(response.data)
-        })
-        .catch(e => {
-            console.log('ERROR', e)
-            res.end()
-        })
-})
-
 
 app.options('/browse11/l-m/en/JsonGetChildrenConcepts', cors(corsOptions))
 app.get('/browse11/l-m/en/JsonGetChildrenConcepts', async (req, res) => {

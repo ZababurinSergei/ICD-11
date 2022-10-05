@@ -9,7 +9,8 @@
   "scripts": {
     "frontend:start": "node index.mjs",
     "frontend:dev": "nodemon index.mjs",
-    "backend:dev": "cd backend && nodemon --inspect index.mjs"
+    "backend:dev": "cd backend && nodemon --inspect index.mjs",
+    "API": "cd backend && nodemon API.mjs"
   },
   "author": "Zababurin Sergei",
   "license": "MIT",
