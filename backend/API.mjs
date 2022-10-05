@@ -10,8 +10,8 @@ const config = {
 
 const location = {
     protocol:'http',
-    host: '127.0.0.1:3333',
-    hostname: '127.0.0.1:3333',
+    host: '127.0.0.1',
+    hostname: '127.0.0.1',
     port: '3333'
 }
 
@@ -57,26 +57,50 @@ const getEntity = (entity) => {
 
 let endpoints = [ ];
 
-axios.get(`http://127.0.0.1:3333/v1/icd/release/11/2020-09/mms`, config)
-    .then(async (response) => {
-        let endpoints = response.data.child.map(item => API.url.transform(item))
-        const data = await API.get.RootConcepts(endpoints)
-        const result = data.map(item => {
-            console.log('item', item)
-            return {
-                ID: API.url.transform(item[`@id`]).href,
-                classKind: item.classKind,
-                code: item.code
-            }
+const getChapter = () => {
+   return axios.get(`http://127.0.0.1:3333/v1/icd/release/11/2020-09/mms`, config)
+        .then(async (response) => {
+            let endpoints = response.data.child.map(item => API.url.transform(item))
+            const data = await API.get.RootConcepts(endpoints)
+            const result = data.map(item => {
+                // console.log('item', item)
+                return {
+                    ID: API.url.transform(item[`@id`]).href,
+                    classKind: item.classKind,
+                    code: item.code,
+                    title: item.title['@value'],
+                    child: item.child
+                }
+            })
+
+            return result
         })
-        console.log('result', result)
-        return data
-    })
-    .catch(e => {
-        console.log('ERROR', e)
-    })
+        .catch(e => {
+            console.log('ERROR', e)
+        })
+}
 
+const getBlock = async () => {
+    let endpoints = response.data.child.map(item => API.url.transform(item))
+    const data = await API.get.RootConcepts(endpoints)
+    const result = data.map(item => {
+        // console.log('item', item)
+        return {
+            ID: API.url.transform(item[`@id`]).href,
+            classKind: item.classKind,
+            code: item.code,
+            title: item.title['@value'],
+            child: item.child
+        }
+    })
+}
 
+const chapter = await getChapter()
+const block = getBlock(chapter)
+
+console.log('chapter', chapter)
+
+// chapter
 // Suggested = null
 // ID = "http://id.who.int/icd/entity/1766440644"
 // html = "\r\n<a \r\n class="ygtvlabel " \r\n \r\n data-id="http://id.who.int/icd/entity/1766440644">\r\n\r\n \r\n\r\n\r\n <span class="icode ">03</span>\r\nDiseases of the blood or blood-forming organs\r\n\r\n\r\n\r\n</a>&nbsp;\r\n\r\n"
