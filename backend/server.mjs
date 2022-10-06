@@ -188,7 +188,7 @@ app.get('/browse11/l-m/en/JsonGetRootConcepts', async (req, res) => {
     console.log('🥎[(GET)RootConcepts]', req.query)
     axios.get(`https://icd.who.int${req.originalUrl}`, config)
         .then((response) => {
-            console.log('🥎🥎[(GET)RootConcepts]', response.data)
+            console.log('🥎🥎[(GET)RootConcepts]', response.data[0])
 
             Stream.emit("push", "message", {
                 type: 'GetRootConcepts',
@@ -228,7 +228,7 @@ app.get('/browse11/l-m/en/JsonGetChildrenConcepts', async (req, res) => {
     req.query.useHtml = false
     axios.get(`https://icd.who.int${req.originalUrl}`, config)
         .then((response) => {
-            // console.log('🥎🥎[(GET)ChildrenConcepts]', response.data)
+            console.log('🥎🥎[(GET)ChildrenConcepts]', response.data)
             Stream.emit("push", "message", {
                 type: 'GetChildrenConcepts',
                 msg: response.data

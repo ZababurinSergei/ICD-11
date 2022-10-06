@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Control Center</title>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<fieldset id="ConceptId">
+    <legend>GET: ConceptId</legend>
+    <div class="ConceptId"></div>
+</fieldset>
+
+<fieldset id="stemId">
+    <legend>GET: stemId</legend>
+    <div class="stemId"></div>
+</fieldset>
+
+<fieldset id="axisToValue">
+    <legend>GET: axisToValue</legend>
+    <div class="axisToValue"></div>
+</fieldset>
+
+<fieldset id="GetPostCoordination">
+    <legend>GET: /browse11/l-m/en/GetPostCoordination</legend>
+    <div class="GetPostCoordination"></div>
+</fieldset>
+
+<fieldset id="GetPostCoordination">
+    <legend>GET: /browse11/l-m/en/GetPostCoordination</legend>
+    <div class="GetPostCoordination">
+
+
+
+        <div class="codearea">
+            <span class="code">Code:&nbsp;</span>
+            <span id="icdcodewpc" onclick="selectText()" title="Clicking copies the code to the clipboard">
+    CA40.00&amp;XN27H</span>
+        </div>
+        <input type="hidden" id="pccsdata" data-data="{&quot;dataType&quot;:&quot;pc&quot;,&quot;postcoordinationCodeSet&quot;:{&quot;stemId&quot;:&quot;http://id.who.int/icd/entity/1323682030&quot;,&quot;axisToValueIds&quot;:{&quot;infectiousAgent&quot;:[{&quot;stemId&quot;:&quot;http://id.who.int/icd/entity/1878765214&quot;,&quot;axisToValueIds&quot;:{}},{&quot;stemId&quot;:&quot;http://id.who.int/icd/entity/1065383727&quot;,&quot;axisToValueIds&quot;:{}}]}},&quot;underShorlineId&quot;:null}">
+        <div class="pctitle">
+            CA40.0 Bacterial pneumonia
+        </div>
+
+
+        <ul class="pccodeset">
+            <li class="last">
+                <div class="axis">
+                    Infectious agent
+                </div>
+                <div class="values">
+                    <div class="pctitle">
+                        XN9EE  Chlamydia pneumoniae
+                        <img title="remove postcoordination value" class="removepcvaluebtn" src="/browse11/Content/remove.png" onclick="OBrowserNavigation.getInstance().requestPCData.removePCValue('http://id.who.int/icd/entity/1323682030','infectiousAgent', 'http://id.who.int/icd/entity/1878765214')">
+                    </div>
+
+
+
+
+
+                    <div class="pctitle">
+                        XN27H  Chlamydia
+                        <img title="remove postcoordination value" class="removepcvaluebtn" src="/browse11/Content/remove.png" onclick="OBrowserNavigation.getInstance().requestPCData.removePCValue('http://id.who.int/icd/entity/1323682030','infectiousAgent', 'http://id.who.int/icd/entity/1065383727')">
+                    </div>
+
+
+
+
+
+                </div>
+
+            </li>
+        </ul>
+
+    </div>
+</fieldset>
+
+<style>
+    #ConceptId, #stemId, #axisToValue {
+        display: flex;
+        width: 50%;
+    }
+</style>
+<script type="module">
+    import Axios from '/axios/axios.mjs'
+    import isEmpty from '/isEmpty/index.mjs'
+    const axios = Axios.default
+
+
+    const config = {
+        headers: {
+            "accept": "application/json",
+            "API-Version": "v2",
+            "Accept-Language": "en"
+        }
+    };
+
+    const location = {
+        protocol:'http',
+        host: 'localhost',
+        hostname: 'localhost',
+        port: '3333'
+    }
+
+    const transformUrl = (url) => {
+        let result = new URL(url)
+        result.pathname = `/v1${result.pathname}`
+        result = Object.assign(result, location)
+        return result
+    }
+
+    const rootRequest = async (endpoints) => {
+        return await Promise.allSettled(endpoints.map((endpoint) => axios.get(endpoint.href, config))).then(
+            axios.spread((...allData) => {
+                return allData.map(item => item.value.data)
+            })
+        );
+    }
+
+    const childRequest = async (endpoints) => {
+        return await Promise.allSettled(endpoints.map((endpoint) => axios.get(endpoint, config))).then(
+            axios.spread((...allData) => {
+                return allData.map(item => item.value.data)
+            })
+        );
+    }
+
+    const API = {
+        url: {
+            transform: transformUrl,
+        },
+        get: {
+            RootConcepts: rootRequest,
+            ChildrenConcepts: childRequest
+        }
+    }
+
+    const getEntity = (entity) => {
+        return axios.get(`${entity}?releaseId=2022-02`, config)
+            .then((response) => {
+
+                console.log(entity, '@@@@@@@@@@@@@💚@@@💚@@@@@@@@@@@@@', response.data)
+                return response.data
+            })
+            .catch(e => {
+                console.log('ERROR', e)
+                return {
+                    error: e,
+                    status: false
+                }
+            })
+    }
+
+    let endpoints = [];
+
+    const getChapter = () => {
+        return axios.get(`http://127.0.0.1:3333/v1/icd/release/11/2020-09/mms`, config)
+            .then(async (response) => {
+                let endpoints = response.data.child.map(item => API.url.transform(item))
+                const data = await API.get.RootConcepts(endpoints)
+                const result = data.map((item, index) => {
+                    return [[{
+                        id: API.url.transform(item[`@id`]).href,
+                        classKind: item.classKind,
+                        code: item.code,
+                        title: item.title['@value'],
+                        child: item.child.map(item => API.url.transform(item).href)
+                    }]]
+                })
+                return result
+            })
+            .catch(e => {
+                console.log('ERROR', e)
+            })
+    }
+
+    const getChildren = async (block) => {
+        const result = []
+        // console.log(block[0])
+        for(let type of block) {
+            const chapter = []
+            for(let value of type) {
+                for(let item of value) {
+                    if(!isEmpty(item.child)) {
+                        const data = await API.get.ChildrenConcepts(item.child)
+                        const child = data.map(item => {
+                            return {
+                                id: API.url.transform(item[`@id`]).href,
+                                classKind: item.classKind,
+                                parent: item.parent.map(item => API.url.transform(item).href ),
+                                code: item.code,
+                                title: item.title['@value'],
+                                child: item.child ? item.child.map(item => API.url.transform(item).href ) : undefined
+                            }
+                        })
+                        chapter.push(child)
+                    }
+                }
+                // console.log('@@@@@@@@@@@@@@@@')
+            }
+            result.push(chapter)
+        }
+
+        return result
+    }
+
+    const chapter = await getChapter()
+    // const child_1 = await getChildren(chapter)
+    // const child_2 = await getChildren(child_1)
+    // const child_3 = await getChildren(child_2)
+    // const child_4 = await getChildren(child_3)
+    // console.log('===1===', child_1[27][0][4])
+    // console.log('===2===', child_2[27][4][0])
+
+</script>
+</body>
+</html>

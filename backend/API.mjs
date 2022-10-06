@@ -1,4 +1,5 @@
 import axios from "axios";
+import isEmpty from './modules/isEmpty/isEmpty.mjs'
 
 const config = {
     headers: {
@@ -22,8 +23,8 @@ const transformUrl = (url) => {
     return result
 }
 
-const RootConcepts = async (endpoints) => {
-    return await Promise.allSettled(endpoints.map((endpoint) => axios.get(endpoint.href, config))).then(
+const childRequest = async (endpoints) => {
+    return await Promise.allSettled(endpoints.map((endpoint) => axios.get(typeof endpoint === 'object' ? endpoint.href : endpoint, config))).then(
         axios.spread((...allData) => {
             return allData.map(item => item.value.data)
         })
@@ -35,44 +36,25 @@ const API = {
         transform: transformUrl,
     },
     get: {
-        RootConcepts: RootConcepts
+        RootConcepts: childRequest,
+        ChildrenConcepts: childRequest
     }
 }
-
-const getEntity = (entity) => {
-    return axios.get(`${entity}?releaseId=2022-02`, config)
-        .then((response) => {
-
-            console.log(entity, '@@@@@@@@@@@@@💚@@@💚@@@@@@@@@@@@@', response.data)
-            return response.data
-        })
-        .catch(e => {
-            console.log('ERROR', e)
-            return {
-                error: e,
-                status: false
-            }
-        })
-}
-
-let endpoints = [ ];
 
 const getChapter = () => {
    return axios.get(`http://127.0.0.1:3333/v1/icd/release/11/2020-09/mms`, config)
         .then(async (response) => {
             let endpoints = response.data.child.map(item => API.url.transform(item))
             const data = await API.get.RootConcepts(endpoints)
-            const result = data.map(item => {
-                // console.log('item', item)
-                return {
-                    ID: API.url.transform(item[`@id`]).href,
+            const result = data.map((item, index) => {
+                return [[{
+                    id: API.url.transform(item[`@id`]).href,
                     classKind: item.classKind,
                     code: item.code,
                     title: item.title['@value'],
-                    child: item.child
-                }
+                    child: item.child.map(item => API.url.transform(item).href)
+                }]]
             })
-
             return result
         })
         .catch(e => {
@@ -80,31 +62,37 @@ const getChapter = () => {
         })
 }
 
-const getBlock = async () => {
-    let endpoints = response.data.child.map(item => API.url.transform(item))
-    const data = await API.get.RootConcepts(endpoints)
-    const result = data.map(item => {
-        // console.log('item', item)
-        return {
-            ID: API.url.transform(item[`@id`]).href,
-            classKind: item.classKind,
-            code: item.code,
-            title: item.title['@value'],
-            child: item.child
+const getChildren = async (block) => {
+    const result = []
+    for(let type of block) {
+        const chapter = []
+        for(let value of type) {
+            for(let item of value) {
+                if(!isEmpty(item.child)) {
+                    const data = await API.get.ChildrenConcepts(item.child)
+                    const child = data.map(item => {
+                        return {
+                            id: API.url.transform(item[`@id`]).href,
+                            classKind: item.classKind,
+                            parent: item.parent.map(item => API.url.transform(item).href ),
+                            code: item.code,
+                            title: item.title['@value'],
+                            child: item.child ? item.child.map(item => API.url.transform(item).href ) : undefined
+                        }
+                    })
+                    chapter.push(child)
+                }
+            }
         }
-    })
+        result.push(chapter)
+    }
+    return result
 }
 
 const chapter = await getChapter()
-const block = getBlock(chapter)
-
-console.log('chapter', chapter)
-
-// chapter
-// Suggested = null
-// ID = "http://id.who.int/icd/entity/1766440644"
-// html = "\r\n<a \r\n class="ygtvlabel " \r\n \r\n data-id="http://id.who.int/icd/entity/1766440644">\r\n\r\n \r\n\r\n\r\n <span class="icode ">03</span>\r\nDiseases of the blood or blood-forming organs\r\n\r\n\r\n\r\n</a>&nbsp;\r\n\r\n"
-//     isLeaf = false
-// classKind = "chapter"
-// isAdoptedChild = false
-// averageDepth = 0
+const child_1 = await getChildren(chapter)
+const child_2 = await getChildren(child_1)
+const child_3 = await getChildren(child_2)
+const child_4 = await getChildren(child_3)
+// console.log('===1===', child_1[27][0][4])
+console.log('===2===', child_3)
